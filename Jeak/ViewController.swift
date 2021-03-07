@@ -61,12 +61,16 @@ class ViewController: UIViewController {
             login.response.whenFailure{
                 print("login failed: \($0)")
             }
+            _ = try? login.response.wait()
             
+
             
-            _ = try! login.response.wait()
         }
         
-        
+//                    guard let result = try?  login.response.wait() else {
+//                        print("login failed:")
+//                        return
+//                    }
         
 //        login.response.whenComplete { (result) in
 //            do{

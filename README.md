@@ -1,5 +1,5 @@
 # Jeak
-基于 [gRPC](https://grpc.io/) 的 [grpc-swift](https://github.com/grpc/grpc-swift) 项目
+基于  [grpc-swift](https://github.com/grpc/grpc-swift) 项目
 
 ## 环境
 
