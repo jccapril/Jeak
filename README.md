@@ -3,7 +3,7 @@
 
 ## 环境
 
-###protoc 插件安装
+### protoc 插件安装
 生成 `protoc-gen-swift` 和 `protoc-gen-grpc-swift`  并放入$PATH 环境中，
 下面提供了两种方法
 #### Git
