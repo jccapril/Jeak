@@ -22,6 +22,16 @@
 		C062971D25F2353B008AF220 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C062971C25F2353B008AF220 /* SnapKit */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C072296025F5FD4100901176 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C072295C25F5FD3F00901176 /* Center.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C072294525F5FD3B00901176;
+			remoteInfo = Center;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0914625625F377B900C51061 /* login.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = login.pb.swift; sourceTree = "<group>"; };
 		0914625725F377B900C51061 /* login.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = login.grpc.swift; sourceTree = "<group>"; };
@@ -34,6 +44,7 @@
 		C062970F25F2338A008AF220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C062971225F2338A008AF220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C062971425F2338A008AF220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C072295C25F5FD3F00901176 /* Center.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Center.xcodeproj; path = Center/Center.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +91,7 @@
 		C062970525F23386008AF220 /* Jeak */ = {
 			isa = PBXGroup;
 			children = (
+				C07BC80B25F5B9110037D23B /* Modules */,
 				0914625525F3755F00C51061 /* Models */,
 				C062970625F23386008AF220 /* AppDelegate.swift */,
 				C062970825F23386008AF220 /* SceneDelegate.swift */,
@@ -90,6 +102,22 @@
 				C062971425F2338A008AF220 /* Info.plist */,
 			);
 			path = Jeak;
+			sourceTree = "<group>";
+		};
+		C072295D25F5FD3F00901176 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C072296125F5FD4100901176 /* Center.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C07BC80B25F5B9110037D23B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C072295C25F5FD3F00901176 /* Center.xcodeproj */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,12 +176,28 @@
 			);
 			productRefGroup = C062970425F23386008AF220 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C072295D25F5FD3F00901176 /* Products */;
+					ProjectRef = C072295C25F5FD3F00901176 /* Center.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C062970225F23386008AF220 /* Jeak */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C072296125F5FD4100901176 /* Center.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Center.app;
+			remoteRef = C072296025F5FD4100901176 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C062970125F23386008AF220 /* Resources */ = {

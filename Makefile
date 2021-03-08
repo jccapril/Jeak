@@ -45,3 +45,15 @@ generate-login: ${LOGIN_PROTO_PB} ${LOGIN_PROTO_GRPC}
 clean-login:
 	rm -rf ./Jeak/Models/*.grpc.swift
 	rm -rf ./Jeak/Models/*.pb.swift
+
+.PHONY:
+set-git-proxy:
+	git config --global https.proxy http://127.0.0.1:1080
+	git config --global http.proxy http://127.0.0.1:1080
+
+.PHONY:
+unset-git-proxy:
+	git config --global --unset http.proxy
+	git config --global --unset https.proxy
+
+	
