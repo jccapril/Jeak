@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0914625125F3710E00C51061 /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 0914625025F3710E00C51061 /* GRPC */; };
-		0914625325F3710E00C51061 /* CGRPCZlib in Frameworks */ = {isa = PBXBuildFile; productRef = 0914625225F3710E00C51061 /* CGRPCZlib */; };
 		0914625925F377BA00C51061 /* login.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0914625625F377B900C51061 /* login.pb.swift */; };
 		0914625A25F377BA00C51061 /* login.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0914625725F377B900C51061 /* login.grpc.swift */; };
 		0914625B25F377BA00C51061 /* login.proto in Sources */ = {isa = PBXBuildFile; fileRef = 0914625825F377BA00C51061 /* login.proto */; };
@@ -23,11 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C072296025F5FD4100901176 /* PBXContainerItemProxy */ = {
+		C0B2943B25F75F9A00FE88B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C072295C25F5FD3F00901176 /* Center.xcodeproj */;
+			containerPortal = C0B2943725F75F9900FE88B7 /* Center.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = C072294525F5FD3B00901176;
+			remoteGlobalIDString = C0B2942C25F75F9900FE88B7;
 			remoteInfo = Center;
 		};
 /* End PBXContainerItemProxy section */
@@ -44,7 +42,7 @@
 		C062970F25F2338A008AF220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C062971225F2338A008AF220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C062971425F2338A008AF220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C072295C25F5FD3F00901176 /* Center.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Center.xcodeproj; path = Center/Center.xcodeproj; sourceTree = "<group>"; };
+		C0B2943725F75F9900FE88B7 /* Center.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Center.xcodeproj; path = Center/Center.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C062971D25F2353B008AF220 /* SnapKit in Frameworks */,
-				0914625325F3710E00C51061 /* CGRPCZlib in Frameworks */,
 				C02A661D25F2402200A6B2DC /* DeviceKit in Frameworks */,
-				0914625125F3710E00C51061 /* GRPC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,31 +89,39 @@
 			children = (
 				C07BC80B25F5B9110037D23B /* Modules */,
 				0914625525F3755F00C51061 /* Models */,
+				C0B2944825F761EC00FE88B7 /* Resources */,
 				C062970625F23386008AF220 /* AppDelegate.swift */,
 				C062970825F23386008AF220 /* SceneDelegate.swift */,
 				C062970A25F23386008AF220 /* ViewController.swift */,
-				C062970C25F23386008AF220 /* Main.storyboard */,
-				C062970F25F2338A008AF220 /* Assets.xcassets */,
-				C062971125F2338A008AF220 /* LaunchScreen.storyboard */,
-				C062971425F2338A008AF220 /* Info.plist */,
 			);
 			path = Jeak;
-			sourceTree = "<group>";
-		};
-		C072295D25F5FD3F00901176 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C072296125F5FD4100901176 /* Center.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		C07BC80B25F5B9110037D23B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				C072295C25F5FD3F00901176 /* Center.xcodeproj */,
+				C0B2943725F75F9900FE88B7 /* Center.xcodeproj */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		C0B2943825F75F9900FE88B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0B2943C25F75F9A00FE88B7 /* Center.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0B2944825F761EC00FE88B7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C062970C25F23386008AF220 /* Main.storyboard */,
+				C062970F25F2338A008AF220 /* Assets.xcassets */,
+				C062971125F2338A008AF220 /* LaunchScreen.storyboard */,
+				C062971425F2338A008AF220 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +143,6 @@
 			packageProductDependencies = (
 				C062971C25F2353B008AF220 /* SnapKit */,
 				C02A661C25F2402200A6B2DC /* DeviceKit */,
-				0914625025F3710E00C51061 /* GRPC */,
-				0914625225F3710E00C51061 /* CGRPCZlib */,
 			);
 			productName = Jeak;
 			productReference = C062970325F23386008AF220 /* Jeak.app */;
@@ -172,14 +174,13 @@
 			packageReferences = (
 				C062971B25F2353B008AF220 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				C02A661B25F2402200A6B2DC /* XCRemoteSwiftPackageReference "DeviceKit" */,
-				0914624F25F3710E00C51061 /* XCRemoteSwiftPackageReference "grpc-swift" */,
 			);
 			productRefGroup = C062970425F23386008AF220 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = C072295D25F5FD3F00901176 /* Products */;
-					ProjectRef = C072295C25F5FD3F00901176 /* Center.xcodeproj */;
+					ProductGroup = C0B2943825F75F9900FE88B7 /* Products */;
+					ProjectRef = C0B2943725F75F9900FE88B7 /* Center.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -190,11 +191,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		C072296125F5FD4100901176 /* Center.app */ = {
+		C0B2943C25F75F9A00FE88B7 /* Center.framework */ = {
 			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Center.app;
-			remoteRef = C072296025F5FD4100901176 /* PBXContainerItemProxy */;
+			fileType = wrapper.framework;
+			path = Center.framework;
+			remoteRef = C0B2943B25F75F9A00FE88B7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -430,14 +431,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0914624F25F3710E00C51061 /* XCRemoteSwiftPackageReference "grpc-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/grpc/grpc-swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		C02A661B25F2402200A6B2DC /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devicekit/DeviceKit.git";
@@ -457,16 +450,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0914625025F3710E00C51061 /* GRPC */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0914624F25F3710E00C51061 /* XCRemoteSwiftPackageReference "grpc-swift" */;
-			productName = GRPC;
-		};
-		0914625225F3710E00C51061 /* CGRPCZlib */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0914624F25F3710E00C51061 /* XCRemoteSwiftPackageReference "grpc-swift" */;
-			productName = CGRPCZlib;
-		};
 		C02A661C25F2402200A6B2DC /* DeviceKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C02A661B25F2402200A6B2DC /* XCRemoteSwiftPackageReference "DeviceKit" */;
