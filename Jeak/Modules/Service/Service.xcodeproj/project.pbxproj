@@ -7,163 +7,102 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		092C8C9225F9197200B904D6 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092C8C9125F9197200B904D6 /* Service.framework */; };
-		092C8C9325F9197200B904D6 /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 092C8C9125F9197200B904D6 /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C002370D25F89D0D008F21DA /* RPC in Frameworks */ = {isa = PBXBuildFile; productRef = C002370C25F89D0D008F21DA /* RPC */; };
-		C0903C9525F8B51700D05B0A /* UserCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0903C9425F8B51700D05B0A /* UserCenter.swift */; };
-		C0B2944325F7608D00FE88B7 /* RPCCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2944225F7608D00FE88B7 /* RPCCenter.swift */; };
-		C0B2944625F760B400FE88B7 /* RPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2944525F760B400FE88B7 /* RPCService.swift */; };
-		C0B2944A25F7637100FE88B7 /* JeakRPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2944925F7637100FE88B7 /* JeakRPCService.swift */; };
+		092C8C7E25F9191800B904D6 /* Service.h in Headers */ = {isa = PBXBuildFile; fileRef = 092C8C7C25F9191800B904D6 /* Service.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		092C8C8E25F9196200B904D6 /* Standard in Frameworks */ = {isa = PBXBuildFile; productRef = 092C8C8D25F9196200B904D6 /* Standard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		092C8C9425F9197200B904D6 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				092C8C9325F9197200B904D6 /* Service.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		092C8C9125F9197200B904D6 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0903C9425F8B51700D05B0A /* UserCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenter.swift; sourceTree = "<group>"; };
-		C0B2942C25F75F9900FE88B7 /* Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0B2943025F75F9900FE88B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C0B2944225F7608D00FE88B7 /* RPCCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCCenter.swift; sourceTree = "<group>"; };
-		C0B2944525F760B400FE88B7 /* RPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCService.swift; sourceTree = "<group>"; };
-		C0B2944925F7637100FE88B7 /* JeakRPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeakRPCService.swift; sourceTree = "<group>"; };
+		092C8C7925F9191800B904D6 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		092C8C7C25F9191800B904D6 /* Service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
+		092C8C7D25F9191800B904D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C0B2942925F75F9900FE88B7 /* Frameworks */ = {
+		092C8C7625F9191800B904D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				092C8C9225F9197200B904D6 /* Service.framework in Frameworks */,
-				C002370D25F89D0D008F21DA /* RPC in Frameworks */,
+				092C8C8E25F9196200B904D6 /* Standard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		092C8C9025F9197200B904D6 /* Frameworks */ = {
+		092C8C6F25F9191800B904D6 = {
 			isa = PBXGroup;
 			children = (
-				092C8C9125F9197200B904D6 /* Service.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C0903C9325F8B50500D05B0A /* UserCenter */ = {
-			isa = PBXGroup;
-			children = (
-				C0903C9425F8B51700D05B0A /* UserCenter.swift */,
-			);
-			path = UserCenter;
-			sourceTree = "<group>";
-		};
-		C0B2942225F75F9900FE88B7 = {
-			isa = PBXGroup;
-			children = (
-				C0B2944025F75FEA00FE88B7 /* Sources */,
-				C0B2943F25F75FD900FE88B7 /* Resources */,
-				C0B2942D25F75F9900FE88B7 /* Products */,
-				092C8C9025F9197200B904D6 /* Frameworks */,
+				092C8C7B25F9191800B904D6 /* Service */,
+				092C8C7A25F9191800B904D6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C0B2942D25F75F9900FE88B7 /* Products */ = {
+		092C8C7A25F9191800B904D6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C0B2942C25F75F9900FE88B7 /* Center.framework */,
+				092C8C7925F9191800B904D6 /* Service.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C0B2943F25F75FD900FE88B7 /* Resources */ = {
+		092C8C7B25F9191800B904D6 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				C0B2943025F75F9900FE88B7 /* Info.plist */,
+				092C8C7C25F9191800B904D6 /* Service.h */,
+				092C8C7D25F9191800B904D6 /* Info.plist */,
 			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		C0B2944025F75FEA00FE88B7 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				C0903C9325F8B50500D05B0A /* UserCenter */,
-				C0B2944125F7605A00FE88B7 /* RPCCenter */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		C0B2944125F7605A00FE88B7 /* RPCCenter */ = {
-			isa = PBXGroup;
-			children = (
-				C0B2944225F7608D00FE88B7 /* RPCCenter.swift */,
-				C0B2944525F760B400FE88B7 /* RPCService.swift */,
-				C0B2944925F7637100FE88B7 /* JeakRPCService.swift */,
-			);
-			path = RPCCenter;
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C0B2942725F75F9900FE88B7 /* Headers */ = {
+		092C8C7425F9191800B904D6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				092C8C7E25F9191800B904D6 /* Service.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C0B2942B25F75F9900FE88B7 /* Center */ = {
+		092C8C7825F9191800B904D6 /* Service */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0B2943425F75F9900FE88B7 /* Build configuration list for PBXNativeTarget "Center" */;
+			buildConfigurationList = 092C8C8125F9191800B904D6 /* Build configuration list for PBXNativeTarget "Service" */;
 			buildPhases = (
-				C0B2942725F75F9900FE88B7 /* Headers */,
-				C0B2942825F75F9900FE88B7 /* Sources */,
-				C0B2942925F75F9900FE88B7 /* Frameworks */,
-				C0B2942A25F75F9900FE88B7 /* Resources */,
-				092C8C9425F9197200B904D6 /* Embed Frameworks */,
+				092C8C7425F9191800B904D6 /* Headers */,
+				092C8C7525F9191800B904D6 /* Sources */,
+				092C8C7625F9191800B904D6 /* Frameworks */,
+				092C8C7725F9191800B904D6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Center;
+			name = Service;
 			packageProductDependencies = (
-				C002370C25F89D0D008F21DA /* RPC */,
+				092C8C8D25F9196200B904D6 /* Standard */,
 			);
-			productName = Center;
-			productReference = C0B2942C25F75F9900FE88B7 /* Center.framework */;
+			productName = Service;
+			productReference = 092C8C7925F9191800B904D6 /* Service.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C0B2942325F75F9900FE88B7 /* Project object */ = {
+		092C8C7025F9191800B904D6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					C0B2942B25F75F9900FE88B7 = {
+					092C8C7825F9191800B904D6 = {
 						CreatedOnToolsVersion = 12.4;
-						LastSwiftMigration = 1240;
 					};
 				};
 			};
-			buildConfigurationList = C0B2942625F75F9900FE88B7 /* Build configuration list for PBXProject "Center" */;
+			buildConfigurationList = 092C8C7325F9191800B904D6 /* Build configuration list for PBXProject "Service" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -171,21 +110,21 @@
 				en,
 				Base,
 			);
-			mainGroup = C0B2942225F75F9900FE88B7;
+			mainGroup = 092C8C6F25F9191800B904D6;
 			packageReferences = (
-				C002370B25F89D0D008F21DA /* XCRemoteSwiftPackageReference "jeak_ios_rpc" */,
+				092C8C8C25F9196200B904D6 /* XCRemoteSwiftPackageReference "standard" */,
 			);
-			productRefGroup = C0B2942D25F75F9900FE88B7 /* Products */;
+			productRefGroup = 092C8C7A25F9191800B904D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C0B2942B25F75F9900FE88B7 /* Center */,
+				092C8C7825F9191800B904D6 /* Service */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C0B2942A25F75F9900FE88B7 /* Resources */ = {
+		092C8C7725F9191800B904D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -195,21 +134,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C0B2942825F75F9900FE88B7 /* Sources */ = {
+		092C8C7525F9191800B904D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0B2944325F7608D00FE88B7 /* RPCCenter.swift in Sources */,
-				C0B2944625F760B400FE88B7 /* RPCService.swift in Sources */,
-				C0B2944A25F7637100FE88B7 /* JeakRPCService.swift in Sources */,
-				C0903C9525F8B51700D05B0A /* UserCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C0B2943225F75F9900FE88B7 /* Debug */ = {
+		092C8C7F25F9191800B904D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -273,7 +208,7 @@
 			};
 			name = Debug;
 		};
-		C0B2943325F75F9900FE88B7 /* Release */ = {
+		092C8C8025F9191800B904D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -331,59 +266,46 @@
 			};
 			name = Release;
 		};
-		C0B2943525F75F9900FE88B7 /* Debug */ = {
+		092C8C8225F9191800B904D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
+				INFOPLIST_FILE = Service/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jeak.Center;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeak.Service;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		C0B2943625F75F9900FE88B7 /* Release */ = {
+		092C8C8325F9191800B904D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
+				INFOPLIST_FILE = Service/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jeak.Center;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeak.Service;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -393,20 +315,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C0B2942625F75F9900FE88B7 /* Build configuration list for PBXProject "Center" */ = {
+		092C8C7325F9191800B904D6 /* Build configuration list for PBXProject "Service" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C0B2943225F75F9900FE88B7 /* Debug */,
-				C0B2943325F75F9900FE88B7 /* Release */,
+				092C8C7F25F9191800B904D6 /* Debug */,
+				092C8C8025F9191800B904D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0B2943425F75F9900FE88B7 /* Build configuration list for PBXNativeTarget "Center" */ = {
+		092C8C8125F9191800B904D6 /* Build configuration list for PBXNativeTarget "Service" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C0B2943525F75F9900FE88B7 /* Debug */,
-				C0B2943625F75F9900FE88B7 /* Release */,
+				092C8C8225F9191800B904D6 /* Debug */,
+				092C8C8325F9191800B904D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -414,23 +336,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C002370B25F89D0D008F21DA /* XCRemoteSwiftPackageReference "jeak_ios_rpc" */ = {
+		092C8C8C25F9196200B904D6 /* XCRemoteSwiftPackageReference "standard" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitee.com/jccgulu/jeak_ios_rpc.git";
+			repositoryURL = "https://gitee.com/jccgulu/standard.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C002370C25F89D0D008F21DA /* RPC */ = {
+		092C8C8D25F9196200B904D6 /* Standard */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C002370B25F89D0D008F21DA /* XCRemoteSwiftPackageReference "jeak_ios_rpc" */;
-			productName = RPC;
+			package = 092C8C8C25F9196200B904D6 /* XCRemoteSwiftPackageReference "standard" */;
+			productName = Standard;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = C0B2942325F75F9900FE88B7 /* Project object */;
+	rootObject = 092C8C7025F9191800B904D6 /* Project object */;
 }

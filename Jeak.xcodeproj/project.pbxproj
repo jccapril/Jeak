@@ -23,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		092C8C8825F9191900B904D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 092C8C8425F9191800B904D6 /* Service.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 092C8C7925F9191800B904D6;
+			remoteInfo = Service;
+		};
 		C0B2943B25F75F9A00FE88B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C0B2943725F75F9900FE88B7 /* Center.xcodeproj */;
@@ -47,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		092C8C8425F9191800B904D6 /* Service.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Service.xcodeproj; path = Service/Service.xcodeproj; sourceTree = "<group>"; };
 		C062970325F23386008AF220 /* Jeak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jeak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C062970625F23386008AF220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C062970825F23386008AF220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		092C8C8525F9191800B904D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				092C8C8925F9191900B904D6 /* Service.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C06296FA25F23386008AF220 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				C0B2943725F75F9900FE88B7 /* Center.xcodeproj */,
+				092C8C8425F9191800B904D6 /* Service.xcodeproj */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -200,6 +217,10 @@
 					ProductGroup = C0B2943825F75F9900FE88B7 /* Products */;
 					ProjectRef = C0B2943725F75F9900FE88B7 /* Center.xcodeproj */;
 				},
+				{
+					ProductGroup = 092C8C8525F9191800B904D6 /* Products */;
+					ProjectRef = 092C8C8425F9191800B904D6 /* Service.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -209,6 +230,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		092C8C8925F9191900B904D6 /* Service.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Service.framework;
+			remoteRef = 092C8C8825F9191900B904D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C0B2943C25F75F9A00FE88B7 /* Center.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;

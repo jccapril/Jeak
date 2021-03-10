@@ -11,6 +11,13 @@ import Center
 import RxSwift
 import RxCocoa
 
+/**
+ 
+ RxSwift 文档
+ https://beeth0ven.github.io/RxSwift-Chinese-Documentation/
+ */
+
+
 
 class ViewController: UIViewController {
     
@@ -30,14 +37,7 @@ class ViewController: UIViewController {
             $0.height.equalTo(50)
             $0.center.equalToSuperview()
         }
-        button.rx.tap
-            .bind{ [weak self] in
-                print("111")
-            }.disposed(by: disposeBag)
-        
-       
-        
-  
+
     }
 
     @objc
