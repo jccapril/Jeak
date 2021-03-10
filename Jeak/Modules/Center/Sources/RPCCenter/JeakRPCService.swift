@@ -14,7 +14,7 @@ public final class JeakRPCService: RPCService {
 //    #if JEAK_PRODUCT
 //        private let host = "api.jeak.com"
 //    #else
-    private let host = "127.0.0.1"
+    private let host = "192.168.3.22"
 //    #endif
     private let port = 443
     

@@ -20,7 +20,9 @@ open class RPCService {
 //    let logger = Loggers[typeName]
 
     public init(host: String, port: Int) {
-        connection = ClientConnection.secure(group: group).connect(host: host, port: port)
+        // 没有使用TLS 就用insecure
+        connection = ClientConnection.insecure(group: group).connect(host: host, port: port)
+//        connection = ClientConnection.secure(group: group).connect(host: host, port: port)
     }
 
     deinit {

@@ -65,13 +65,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0914625525F3755F00C51061 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		C06296FA25F23386008AF220 = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				C07BC80B25F5B9110037D23B /* Modules */,
-				0914625525F3755F00C51061 /* Models */,
 				C0B2944825F761EC00FE88B7 /* Resources */,
 				C062970625F23386008AF220 /* AppDelegate.swift */,
 				C062970825F23386008AF220 /* SceneDelegate.swift */,
