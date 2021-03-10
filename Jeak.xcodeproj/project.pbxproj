@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0914625925F377BA00C51061 /* login.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0914625625F377B900C51061 /* login.pb.swift */; };
-		0914625A25F377BA00C51061 /* login.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0914625725F377B900C51061 /* login.grpc.swift */; };
-		0914625B25F377BA00C51061 /* login.proto in Sources */ = {isa = PBXBuildFile; fileRef = 0914625825F377BA00C51061 /* login.proto */; };
-		C02A661D25F2402200A6B2DC /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = C02A661C25F2402200A6B2DC /* DeviceKit */; };
 		C062970725F23386008AF220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062970625F23386008AF220 /* AppDelegate.swift */; };
 		C062970925F23386008AF220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062970825F23386008AF220 /* SceneDelegate.swift */; };
 		C062970B25F23386008AF220 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062970A25F23386008AF220 /* ViewController.swift */; };
@@ -18,6 +14,8 @@
 		C062971025F2338A008AF220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C062970F25F2338A008AF220 /* Assets.xcassets */; };
 		C062971325F2338A008AF220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C062971125F2338A008AF220 /* LaunchScreen.storyboard */; };
 		C062971D25F2353B008AF220 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C062971C25F2353B008AF220 /* SnapKit */; };
+		C0A3D80F25F86AE40032A90D /* Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B2943C25F75F9A00FE88B7 /* Center.framework */; };
+		C0A3D81025F86AE40032A90D /* Center.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0B2943C25F75F9A00FE88B7 /* Center.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,10 +28,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C0A3D81125F86AE40032A90D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C0A3D81025F86AE40032A90D /* Center.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		0914625625F377B900C51061 /* login.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = login.pb.swift; sourceTree = "<group>"; };
-		0914625725F377B900C51061 /* login.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = login.grpc.swift; sourceTree = "<group>"; };
-		0914625825F377BA00C51061 /* login.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = login.proto; sourceTree = "<group>"; };
 		C062970325F23386008AF220 /* Jeak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jeak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C062970625F23386008AF220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C062970825F23386008AF220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C062971D25F2353B008AF220 /* SnapKit in Frameworks */,
-				C02A661D25F2402200A6B2DC /* DeviceKit in Frameworks */,
+				C0A3D80F25F86AE40032A90D /* Center.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,9 +70,6 @@
 		0914625525F3755F00C51061 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0914625725F377B900C51061 /* login.grpc.swift */,
-				0914625625F377B900C51061 /* login.pb.swift */,
-				0914625825F377BA00C51061 /* login.proto */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -73,6 +79,7 @@
 			children = (
 				C062970525F23386008AF220 /* Jeak */,
 				C062970425F23386008AF220 /* Products */,
+				C0A3D80D25F86AE40032A90D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +112,13 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		C0A3D80D25F86AE40032A90D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C0B2943825F75F9900FE88B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +148,7 @@
 				C06296FF25F23386008AF220 /* Sources */,
 				C062970025F23386008AF220 /* Frameworks */,
 				C062970125F23386008AF220 /* Resources */,
+				C0A3D81125F86AE40032A90D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,7 +157,6 @@
 			name = Jeak;
 			packageProductDependencies = (
 				C062971C25F2353B008AF220 /* SnapKit */,
-				C02A661C25F2402200A6B2DC /* DeviceKit */,
 			);
 			productName = Jeak;
 			productReference = C062970325F23386008AF220 /* Jeak.app */;
@@ -173,7 +187,6 @@
 			mainGroup = C06296FA25F23386008AF220;
 			packageReferences = (
 				C062971B25F2353B008AF220 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				C02A661B25F2402200A6B2DC /* XCRemoteSwiftPackageReference "DeviceKit" */,
 			);
 			productRefGroup = C062970425F23386008AF220 /* Products */;
 			projectDirPath = "";
@@ -220,10 +233,7 @@
 			files = (
 				C062970B25F23386008AF220 /* ViewController.swift in Sources */,
 				C062970725F23386008AF220 /* AppDelegate.swift in Sources */,
-				0914625925F377BA00C51061 /* login.pb.swift in Sources */,
 				C062970925F23386008AF220 /* SceneDelegate.swift in Sources */,
-				0914625B25F377BA00C51061 /* login.proto in Sources */,
-				0914625A25F377BA00C51061 /* login.grpc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,14 +383,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4R855GB33C;
-				INFOPLIST_FILE = Jeak/Info.plist;
+				INFOPLIST_FILE = Jeak/Resources/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jeaf.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeak.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = jeaf_dev_pro;
+				PROVISIONING_PROFILE_SPECIFIER = jeak_dev_pro;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -394,7 +404,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Jeak/Info.plist;
+				INFOPLIST_FILE = Jeak/Resources/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,14 +441,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C02A661B25F2402200A6B2DC /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/devicekit/DeviceKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.3.0;
-			};
-		};
 		C062971B25F2353B008AF220 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -450,11 +452,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C02A661C25F2402200A6B2DC /* DeviceKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C02A661B25F2402200A6B2DC /* XCRemoteSwiftPackageReference "DeviceKit" */;
-			productName = DeviceKit;
-		};
 		C062971C25F2353B008AF220 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C062971B25F2353B008AF220 /* XCRemoteSwiftPackageReference "SnapKit" */;

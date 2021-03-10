@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C002370D25F89D0D008F21DA /* RPC in Frameworks */ = {isa = PBXBuildFile; productRef = C002370C25F89D0D008F21DA /* RPC */; };
+		C002372825F8A271008F21DA /* Standard in Frameworks */ = {isa = PBXBuildFile; productRef = C002372725F8A271008F21DA /* Standard */; };
 		C0B2944325F7608D00FE88B7 /* RPCCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2944225F7608D00FE88B7 /* RPCCenter.swift */; };
 		C0B2944625F760B400FE88B7 /* RPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2944525F760B400FE88B7 /* RPCService.swift */; };
 		C0B2944A25F7637100FE88B7 /* JeakRPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2944925F7637100FE88B7 /* JeakRPCService.swift */; };
@@ -25,6 +27,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C002370D25F89D0D008F21DA /* RPC in Frameworks */,
+				C002372825F8A271008F21DA /* Standard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +105,10 @@
 			dependencies = (
 			);
 			name = Center;
+			packageProductDependencies = (
+				C002370C25F89D0D008F21DA /* RPC */,
+				C002372725F8A271008F21DA /* Standard */,
+			);
 			productName = Center;
 			productReference = C0B2942C25F75F9900FE88B7 /* Center.framework */;
 			productType = "com.apple.product-type.framework";
@@ -128,6 +136,10 @@
 				Base,
 			);
 			mainGroup = C0B2942225F75F9900FE88B7;
+			packageReferences = (
+				C002370B25F89D0D008F21DA /* XCRemoteSwiftPackageReference "jeak_ios_rpc" */,
+				C002372625F8A271008F21DA /* XCRemoteSwiftPackageReference "standard" */,
+			);
 			productRefGroup = C0B2942D25F75F9900FE88B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -287,21 +299,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4R855GB33C;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Center/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jeaf.Center;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeak.Center;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -313,21 +329,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4R855GB33C;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Center/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jeaf.Center;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeak.Center;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -356,6 +376,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C002370B25F89D0D008F21DA /* XCRemoteSwiftPackageReference "jeak_ios_rpc" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/jccgulu/jeak_ios_rpc.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		C002372625F8A271008F21DA /* XCRemoteSwiftPackageReference "standard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/jccgulu/standard.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C002370C25F89D0D008F21DA /* RPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C002370B25F89D0D008F21DA /* XCRemoteSwiftPackageReference "jeak_ios_rpc" */;
+			productName = RPC;
+		};
+		C002372725F8A271008F21DA /* Standard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C002372625F8A271008F21DA /* XCRemoteSwiftPackageReference "standard" */;
+			productName = Standard;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C0B2942325F75F9900FE88B7 /* Project object */;
 }

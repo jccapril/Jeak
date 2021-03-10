@@ -7,8 +7,7 @@
 
 import UIKit
 import SnapKit
-import GRPC
-import NIO
+import Center
 
 
 class ViewController: UIViewController {
@@ -31,65 +30,18 @@ class ViewController: UIViewController {
 
     @objc
     func helloWorld(sender:UIButton) {
-        
-        
-        DispatchQueue.global().async {
-            let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
-            defer {
-              try! group.syncShutdownGracefully()
+        RPCCenter.jeak.login(mobile: "18301787178", password: "123123") { (result) in
+            switch result {
+            case .success(let response):
+                if response.errCode == 0 {
+                   print("aaa")
+                }
+            
+            case .failure:
+                print("bbb")
+                break
             }
-            // Configure the channel, we're not using TLS so the connection is `insecure`.
-            let channel = ClientConnection.insecure(group: group)
-              .connect(host: "192.168.3.22", port: 18080)
-            // Close the connection when we're done with it.
-            defer {
-              try! channel.close().wait()
-            }
-            
-            
-            
-            let client = Login_LoginClient(channel: channel)
-            let request = Login_LoginRequest.with{
-                $0.name = "admin"
-            }
-           
-            let login = client.login(request)
-            
-            login.response.whenSuccess{
-                print(" login received: \($0.message)")
-            }
-            login.response.whenFailure{
-                print("login failed: \($0)")
-            }
-            _ = try? login.response.wait()
-            
-
-            
         }
-        
-//                    guard let result = try?  login.response.wait() else {
-//                        print("login failed:")
-//                        return
-//                    }
-        
-//        login.response.whenComplete { (result) in
-//            do{
-//                let response = try result.get()
-//                print(" login received: \(response.message)")
-//            } catch {
-//                print("login failed: \(error)")
-//            }
-//        }
-        // wait() on the response to stop the program from exiting before the response is received.
-//        do {
-//            let response = try login.response.wait()
-//            sender.setTitle(String(response.message), for: .normal)
-//            print(" login received: \(response.message)")
-//        } catch {
-//            sender.setTitle("1111", for: .normal)
-//            print("login failed: \(error)")
-//        }
-      
     }
 
 }

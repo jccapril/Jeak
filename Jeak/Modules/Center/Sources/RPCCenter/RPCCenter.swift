@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+public enum RPCCenter {}
+
+private extension RPCCenter {}
+
+public extension RPCCenter {
+    static let jeak = JeakRPCService()
+}
