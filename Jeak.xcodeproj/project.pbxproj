@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092C8C5925F912B200B904D6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 092C8C5825F912B200B904D6 /* SnapKit */; };
+		092C8C6825F9137600B904D6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 092C8C6725F9137600B904D6 /* RxSwift */; };
+		092C8C6A25F9137600B904D6 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 092C8C6925F9137600B904D6 /* RxRelay */; };
+		092C8C6C25F9137600B904D6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 092C8C6B25F9137600B904D6 /* RxCocoa */; };
+		092C8C6E25F9137600B904D6 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 092C8C6D25F9137600B904D6 /* RxBlocking */; };
 		C062970725F23386008AF220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062970625F23386008AF220 /* AppDelegate.swift */; };
 		C062970925F23386008AF220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062970825F23386008AF220 /* SceneDelegate.swift */; };
 		C062970B25F23386008AF220 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062970A25F23386008AF220 /* ViewController.swift */; };
@@ -58,7 +63,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				092C8C6825F9137600B904D6 /* RxSwift in Frameworks */,
+				092C8C6E25F9137600B904D6 /* RxBlocking in Frameworks */,
 				C0A3D80F25F86AE40032A90D /* Center.framework in Frameworks */,
+				092C8C6C25F9137600B904D6 /* RxCocoa in Frameworks */,
+				092C8C6A25F9137600B904D6 /* RxRelay in Frameworks */,
+				092C8C5925F912B200B904D6 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +156,11 @@
 			);
 			name = Jeak;
 			packageProductDependencies = (
+				092C8C5825F912B200B904D6 /* SnapKit */,
+				092C8C6725F9137600B904D6 /* RxSwift */,
+				092C8C6925F9137600B904D6 /* RxRelay */,
+				092C8C6B25F9137600B904D6 /* RxCocoa */,
+				092C8C6D25F9137600B904D6 /* RxBlocking */,
 			);
 			productName = Jeak;
 			productReference = C062970325F23386008AF220 /* Jeak.app */;
@@ -175,6 +190,8 @@
 			);
 			mainGroup = C06296FA25F23386008AF220;
 			packageReferences = (
+				092C8C5725F912B200B904D6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				092C8C6625F9137600B904D6 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = C062970425F23386008AF220 /* Products */;
 			projectDirPath = "";
@@ -427,6 +444,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		092C8C5725F912B200B904D6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/jlab/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		092C8C6625F9137600B904D6 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/jlab/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		092C8C5825F912B200B904D6 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 092C8C5725F912B200B904D6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		092C8C6725F9137600B904D6 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 092C8C6625F9137600B904D6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		092C8C6925F9137600B904D6 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 092C8C6625F9137600B904D6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		092C8C6B25F9137600B904D6 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 092C8C6625F9137600B904D6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		092C8C6D25F9137600B904D6 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 092C8C6625F9137600B904D6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C06296FB25F23386008AF220 /* Project object */;
 }
