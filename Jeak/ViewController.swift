@@ -30,18 +30,21 @@ class ViewController: UIViewController {
 
     @objc
     func helloWorld(sender:UIButton) {
-        RPCCenter.jeak.login(mobile: "18301787178", password: "123123") { (result) in
+        
+        UserCenter.login(mobile:"18301787178" , password: "123123") { (result) in
             switch result {
             case .success(let response):
                 if response.errCode == 0 {
-                   print("aaa")
+                    print("Call Status : \(response)")
                 }
             
-            case .failure:
-                print("bbb")
+            case .failure(let error):
+                print("Call Failed With Error : \(error)")
                 break
             }
         }
+        
+
     }
 
 }

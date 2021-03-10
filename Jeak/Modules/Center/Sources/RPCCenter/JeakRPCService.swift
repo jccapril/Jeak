@@ -67,9 +67,9 @@ public extension JeakRPCService {
             }
             do {
                 let status = try call.status.wait()
-                print("Call Status : \(status)")
+                print("inner Call Status : \(status)")
             } catch {
-                print("Call Failed With Error : \(error)")
+                print("inner Call Failed With Error : \(error)")
             }
         }
     }
