@@ -11,11 +11,11 @@ import RPC
 
 
 public final class JeakRPCService: RPCService {
-    #if JEAK_PRODUCT
-        private let host = "api.jeak.com"
-    #else
-        private let host = "127.0.0.1"
-    #endif
+//    #if JEAK_PRODUCT
+//        private let host = "api.jeak.com"
+//    #else
+    private let host = "127.0.0.1"
+//    #endif
     private let port = 443
     
     private let timeout = 10

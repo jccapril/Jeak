@@ -15,17 +15,8 @@
         "repositoryURL": "https://gitee.com/jccgulu/jeak_ios_rpc.git",
         "state": {
           "branch": "main",
-          "revision": "6794db540fa109989b0ed17875e68871b42cda8e",
+          "revision": "ac5a3cec2153b4b2c35f3f3a617f25379ad26d5d",
           "version": null
-        }
-      },
-      {
-        "package": "SnapKit",
-        "repositoryURL": "https://github.com/SnapKit/SnapKit.git",
-        "state": {
-          "branch": null,
-          "revision": "d458564516e5676af9c70b4f4b2a9178294f1bc6",
-          "version": "5.0.1"
         }
       },
       {

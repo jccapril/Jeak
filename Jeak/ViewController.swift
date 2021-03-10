@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SnapKit
+//import SnapKit
 import Center
 
 
@@ -16,15 +16,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+            
         button.setTitle("HelloWord", for: .normal)
+        button.frame = CGRect(x: 50, y: 100, width: 100, height: 50)
+//        button.frame(forAlignmentRect: CGRect(x: 50, y: 100, width: 100, height: 50))
         button.addTarget(self, action: #selector(helloWorld(sender:)), for: .touchUpInside)
         self.view.addSubview(button)
-        button.snp.makeConstraints {
-            $0.width.equalTo(100)
-            $0.height.equalTo(50)
-            $0.center.equalToSuperview()
-        }
+//        button.snp.makeConstraints {
+//            $0.width.equalTo(100)
+//            $0.height.equalTo(50)
+//            $0.center.equalToSuperview()
+//        }
   
     }
 
