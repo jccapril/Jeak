@@ -10,14 +10,13 @@ import SnapKit
 import Center
 //import RxSwift
 //import RxCocoa
+import Toast
 
 /**
  
  RxSwift 文档
  https://beeth0ven.github.io/RxSwift-Chinese-Documentation/
  */
-
-
 
 class ViewController: UIViewController {
     
@@ -40,16 +39,22 @@ class ViewController: UIViewController {
 
     @objc
     func helloWorld(sender:UIButton) {
-        
+        self.view.makeToastActivity(.center)
         UserCenter.login(mobile:"18301787178" , password: "123123") { (result) in
+            self.view.hideToastActivity()
             switch result {
             case .success(let response):
                 if response.errCode == 0 {
                     print("Call Status : \(response)")
+                    self.view.makeToast("SUCCESS", duration: 1.0, position: .center)
+                }else {
+                    self.view.makeToast("FAILURE", duration: 1.0, position: .center)
                 }
+                
             
             case .failure(let error):
                 print("Call Failed With Error : \(error)")
+                self.view.makeToast("FAILURE", duration: 1.0, position: .center)
                 break
             }
         }

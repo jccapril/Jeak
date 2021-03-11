@@ -108,6 +108,15 @@
           "revision": "e1904bf5a5f79cb7e0ff68a427a53a93b652fcd1",
           "version": "1.15.0"
         }
+      },
+      {
+        "package": "Toast",
+        "repositoryURL": "https://gitee.com/jlab/Toast-Swift.git",
+        "state": {
+          "branch": null,
+          "revision": "0c9493eeacb102cc614da385cfaaf475379f4ab4",
+          "version": "5.0.1"
+        }
       }
     ]
   },

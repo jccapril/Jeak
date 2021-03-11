@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092C8CA625FA572300B904D6 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 092C8CA525FA572300B904D6 /* Toast */; };
 		C0AB3B3425F9F220007C36AD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0AB3B3325F9F220007C36AD /* SnapKit */; };
 		C0AB3B3725F9F2B7007C36AD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C0AB3B3625F9F2B7007C36AD /* RxSwift */; };
 		C0AB3B3925F9F2B7007C36AD /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = C0AB3B3825F9F2B7007C36AD /* RxRelay */; };
@@ -28,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				092C8CA625FA572300B904D6 /* Toast in Frameworks */,
 				C0AB3B3925F9F2B7007C36AD /* RxRelay in Frameworks */,
 				C0AB3B3725F9F2B7007C36AD /* RxSwift in Frameworks */,
 				C0AB3B3B25F9F2B7007C36AD /* RxCocoa in Frameworks */,
@@ -106,6 +108,7 @@
 				C0AB3B3825F9F2B7007C36AD /* RxRelay */,
 				C0AB3B3A25F9F2B7007C36AD /* RxCocoa */,
 				C0AB3B3C25F9F2B7007C36AD /* RxBlocking */,
+				092C8CA525FA572300B904D6 /* Toast */,
 			);
 			productName = UICore;
 			productReference = C0AB3B1B25F9F170007C36AD /* UICore.framework */;
@@ -137,6 +140,7 @@
 			packageReferences = (
 				C0AB3B3225F9F220007C36AD /* XCRemoteSwiftPackageReference "SnapKit" */,
 				C0AB3B3525F9F2B7007C36AD /* XCRemoteSwiftPackageReference "RxSwift" */,
+				092C8CA425FA572300B904D6 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = C0AB3B1C25F9F170007C36AD /* Products */;
 			projectDirPath = "";
@@ -369,6 +373,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		092C8CA425FA572300B904D6 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/jlab/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 		C0AB3B3225F9F220007C36AD /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://gitee.com/jlab/SnapKit.git";
@@ -388,6 +400,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		092C8CA525FA572300B904D6 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 092C8CA425FA572300B904D6 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
 		C0AB3B3325F9F220007C36AD /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C0AB3B3225F9F220007C36AD /* XCRemoteSwiftPackageReference "SnapKit" */;

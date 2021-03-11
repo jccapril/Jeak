@@ -7,11 +7,9 @@
 
 import UICore
 
-
-
 private extension Application {
-    static let mainViewController: ViewController = {
-        ViewController()
+    static let mainViewController: MainViewController = {
+        MainViewController()
     }()
 
     static let window: UIWindow = {
@@ -27,7 +25,7 @@ public extension Application {
     static func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> UIWindow {
         bootstrap()
         setup()
-       
+        
         window.makeKeyAndVisible()
         return window
     }
