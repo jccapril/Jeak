@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		092C8CA625FA572300B904D6 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 092C8CA525FA572300B904D6 /* Toast */; };
+		C02B9E8725FB0631007DADA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8625FB0631007DADA7 /* ViewController.swift */; };
 		C0AB3B3425F9F220007C36AD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0AB3B3325F9F220007C36AD /* SnapKit */; };
 		C0AB3B3725F9F2B7007C36AD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C0AB3B3625F9F2B7007C36AD /* RxSwift */; };
 		C0AB3B3925F9F2B7007C36AD /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = C0AB3B3825F9F2B7007C36AD /* RxRelay */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C02B9E8625FB0631007DADA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C0AB3B1B25F9F170007C36AD /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AB3B1F25F9F170007C36AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0AB3B3F25F9F2D6007C36AD /* Exported.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C02B9E8425FB05F9007DADA7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C02B9E8625FB0631007DADA7 /* ViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		C0AB3B1125F9F170007C36AD = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +79,7 @@
 		C0AB3B3125F9F20D007C36AD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C02B9E8425FB05F9007DADA7 /* Base */,
 				C0AB3B3F25F9F2D6007C36AD /* Exported.swift */,
 				C0AB3B6325F9F607007C36AD /* Application.swift */,
 			);
@@ -166,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02B9E8725FB0631007DADA7 /* ViewController.swift in Sources */,
 				C0AB3B6425F9F607007C36AD /* Application.swift in Sources */,
 				C0AB3B4025F9F2D6007C36AD /* Exported.swift in Sources */,
 			);

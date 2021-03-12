@@ -8,8 +8,8 @@
 import UICore
 
 private extension Application {
-    static let mainViewController: MainViewController = {
-        MainViewController()
+    static let mainViewController: UINavigationController = {
+        UINavigationController(rootViewController:ExampleMainViewController())
     }()
 
     static let window: UIWindow = {

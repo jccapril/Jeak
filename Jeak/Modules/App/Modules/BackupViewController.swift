@@ -5,20 +5,13 @@
 //  Created by Flutter on 2021/3/5.
 //
 
-import UIKit
-import SnapKit
+import UICore
 import Center
-//import RxSwift
-//import RxCocoa
 import Toast
 
-/**
- 
- RxSwift 文档
- https://beeth0ven.github.io/RxSwift-Chinese-Documentation/
- */
 
-class ViewController: UIViewController {
+
+class BackupViewController: ViewController {
     
     lazy var button = UIButton(type: .system)
     override func viewDidLoad() {

@@ -8,12 +8,10 @@
 import UICore
 
 // https://www.jianshu.com/p/eeba45a94137
-class MainViewController: UIViewController {
+class MainViewController: ViewController {
     
     let reuserId = "cell"
-    var infoViewModel = InfoViewModel()
     
-    var disposeBag: DisposeBag = DisposeBag()
     
     lazy var tableView: UITableView = {
         let lazy = UITableView(frame: .zero, style: .plain)
@@ -27,7 +25,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        view.backgroundColor = .white
+
         view.addSubview(tableView)
         tableView.snp.makeConstraints{
             $0.leading.trailing.equalToSuperview()
@@ -35,8 +33,7 @@ class MainViewController: UIViewController {
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
         
-        infoViewModel.add()
-        let items = Observable.just(infoViewModel.arr)
+        let items = Observable.just(InfoViewModel().arr)
         
         
         
@@ -46,8 +43,7 @@ class MainViewController: UIViewController {
                 
             }
             .disposed(by: disposeBag)
-        
-        tableView.isEditing = true
+    
         
         tableView.rx.itemSelected
             .subscribe(onNext: { indexPath in
@@ -66,7 +62,6 @@ class MainViewController: UIViewController {
         tableView.rx.itemDeleted
                     .subscribe(onNext: { (indexPath) in
                         print("删除 \(indexPath)")
-                        self.infoViewModel.remove(at: indexPath.row)
                     })
                     .disposed(by: disposeBag)
 
@@ -84,17 +79,15 @@ struct DataModel {
     let nameStr:String
 }
 
-class InfoViewModel {
+struct InfoViewModel {
     var arr = Array<DataModel>()
     
-    func add(){
+    init(){
         arr.append(DataModel(despStr: "first", nameStr: "Cooci"))
         arr.append(DataModel(despStr: "2", nameStr: "Gavin"))
         arr.append(DataModel(despStr: "3", nameStr: "James"))
         arr.append(DataModel(despStr: "4", nameStr: "Dean"))
         arr.append(DataModel(despStr: "5", nameStr: "Kody"))
     }
-    func remove(at: Int) {
-        arr.remove(at: at)
-    }
+
 }
