@@ -18,6 +18,7 @@
 		C0AB3B6B25F9F79F007C36AD /* UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3B6A25F9F79F007C36AD /* UICore.framework */; };
 		C0AB3B6C25F9F79F007C36AD /* UICore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3B6A25F9F79F007C36AD /* UICore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0AB3B7025F9F85C007C36AD /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB3B6F25F9F85C007C36AD /* BackupViewController.swift */; };
+		C0BED1E025FF2F8E005A5584 /* RxSwiftFilteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BED1DF25FF2F8E005A5584 /* RxSwiftFilteringViewController.swift */; };
 		C0E2833225FA031900ACAA93 /* Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E2833125FA031900ACAA93 /* Center.framework */; };
 		C0E2833325FA031900ACAA93 /* Center.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0E2833125FA031900ACAA93 /* Center.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		C0AB3B6625F9F753007C36AD /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		C0AB3B6A25F9F79F007C36AD /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AB3B6F25F9F85C007C36AD /* BackupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
+		C0BED1DF25FF2F8E005A5584 /* RxSwiftFilteringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftFilteringViewController.swift; sourceTree = "<group>"; };
 		C0E2833125FA031900ACAA93 /* Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 				C02B9E8D25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift */,
 				C02B9E8F25FB4363007DADA7 /* RandomUserAPI.swift */,
 				C02B9E9525FB5193007DADA7 /* RxSwiftExampleViewController.swift */,
+				C0BED1DF25FF2F8E005A5584 /* RxSwiftFilteringViewController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				C02B9E9025FB4363007DADA7 /* RandomUserAPI.swift in Sources */,
 				092C8CA925FA59A800B904D6 /* MainViewController.swift in Sources */,
 				C0AB3B7025F9F85C007C36AD /* BackupViewController.swift in Sources */,
+				C0BED1E025FF2F8E005A5584 /* RxSwiftFilteringViewController.swift in Sources */,
 				C02B9E8E25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift in Sources */,
 				C02B9E8C25FB1566007DADA7 /* EquatableExampleViewController.swift in Sources */,
 				C02B9E8A25FB1113007DADA7 /* CodableExampleViewController.swift in Sources */,

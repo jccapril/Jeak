@@ -80,6 +80,8 @@ private extension ExampleMainViewController {
                     self.navigationController?.pushViewController(TableViewWithCommandsExampleViewController(), animated: true)
                 }else if(indexPath.row == 3) {
                     self.navigationController?.pushViewController(RxSwiftExampleViewController(), animated: true)
+                }else if(indexPath.row == 4) {
+                    self.navigationController?.pushViewController(RxSwiftFilteringViewController(), animated: true)
                 }
 
             })
@@ -101,6 +103,7 @@ struct ExampleViewModel {
         examples.append(ExampleModel(title:"Codable", target: "CodableExampleViewController"))
         examples.append(ExampleModel(title:"Equatable", target: "EquatableExampleViewController"))
         examples.append(ExampleModel(title:"TableViewWithCommands", target: "TableViewWithCommandsExampleViewController"))
-        examples.append(ExampleModel(title:"RxSwift", target: "RxSwiftExampleViewController"))
+        examples.append(ExampleModel(title:"RxSwift-Observable", target: "RxSwiftExampleViewController"))
+        examples.append(ExampleModel(title:"RxSwift-Filtering", target: "RxSwiftFilteringViewController"))
     }
 }
