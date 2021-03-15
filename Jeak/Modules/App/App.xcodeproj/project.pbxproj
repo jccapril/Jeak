@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		092C8CA925FA59A800B904D6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092C8CA825FA59A800B904D6 /* MainViewController.swift */; };
+		092C8CDA25FF943100B904D6 /* RxSwiftSubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092C8CD925FF943100B904D6 /* RxSwiftSubjectViewController.swift */; };
+		092C8CDC25FF9ED700B904D6 /* RxSwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092C8CDB25FF9ED700B904D6 /* RxSwiftUIViewController.swift */; };
+		092C8CDE25FFA59E00B904D6 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092C8CDD25FFA59E00B904D6 /* Operators.swift */; };
 		C02B9E6D25FB0485007DADA7 /* ExampleMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E6C25FB0485007DADA7 /* ExampleMainViewController.swift */; };
 		C02B9E8A25FB1113007DADA7 /* CodableExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8925FB1113007DADA7 /* CodableExampleViewController.swift */; };
 		C02B9E8C25FB1566007DADA7 /* EquatableExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8B25FB1566007DADA7 /* EquatableExampleViewController.swift */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		092C8CA825FA59A800B904D6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		092C8CD925FF943100B904D6 /* RxSwiftSubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftSubjectViewController.swift; sourceTree = "<group>"; };
+		092C8CDB25FF9ED700B904D6 /* RxSwiftUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftUIViewController.swift; sourceTree = "<group>"; };
+		092C8CDD25FFA59E00B904D6 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		C02B9E6C25FB0485007DADA7 /* ExampleMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleMainViewController.swift; sourceTree = "<group>"; };
 		C02B9E8925FB1113007DADA7 /* CodableExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExampleViewController.swift; sourceTree = "<group>"; };
 		C02B9E8B25FB1566007DADA7 /* EquatableExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableExampleViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +94,8 @@
 				C02B9E8F25FB4363007DADA7 /* RandomUserAPI.swift */,
 				C02B9E9525FB5193007DADA7 /* RxSwiftExampleViewController.swift */,
 				C0BED1DF25FF2F8E005A5584 /* RxSwiftFilteringViewController.swift */,
+				092C8CD925FF943100B904D6 /* RxSwiftSubjectViewController.swift */,
+				092C8CDB25FF9ED700B904D6 /* RxSwiftUIViewController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				C0AB3B6625F9F753007C36AD /* Application.swift */,
+				092C8CDD25FFA59E00B904D6 /* Operators.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -215,13 +224,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				092C8CDC25FF9ED700B904D6 /* RxSwiftUIViewController.swift in Sources */,
 				C02B9E9025FB4363007DADA7 /* RandomUserAPI.swift in Sources */,
 				092C8CA925FA59A800B904D6 /* MainViewController.swift in Sources */,
 				C0AB3B7025F9F85C007C36AD /* BackupViewController.swift in Sources */,
+				092C8CDA25FF943100B904D6 /* RxSwiftSubjectViewController.swift in Sources */,
 				C0BED1E025FF2F8E005A5584 /* RxSwiftFilteringViewController.swift in Sources */,
 				C02B9E8E25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift in Sources */,
 				C02B9E8C25FB1566007DADA7 /* EquatableExampleViewController.swift in Sources */,
 				C02B9E8A25FB1113007DADA7 /* CodableExampleViewController.swift in Sources */,
+				092C8CDE25FFA59E00B904D6 /* Operators.swift in Sources */,
 				C02B9E6D25FB0485007DADA7 /* ExampleMainViewController.swift in Sources */,
 				C0AB3B6725F9F753007C36AD /* Application.swift in Sources */,
 				C02B9E9625FB5193007DADA7 /* RxSwiftExampleViewController.swift in Sources */,

@@ -82,6 +82,10 @@ private extension ExampleMainViewController {
                     self.navigationController?.pushViewController(RxSwiftExampleViewController(), animated: true)
                 }else if(indexPath.row == 4) {
                     self.navigationController?.pushViewController(RxSwiftFilteringViewController(), animated: true)
+                }else if(indexPath.row == 5) {
+                    self.navigationController?.pushViewController(RxSwiftSubjectViewController(), animated: true)
+                }else if(indexPath.row == 6) {
+                    self.navigationController?.pushViewController(RxSwiftUIViewController(), animated: true)
                 }
 
             })
@@ -105,5 +109,7 @@ struct ExampleViewModel {
         examples.append(ExampleModel(title:"TableViewWithCommands", target: "TableViewWithCommandsExampleViewController"))
         examples.append(ExampleModel(title:"RxSwift-Observable", target: "RxSwiftExampleViewController"))
         examples.append(ExampleModel(title:"RxSwift-Filtering", target: "RxSwiftFilteringViewController"))
+        examples.append(ExampleModel(title:"RxSwift-Subject", target: "RxSwiftSubjectViewController"))
+        examples.append(ExampleModel(title: "RxSwift-UI", target: "RxSwiftUIViewController"))
     }
 }
