@@ -17,6 +17,13 @@
 		C02B9E8E25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8D25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift */; };
 		C02B9E9025FB4363007DADA7 /* RandomUserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8F25FB4363007DADA7 /* RandomUserAPI.swift */; };
 		C02B9E9625FB5193007DADA7 /* RxSwiftExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E9525FB5193007DADA7 /* RxSwiftExampleViewController.swift */; };
+		C09D3E5D26009FB300EDC0F9 /* JKDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D3E5C26009FB300EDC0F9 /* JKDashboardViewController.swift */; };
+		C09D3E602600A25600EDC0F9 /* JKLotteryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D3E5F2600A25600EDC0F9 /* JKLotteryListViewController.swift */; };
+		C09D3E8F2600A4AF00EDC0F9 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09D3E8E2600A4AF00EDC0F9 /* Service.framework */; };
+		C09D3E902600A4AF00EDC0F9 /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C09D3E8E2600A4AF00EDC0F9 /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C09D3E922600A51600EDC0F9 /* JKLotteryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D3E912600A51600EDC0F9 /* JKLotteryTableViewCell.swift */; };
+		C09D3E982600A74600EDC0F9 /* JKLotteryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D3E972600A74600EDC0F9 /* JKLotteryListViewModel.swift */; };
+		C09D3E9A2600A99C00EDC0F9 /* JKLottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D3E992600A99C00EDC0F9 /* JKLottery.swift */; };
 		C0AB3B6725F9F753007C36AD /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB3B6625F9F753007C36AD /* Application.swift */; };
 		C0AB3B6B25F9F79F007C36AD /* UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3B6A25F9F79F007C36AD /* UICore.framework */; };
 		C0AB3B6C25F9F79F007C36AD /* UICore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3B6A25F9F79F007C36AD /* UICore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -33,6 +40,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C09D3E902600A4AF00EDC0F9 /* Service.framework in Embed Frameworks */,
 				C0AB3B6C25F9F79F007C36AD /* UICore.framework in Embed Frameworks */,
 				C0E2833325FA031900ACAA93 /* Center.framework in Embed Frameworks */,
 			);
@@ -52,6 +60,12 @@
 		C02B9E8D25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWithCommandsExampleViewController.swift; sourceTree = "<group>"; };
 		C02B9E8F25FB4363007DADA7 /* RandomUserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserAPI.swift; sourceTree = "<group>"; };
 		C02B9E9525FB5193007DADA7 /* RxSwiftExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftExampleViewController.swift; sourceTree = "<group>"; };
+		C09D3E5C26009FB300EDC0F9 /* JKDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKDashboardViewController.swift; sourceTree = "<group>"; };
+		C09D3E5F2600A25600EDC0F9 /* JKLotteryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKLotteryListViewController.swift; sourceTree = "<group>"; };
+		C09D3E8E2600A4AF00EDC0F9 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C09D3E912600A51600EDC0F9 /* JKLotteryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKLotteryTableViewCell.swift; sourceTree = "<group>"; };
+		C09D3E972600A74600EDC0F9 /* JKLotteryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKLotteryListViewModel.swift; sourceTree = "<group>"; };
+		C09D3E992600A99C00EDC0F9 /* JKLottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKLottery.swift; sourceTree = "<group>"; };
 		C0AB3B4D25F9F3D3007C36AD /* App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AB3B5125F9F3D3007C36AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0AB3B6625F9F753007C36AD /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
@@ -66,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C09D3E8F2600A4AF00EDC0F9 /* Service.framework in Frameworks */,
 				C0AB3B6B25F9F79F007C36AD /* UICore.framework in Frameworks */,
 				C0E2833225FA031900ACAA93 /* Center.framework in Frameworks */,
 			);
@@ -77,6 +92,9 @@
 		092C8C9F25FA565300B904D6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C09D3E5E2600A1F100EDC0F9 /* Lottery */,
+				C09D3E5B26009ED100EDC0F9 /* Dashboard */,
+				C09D3E5A26009E5500EDC0F9 /* Main */,
 				C02B9E6B25FB043B007DADA7 /* Example */,
 				C0AB3B6F25F9F85C007C36AD /* BackupViewController.swift */,
 				092C8CA825FA59A800B904D6 /* MainViewController.swift */,
@@ -98,6 +116,32 @@
 				092C8CDB25FF9ED700B904D6 /* RxSwiftUIViewController.swift */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		C09D3E5A26009E5500EDC0F9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C09D3E5B26009ED100EDC0F9 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				C09D3E5C26009FB300EDC0F9 /* JKDashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		C09D3E5E2600A1F100EDC0F9 /* Lottery */ = {
+			isa = PBXGroup;
+			children = (
+				C09D3E5F2600A25600EDC0F9 /* JKLotteryListViewController.swift */,
+				C09D3E912600A51600EDC0F9 /* JKLotteryTableViewCell.swift */,
+				C09D3E972600A74600EDC0F9 /* JKLotteryListViewModel.swift */,
+				C09D3E992600A99C00EDC0F9 /* JKLottery.swift */,
+			);
+			path = Lottery;
 			sourceTree = "<group>";
 		};
 		C0AB3B4325F9F3D3007C36AD = {
@@ -139,6 +183,7 @@
 		C0AB3B6925F9F79F007C36AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C09D3E8E2600A4AF00EDC0F9 /* Service.framework */,
 				C0E2833125FA031900ACAA93 /* Center.framework */,
 				C0AB3B6A25F9F79F007C36AD /* UICore.framework */,
 			);
@@ -225,6 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				092C8CDC25FF9ED700B904D6 /* RxSwiftUIViewController.swift in Sources */,
+				C09D3E5D26009FB300EDC0F9 /* JKDashboardViewController.swift in Sources */,
+				C09D3E9A2600A99C00EDC0F9 /* JKLottery.swift in Sources */,
+				C09D3E922600A51600EDC0F9 /* JKLotteryTableViewCell.swift in Sources */,
 				C02B9E9025FB4363007DADA7 /* RandomUserAPI.swift in Sources */,
 				092C8CA925FA59A800B904D6 /* MainViewController.swift in Sources */,
 				C0AB3B7025F9F85C007C36AD /* BackupViewController.swift in Sources */,
@@ -234,9 +282,11 @@
 				C02B9E8C25FB1566007DADA7 /* EquatableExampleViewController.swift in Sources */,
 				C02B9E8A25FB1113007DADA7 /* CodableExampleViewController.swift in Sources */,
 				092C8CDE25FFA59E00B904D6 /* Operators.swift in Sources */,
+				C09D3E602600A25600EDC0F9 /* JKLotteryListViewController.swift in Sources */,
 				C02B9E6D25FB0485007DADA7 /* ExampleMainViewController.swift in Sources */,
 				C0AB3B6725F9F753007C36AD /* Application.swift in Sources */,
 				C02B9E9625FB5193007DADA7 /* RxSwiftExampleViewController.swift in Sources */,
+				C09D3E982600A74600EDC0F9 /* JKLotteryListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

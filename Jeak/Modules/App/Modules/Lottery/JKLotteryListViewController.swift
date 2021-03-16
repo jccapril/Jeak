@@ -1,0 +1,73 @@
+//
+//  LotteryListViewController.swift
+//  App
+//
+//  Created by Flutter on 2021/3/16.
+//
+
+import UICore
+import Standard
+
+class JKLotteryListViewController: ViewController {
+    
+    lazy var tableView: UITableView = {
+        let lazy = UITableView(frame: .zero, style: .plain)
+        lazy.separatorStyle = .none
+        lazy.backgroundColor = .white
+        lazy.register(JKLotteryTableViewCell.self, forCellReuseIdentifier: JKLotteryTableViewCell.cellID)
+        return lazy
+    }()
+    
+    
+    lazy var segment: UISegmentedControl = {
+        let lazy = UISegmentedControl(items: ["SSQ","DLT"])
+        lazy.selectedSegmentIndex = 0
+        return lazy
+    }()
+    
+}
+
+// MARK: - Override
+
+extension JKLotteryListViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        setup()
+        
+        let viewModel = JKLotteryListViewModel(type: segment.rx.selectedSegmentIndex.asDriver())
+        
+        viewModel.lotteryType.drive(onNext: { type  in
+            print(type)
+        }).disposed(by: disposeBag)
+    }
+    
+}
+
+
+private extension JKLotteryListViewController {
+    
+    
+    func setup() {
+        
+        view.addSubview(segment)
+        segment.snp.makeConstraints {
+            $0.height.equalTo(50)
+            $0.width.equalTo(180)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            $0.centerX.equalToSuperview()
+        }
+        
+    }
+    
+    func mockDataSource() -> [JKLottery] {
+        var mock = [JKLottery]()
+        mock.append(JKLotterySSQ(red: "1,2,3,4,5,6", blue: "1"))
+        mock.append(JKLotterySSQ(red: "11,12,13,14,15,16", blue: "2"))
+        mock.append(JKLotterySSQ(red: "21,22,23,24,25,26", blue: "3"))
+        return mock
+    }
+    
+}

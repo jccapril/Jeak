@@ -8,8 +8,12 @@
 import UICore
 
 private extension Application {
-    static let mainViewController: UINavigationController = {
-        UINavigationController(rootViewController:ExampleMainViewController())
+//    static let mainViewController: UINavigationController = {
+//        UINavigationController(rootViewController:ExampleMainViewController())
+//    }()
+    
+    static let mainViewController: JKLotteryListViewController = {
+        JKLotteryListViewController()
     }()
 
     static let window: UIWindow = {

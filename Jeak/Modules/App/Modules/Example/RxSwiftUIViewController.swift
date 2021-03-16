@@ -60,11 +60,9 @@ extension RxSwiftUIViewController {
         let text = BehaviorRelay(value: "jcc")
         _ = textTF.rx.textInput <-> text
         
-        
         btn.rx.controlEvent(.touchUpInside).subscribe(onNext: { [weak self] in
             self?.view.backgroundColor = .orange
             print("点击了\(text.value)")
-            
         }).disposed(by: disposeBag)
         
     }
