@@ -11,7 +11,6 @@ import RxCocoa
 
 class JKLotteryListViewModel {
     
-
     
     let lotteryType: Driver<JKLotteryType>
 //    let lotteryList: [JKLottery]

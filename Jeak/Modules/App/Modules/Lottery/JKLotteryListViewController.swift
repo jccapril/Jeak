@@ -10,6 +10,8 @@ import Standard
 
 class JKLotteryListViewController: ViewController {
     
+    var jkType: JKLotteryType = .ssq
+    
     lazy var tableView: UITableView = {
         let lazy = UITableView(frame: .zero, style: .plain)
         lazy.separatorStyle = .none
@@ -39,8 +41,9 @@ extension JKLotteryListViewController {
         
         let viewModel = JKLotteryListViewModel(type: segment.rx.selectedSegmentIndex.asDriver())
         
-        viewModel.lotteryType.drive(onNext: { type  in
-            print(type)
+        viewModel.lotteryType.drive(onNext: { [weak self] type  in
+            self?.jkType = type
+            print(self?.jkType ?? .ssq)
         }).disposed(by: disposeBag)
     }
     
