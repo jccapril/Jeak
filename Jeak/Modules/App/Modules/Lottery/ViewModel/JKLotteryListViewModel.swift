@@ -15,9 +15,9 @@ class JKLotteryListViewModel {
     let lotteryType: Driver<JKLotteryType>
 //    let lotteryList: [JKLottery]
     
-    init(type:Driver<Int>) {
+    init(selectedSegmentIndex:Driver<Int>) {
         
-        lotteryType = type.map{ index in
+        lotteryType = selectedSegmentIndex.map{ index in
             return (JKLotteryType.init(rawValue: index) ?? .ssq)
         }
         

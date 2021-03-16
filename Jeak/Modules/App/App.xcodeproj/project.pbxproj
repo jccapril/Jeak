@@ -11,6 +11,7 @@
 		092C8CDA25FF943100B904D6 /* RxSwiftSubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092C8CD925FF943100B904D6 /* RxSwiftSubjectViewController.swift */; };
 		092C8CDC25FF9ED700B904D6 /* RxSwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092C8CDB25FF9ED700B904D6 /* RxSwiftUIViewController.swift */; };
 		092C8CDE25FFA59E00B904D6 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092C8CDD25FFA59E00B904D6 /* Operators.swift */; };
+		092C8CE82600E52000B904D6 /* JKSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092C8CE72600E52000B904D6 /* JKSegmentControl.swift */; };
 		C02B9E6D25FB0485007DADA7 /* ExampleMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E6C25FB0485007DADA7 /* ExampleMainViewController.swift */; };
 		C02B9E8A25FB1113007DADA7 /* CodableExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8925FB1113007DADA7 /* CodableExampleViewController.swift */; };
 		C02B9E8C25FB1566007DADA7 /* EquatableExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8B25FB1566007DADA7 /* EquatableExampleViewController.swift */; };
@@ -54,6 +55,7 @@
 		092C8CD925FF943100B904D6 /* RxSwiftSubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftSubjectViewController.swift; sourceTree = "<group>"; };
 		092C8CDB25FF9ED700B904D6 /* RxSwiftUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftUIViewController.swift; sourceTree = "<group>"; };
 		092C8CDD25FFA59E00B904D6 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		092C8CE72600E52000B904D6 /* JKSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKSegmentControl.swift; sourceTree = "<group>"; };
 		C02B9E6C25FB0485007DADA7 /* ExampleMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleMainViewController.swift; sourceTree = "<group>"; };
 		C02B9E8925FB1113007DADA7 /* CodableExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExampleViewController.swift; sourceTree = "<group>"; };
 		C02B9E8B25FB1566007DADA7 /* EquatableExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableExampleViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,39 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		092C8CE32600E4C400B904D6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C09D3E972600A74600EDC0F9 /* JKLotteryListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		092C8CE42600E4D100B904D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C09D3E992600A99C00EDC0F9 /* JKLottery.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		092C8CE52600E4DA00B904D6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C09D3E5F2600A25600EDC0F9 /* JKLotteryListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		092C8CE62600E4E500B904D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C09D3E912600A51600EDC0F9 /* JKLotteryTableViewCell.swift */,
+				092C8CE72600E52000B904D6 /* JKSegmentControl.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C02B9E6B25FB043B007DADA7 /* Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,10 +171,10 @@
 		C09D3E5E2600A1F100EDC0F9 /* Lottery */ = {
 			isa = PBXGroup;
 			children = (
-				C09D3E5F2600A25600EDC0F9 /* JKLotteryListViewController.swift */,
-				C09D3E912600A51600EDC0F9 /* JKLotteryTableViewCell.swift */,
-				C09D3E972600A74600EDC0F9 /* JKLotteryListViewModel.swift */,
-				C09D3E992600A99C00EDC0F9 /* JKLottery.swift */,
+				092C8CE62600E4E500B904D6 /* View */,
+				092C8CE52600E4DA00B904D6 /* ViewController */,
+				092C8CE42600E4D100B904D6 /* Model */,
+				092C8CE32600E4C400B904D6 /* ViewModel */,
 			);
 			path = Lottery;
 			sourceTree = "<group>";
@@ -273,6 +308,7 @@
 				C09D3E5D26009FB300EDC0F9 /* JKDashboardViewController.swift in Sources */,
 				C09D3E9A2600A99C00EDC0F9 /* JKLottery.swift in Sources */,
 				C09D3E922600A51600EDC0F9 /* JKLotteryTableViewCell.swift in Sources */,
+				092C8CE82600E52000B904D6 /* JKSegmentControl.swift in Sources */,
 				C02B9E9025FB4363007DADA7 /* RandomUserAPI.swift in Sources */,
 				092C8CA925FA59A800B904D6 /* MainViewController.swift in Sources */,
 				C0AB3B7025F9F85C007C36AD /* BackupViewController.swift in Sources */,

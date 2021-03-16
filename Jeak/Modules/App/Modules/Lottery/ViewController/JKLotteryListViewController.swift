@@ -21,9 +21,8 @@ class JKLotteryListViewController: ViewController {
     }()
     
     
-    lazy var segment: UISegmentedControl = {
-        let lazy = UISegmentedControl(items: ["SSQ","DLT"])
-        lazy.selectedSegmentIndex = 0
+    lazy var segment: JKSegmentControl = {
+        let lazy = JKSegmentControl(frame: CGRect.zero, items: ["双色球","大乐透"])
         return lazy
     }()
     
@@ -39,12 +38,14 @@ extension JKLotteryListViewController {
         // Do any additional setup after loading the view.
         setup()
         
-        let viewModel = JKLotteryListViewModel(type: segment.rx.selectedSegmentIndex.asDriver())
+        /*
+        let viewModel = JKLotteryListViewModel(selectedSegmentIndex: segment.rx.selectedSegmentIndex.asDriver())
         
         viewModel.lotteryType.drive(onNext: { [weak self] type  in
             self?.jkType = type
             print(self?.jkType ?? .ssq)
         }).disposed(by: disposeBag)
+ */
     }
     
 }
@@ -57,8 +58,9 @@ private extension JKLotteryListViewController {
         
         view.addSubview(segment)
         segment.snp.makeConstraints {
-            $0.height.equalTo(50)
-            $0.width.equalTo(180)
+            $0.height.equalTo(44)
+            $0.leading.equalTo(50)
+            $0.trailing.equalTo(-50)
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             $0.centerX.equalToSuperview()
         }
