@@ -22,7 +22,13 @@ class JKLotteryListViewController: ViewController {
     
     
     lazy var segment: JKSegmentControl = {
-        let lazy = JKSegmentControl(frame: CGRect.zero, items: ["双色球","大乐透"])
+        let lazy = JKSegmentControl(items: ["双色球","大乐透"])
+//        lazy.delegate = self
+        return lazy
+    }()
+    
+    lazy var sss: UISegmentedControl = {
+        let lazy = UISegmentedControl(items: ["a","b","c"])
         return lazy
     }()
     
@@ -38,14 +44,28 @@ extension JKLotteryListViewController {
         // Do any additional setup after loading the view.
         setup()
         
-        /*
-        let viewModel = JKLotteryListViewModel(selectedSegmentIndex: segment.rx.selectedSegmentIndex.asDriver())
+        
+        let viewModel = JKLotteryListViewModel(selectedSegmentIndex: segment.rx.selectedIndex.asDriver())
         
         viewModel.lotteryType.drive(onNext: { [weak self] type  in
             self?.jkType = type
             print(self?.jkType ?? .ssq)
         }).disposed(by: disposeBag)
- */
+        
+        
+        view.addSubview(sss)
+        sss.snp.makeConstraints {
+            $0.width.equalTo(100)
+            $0.height.equalTo(50)
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(100)
+        }
+        sss.rx.controlEvent(.valueChanged).subscribe(onNext: { (event) in
+            
+            print(event)
+            
+        }).disposed(by: disposeBag)
+        
     }
     
 }
@@ -65,6 +85,33 @@ private extension JKLotteryListViewController {
             $0.centerX.equalToSuperview()
         }
         
+        
+
+        let btn = UIButton(type: .system)
+        btn.setTitle("Test", for: .normal)
+        view.addSubview(btn)
+        
+        btn.snp.makeConstraints {
+            $0.width.equalTo(100)
+            $0.height.equalTo(40)
+            $0.center.equalToSuperview()
+        }
+        
+        btn.rx.controlEvent(.touchUpInside).subscribe(onNext: { [weak self] event in
+            if self?.segment.selectedIndex == 1 {
+                self?.segment.selectedIndex = 0
+            }else {
+                self?.segment.selectedIndex = 1
+            }
+            
+            self?.sss.selectedSegmentIndex = 1
+            
+        }).disposed(by: disposeBag)
+        
+        
+        
+        
+        
     }
     
     func mockDataSource() -> [JKLottery] {
@@ -76,3 +123,4 @@ private extension JKLotteryListViewController {
     }
     
 }
+

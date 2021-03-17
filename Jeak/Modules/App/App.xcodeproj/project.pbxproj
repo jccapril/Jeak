@@ -12,6 +12,8 @@
 		092C8CDC25FF9ED700B904D6 /* RxSwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092C8CDB25FF9ED700B904D6 /* RxSwiftUIViewController.swift */; };
 		092C8CDE25FFA59E00B904D6 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092C8CDD25FFA59E00B904D6 /* Operators.swift */; };
 		092C8CE82600E52000B904D6 /* JKSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092C8CE72600E52000B904D6 /* JKSegmentControl.swift */; };
+		C0036C932601DA8C00807550 /* JKSegmentControl+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0036C922601DA8C00807550 /* JKSegmentControl+rx.swift */; };
+		C0036C972601F90B00807550 /* JKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0036C962601F90B00807550 /* JKView.swift */; };
 		C02B9E6D25FB0485007DADA7 /* ExampleMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E6C25FB0485007DADA7 /* ExampleMainViewController.swift */; };
 		C02B9E8A25FB1113007DADA7 /* CodableExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8925FB1113007DADA7 /* CodableExampleViewController.swift */; };
 		C02B9E8C25FB1566007DADA7 /* EquatableExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8B25FB1566007DADA7 /* EquatableExampleViewController.swift */; };
@@ -56,6 +58,8 @@
 		092C8CDB25FF9ED700B904D6 /* RxSwiftUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftUIViewController.swift; sourceTree = "<group>"; };
 		092C8CDD25FFA59E00B904D6 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		092C8CE72600E52000B904D6 /* JKSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKSegmentControl.swift; sourceTree = "<group>"; };
+		C0036C922601DA8C00807550 /* JKSegmentControl+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JKSegmentControl+rx.swift"; sourceTree = "<group>"; };
+		C0036C962601F90B00807550 /* JKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKView.swift; sourceTree = "<group>"; };
 		C02B9E6C25FB0485007DADA7 /* ExampleMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleMainViewController.swift; sourceTree = "<group>"; };
 		C02B9E8925FB1113007DADA7 /* CodableExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExampleViewController.swift; sourceTree = "<group>"; };
 		C02B9E8B25FB1566007DADA7 /* EquatableExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableExampleViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 			children = (
 				C09D3E912600A51600EDC0F9 /* JKLotteryTableViewCell.swift */,
 				092C8CE72600E52000B904D6 /* JKSegmentControl.swift */,
+				C0036C922601DA8C00807550 /* JKSegmentControl+rx.swift */,
+				C0036C962601F90B00807550 /* JKView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,10 +316,12 @@
 				C09D3E922600A51600EDC0F9 /* JKLotteryTableViewCell.swift in Sources */,
 				092C8CE82600E52000B904D6 /* JKSegmentControl.swift in Sources */,
 				C02B9E9025FB4363007DADA7 /* RandomUserAPI.swift in Sources */,
+				C0036C972601F90B00807550 /* JKView.swift in Sources */,
 				092C8CA925FA59A800B904D6 /* MainViewController.swift in Sources */,
 				C0AB3B7025F9F85C007C36AD /* BackupViewController.swift in Sources */,
 				092C8CDA25FF943100B904D6 /* RxSwiftSubjectViewController.swift in Sources */,
 				C0BED1E025FF2F8E005A5584 /* RxSwiftFilteringViewController.swift in Sources */,
+				C0036C932601DA8C00807550 /* JKSegmentControl+rx.swift in Sources */,
 				C02B9E8E25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift in Sources */,
 				C02B9E8C25FB1566007DADA7 /* EquatableExampleViewController.swift in Sources */,
 				C02B9E8A25FB1113007DADA7 /* CodableExampleViewController.swift in Sources */,

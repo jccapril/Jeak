@@ -22,6 +22,7 @@
 		C0AB3B3D25F9F2B7007C36AD /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = C0AB3B3C25F9F2B7007C36AD /* RxBlocking */; };
 		C0AB3B4025F9F2D6007C36AD /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB3B3F25F9F2D6007C36AD /* Exported.swift */; };
 		C0AB3B6425F9F607007C36AD /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB3B6325F9F607007C36AD /* Application.swift */; };
+		C0EF299626019EB40002F1E4 /* Color.Initialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EF299526019EB40002F1E4 /* Color.Initialize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,7 @@
 		C0AB3B1F25F9F170007C36AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0AB3B3F25F9F2D6007C36AD /* Exported.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
 		C0AB3B6325F9F607007C36AD /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		C0EF299526019EB40002F1E4 /* Color.Initialize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.Initialize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,11 +142,20 @@
 		C0AB3B3125F9F20D007C36AD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C0EF299426019E930002F1E4 /* Extension */,
 				C02B9E8425FB05F9007DADA7 /* Base */,
 				C0AB3B3F25F9F2D6007C36AD /* Exported.swift */,
 				C0AB3B6325F9F607007C36AD /* Application.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		C0EF299426019E930002F1E4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C0EF299526019EB40002F1E4 /* Color.Initialize.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +257,7 @@
 				C02B9E8725FB0631007DADA7 /* ViewController.swift in Sources */,
 				C09D3E962600A56900EDC0F9 /* TableViewCell.swift in Sources */,
 				C0AB3B6425F9F607007C36AD /* Application.swift in Sources */,
+				C0EF299626019EB40002F1E4 /* Color.Initialize.swift in Sources */,
 				C0AB3B4025F9F2D6007C36AD /* Exported.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
