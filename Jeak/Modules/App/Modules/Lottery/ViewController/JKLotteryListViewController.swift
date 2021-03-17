@@ -8,6 +8,8 @@
 import UICore
 import Standard
 
+//https://github.com/devxoul/ReusableKit
+
 class JKLotteryListViewController: ViewController {
     
     var jkType: JKLotteryType = .ssq
