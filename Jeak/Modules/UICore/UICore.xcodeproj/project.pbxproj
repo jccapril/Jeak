@@ -15,6 +15,9 @@
 		C09D3E8B2600A39E00EDC0F9 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09D3E8A2600A39E00EDC0F9 /* Service.framework */; };
 		C09D3E8C2600A39E00EDC0F9 /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C09D3E8A2600A39E00EDC0F9 /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C09D3E962600A56900EDC0F9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D3E952600A56900EDC0F9 /* TableViewCell.swift */; };
+		C09E93A426049B7A00E28B84 /* ReusableKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09E93A326049B7A00E28B84 /* ReusableKit.swift */; };
+		C09E93AA2604A5D400E28B84 /* UITableView+ReusableKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09E93A92604A5D300E28B84 /* UITableView+ReusableKit.swift */; };
+		C09E93AC2604A84000E28B84 /* UICollectionView+ReusableKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09E93AB2604A84000E28B84 /* UICollectionView+ReusableKit.swift */; };
 		C0AB3B3425F9F220007C36AD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0AB3B3325F9F220007C36AD /* SnapKit */; };
 		C0AB3B3725F9F2B7007C36AD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C0AB3B3625F9F2B7007C36AD /* RxSwift */; };
 		C0AB3B3925F9F2B7007C36AD /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = C0AB3B3825F9F2B7007C36AD /* RxRelay */; };
@@ -44,6 +47,9 @@
 		C02B9E8625FB0631007DADA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C09D3E8A2600A39E00EDC0F9 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09D3E952600A56900EDC0F9 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C09E93A326049B7A00E28B84 /* ReusableKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableKit.swift; sourceTree = "<group>"; };
+		C09E93A92604A5D300E28B84 /* UITableView+ReusableKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReusableKit.swift"; sourceTree = "<group>"; };
+		C09E93AB2604A84000E28B84 /* UICollectionView+ReusableKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableKit.swift"; sourceTree = "<group>"; };
 		C0AB3B1B25F9F170007C36AD /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AB3B1F25F9F170007C36AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0AB3B3F25F9F2D6007C36AD /* Exported.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 		C02B9E8425FB05F9007DADA7 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C0E1FD2F2603563C006D1375 /* ReusableCell */,
 				09ECE1AA2600ED5F00ADF9EF /* CollectionView */,
 				C09D3E942600A55800EDC0F9 /* TableView */,
 				C09D3E932600A54D00EDC0F9 /* ViewController */,
@@ -148,6 +155,16 @@
 				C0AB3B6325F9F607007C36AD /* Application.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		C0E1FD2F2603563C006D1375 /* ReusableCell */ = {
+			isa = PBXGroup;
+			children = (
+				C09E93A326049B7A00E28B84 /* ReusableKit.swift */,
+				C09E93A92604A5D300E28B84 /* UITableView+ReusableKit.swift */,
+				C09E93AB2604A84000E28B84 /* UICollectionView+ReusableKit.swift */,
+			);
+			path = ReusableCell;
 			sourceTree = "<group>";
 		};
 		C0EF299426019E930002F1E4 /* Extension */ = {
@@ -258,7 +275,10 @@
 				C09D3E962600A56900EDC0F9 /* TableViewCell.swift in Sources */,
 				C0AB3B6425F9F607007C36AD /* Application.swift in Sources */,
 				C0EF299626019EB40002F1E4 /* Color.Initialize.swift in Sources */,
+				C09E93A426049B7A00E28B84 /* ReusableKit.swift in Sources */,
+				C09E93AC2604A84000E28B84 /* UICollectionView+ReusableKit.swift in Sources */,
 				C0AB3B4025F9F2D6007C36AD /* Exported.swift in Sources */,
+				C09E93AA2604A5D400E28B84 /* UITableView+ReusableKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

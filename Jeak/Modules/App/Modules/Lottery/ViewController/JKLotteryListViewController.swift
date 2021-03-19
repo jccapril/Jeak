@@ -14,6 +14,10 @@ class JKLotteryListViewController: ViewController {
     
     var jkType: JKLotteryType = .ssq
     
+    enum Reusable {
+        static let lotteryCell = ReusableCell<JKLotteryTableViewCell>()
+    }
+    
     lazy var tableView: UITableView = {
         let lazy = UITableView(frame: .zero, style: .plain)
         lazy.separatorStyle = .none
@@ -45,6 +49,8 @@ extension JKLotteryListViewController {
 
         // Do any additional setup after loading the view.
         setup()
+        
+        tableView.register(Reusable.lotteryCell)
         
         
         let viewModel = JKLotteryListViewModel(selectedSegmentIndex: segment.rx.selectedIndex.asDriver())
