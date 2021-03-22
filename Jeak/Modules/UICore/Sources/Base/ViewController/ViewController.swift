@@ -27,7 +27,7 @@ public extension ViewController {
 extension ViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        setupUI()
     }
     
 }
@@ -35,7 +35,7 @@ extension ViewController {
 // MARK: - Private
 
 private extension ViewController {
-    func setup() {
+    func setupUI() {
         view.backgroundColor = .white
     }
 }

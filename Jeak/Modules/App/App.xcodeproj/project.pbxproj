@@ -14,12 +14,15 @@
 		092C8CE82600E52000B904D6 /* JKSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092C8CE72600E52000B904D6 /* JKSegmentControl.swift */; };
 		C0036C932601DA8C00807550 /* JKSegmentControl+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0036C922601DA8C00807550 /* JKSegmentControl+rx.swift */; };
 		C0036C972601F90B00807550 /* JKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0036C962601F90B00807550 /* JKView.swift */; };
+		C007163126089C0300336C2A /* JKLotteryRankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007163026089C0300336C2A /* JKLotteryRankTableViewCell.swift */; };
+		C007163326089C4A00336C2A /* JKCurrentLotteryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007163226089C4A00336C2A /* JKCurrentLotteryHeaderView.swift */; };
 		C02B9E6D25FB0485007DADA7 /* ExampleMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E6C25FB0485007DADA7 /* ExampleMainViewController.swift */; };
 		C02B9E8A25FB1113007DADA7 /* CodableExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8925FB1113007DADA7 /* CodableExampleViewController.swift */; };
 		C02B9E8C25FB1566007DADA7 /* EquatableExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8B25FB1566007DADA7 /* EquatableExampleViewController.swift */; };
 		C02B9E8E25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8D25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift */; };
 		C02B9E9025FB4363007DADA7 /* RandomUserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8F25FB4363007DADA7 /* RandomUserAPI.swift */; };
 		C02B9E9625FB5193007DADA7 /* RxSwiftExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E9525FB5193007DADA7 /* RxSwiftExampleViewController.swift */; };
+		C060418D26089E4D009A393A /* JKLotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C060418C26089E4D009A393A /* JKLotteryViewController.swift */; };
 		C09D3E5D26009FB300EDC0F9 /* JKDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D3E5C26009FB300EDC0F9 /* JKDashboardViewController.swift */; };
 		C09D3E602600A25600EDC0F9 /* JKLotteryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D3E5F2600A25600EDC0F9 /* JKLotteryListViewController.swift */; };
 		C09D3E8F2600A4AF00EDC0F9 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09D3E8E2600A4AF00EDC0F9 /* Service.framework */; };
@@ -60,12 +63,15 @@
 		092C8CE72600E52000B904D6 /* JKSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKSegmentControl.swift; sourceTree = "<group>"; };
 		C0036C922601DA8C00807550 /* JKSegmentControl+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JKSegmentControl+rx.swift"; sourceTree = "<group>"; };
 		C0036C962601F90B00807550 /* JKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKView.swift; sourceTree = "<group>"; };
+		C007163026089C0300336C2A /* JKLotteryRankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKLotteryRankTableViewCell.swift; sourceTree = "<group>"; };
+		C007163226089C4A00336C2A /* JKCurrentLotteryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKCurrentLotteryHeaderView.swift; sourceTree = "<group>"; };
 		C02B9E6C25FB0485007DADA7 /* ExampleMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleMainViewController.swift; sourceTree = "<group>"; };
 		C02B9E8925FB1113007DADA7 /* CodableExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExampleViewController.swift; sourceTree = "<group>"; };
 		C02B9E8B25FB1566007DADA7 /* EquatableExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableExampleViewController.swift; sourceTree = "<group>"; };
 		C02B9E8D25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWithCommandsExampleViewController.swift; sourceTree = "<group>"; };
 		C02B9E8F25FB4363007DADA7 /* RandomUserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserAPI.swift; sourceTree = "<group>"; };
 		C02B9E9525FB5193007DADA7 /* RxSwiftExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftExampleViewController.swift; sourceTree = "<group>"; };
+		C060418C26089E4D009A393A /* JKLotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKLotteryViewController.swift; sourceTree = "<group>"; };
 		C09D3E5C26009FB300EDC0F9 /* JKDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKDashboardViewController.swift; sourceTree = "<group>"; };
 		C09D3E5F2600A25600EDC0F9 /* JKLotteryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKLotteryListViewController.swift; sourceTree = "<group>"; };
 		C09D3E8E2600A4AF00EDC0F9 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +149,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C007162F26089BAA00336C2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C007163026089C0300336C2A /* JKLotteryRankTableViewCell.swift */,
+				C007163226089C4A00336C2A /* JKCurrentLotteryHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C02B9E6B25FB043B007DADA7 /* Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +174,15 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		C060418B26089E22009A393A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C09D3E5C26009FB300EDC0F9 /* JKDashboardViewController.swift */,
+				C060418C26089E4D009A393A /* JKLotteryViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		C09D3E5A26009E5500EDC0F9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +193,8 @@
 		C09D3E5B26009ED100EDC0F9 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				C09D3E5C26009FB300EDC0F9 /* JKDashboardViewController.swift */,
+				C060418B26089E22009A393A /* ViewController */,
+				C007162F26089BAA00336C2A /* View */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -317,11 +342,14 @@
 				092C8CE82600E52000B904D6 /* JKSegmentControl.swift in Sources */,
 				C02B9E9025FB4363007DADA7 /* RandomUserAPI.swift in Sources */,
 				C0036C972601F90B00807550 /* JKView.swift in Sources */,
+				C060418D26089E4D009A393A /* JKLotteryViewController.swift in Sources */,
 				092C8CA925FA59A800B904D6 /* MainViewController.swift in Sources */,
+				C007163326089C4A00336C2A /* JKCurrentLotteryHeaderView.swift in Sources */,
 				C0AB3B7025F9F85C007C36AD /* BackupViewController.swift in Sources */,
 				092C8CDA25FF943100B904D6 /* RxSwiftSubjectViewController.swift in Sources */,
 				C0BED1E025FF2F8E005A5584 /* RxSwiftFilteringViewController.swift in Sources */,
 				C0036C932601DA8C00807550 /* JKSegmentControl+rx.swift in Sources */,
+				C007163126089C0300336C2A /* JKLotteryRankTableViewCell.swift in Sources */,
 				C02B9E8E25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift in Sources */,
 				C02B9E8C25FB1566007DADA7 /* EquatableExampleViewController.swift in Sources */,
 				C02B9E8A25FB1113007DADA7 /* CodableExampleViewController.swift in Sources */,
