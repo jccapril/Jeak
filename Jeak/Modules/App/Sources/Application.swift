@@ -12,14 +12,16 @@ private extension Application {
 //        UINavigationController(rootViewController:ExampleMainViewController())
 //    }()
     
-    static let mainViewController: JKLotteryListViewController = {
-        JKLotteryListViewController()
+    static let mainViewController: JKDashboardViewController = {
+        JKDashboardViewController()
     }()
 
     static let window: UIWindow = {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.backgroundColor = .white
-        return window
+        UIWindow(frame: UIScreen.main.bounds)
+            .leaf
+            .backgroundColor(.white)
+            .makeKeyAndVisible()
+            .instance
     }()
  
 }
@@ -29,8 +31,6 @@ public extension Application {
     static func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> UIWindow {
         bootstrap()
         setup()
-        
-        window.makeKeyAndVisible()
         return window
     }
 }

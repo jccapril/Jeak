@@ -13,14 +13,14 @@ class JKDashboardViewController: ViewController {
         static let cell = ReusableCell<JKLotteryRankTableViewCell>()
         static let headerView = ReusableView<JKCurrentLotteryHeaderView>()
     }
-    
     lazy var tableView: UITableView = {
-        let lazy = UITableView(frame: .zero, style: .plain)
-        lazy.separatorStyle = .none
-        lazy.backgroundColor = .white
-        lazy.register(Reusable.cell)
-        lazy.register(Reusable.headerView)
-        return lazy
+        UITableView(frame: .zero, style: .plain)
+            .leaf
+            .separatorStyle(.none)
+            .backgroundColor(.white)
+            .register(Reusable.cell)
+            .register(Reusable.headerView)
+            .instance
     }()
     
 }
@@ -35,6 +35,7 @@ extension JKDashboardViewController {
         
         setupUI()
         
+
     }
 }
 
@@ -43,6 +44,12 @@ extension JKDashboardViewController {
 private extension JKDashboardViewController {
     
     func setupUI() {
+        
+        tableView.leaf.add(to: view).snp.makeConstraints {
+            $0.trailing.bottom.leading.equalToSuperview()
+            $0.top.equalTo(Adaptor.safeAreaTopHeight)
+        }
+        
         
     }
     

@@ -97,5 +97,19 @@ extension Reactive where Base: UICollectionView {
 }
 
 
+extension LeafBox where T: UICollectionView {
+    
+    public func register<Cell>(_ cell: ReusableCell<Cell>) -> LeafBox<T>{
+        value.register(cell)
+        return value.leaf
+    }
+    
+    public func register<View>(_ view: ReusableView<View>, kind: SupplementaryViewKind) -> LeafBox<T> {
+        value.register(view, kind: kind)
+        return value.leaf
+    }
+    
+}
+
 
 #endif

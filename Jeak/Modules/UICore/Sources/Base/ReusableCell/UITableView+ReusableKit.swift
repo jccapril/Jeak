@@ -38,11 +38,11 @@ extension UITableView {
     
     // MARK: View
     /// Registers a generic view for use in creating new table header or footer views.
-    public func register<View>(_ cell: ReusableView<View>) {
-        if let nib = cell.nib {
-          self.register(nib, forHeaderFooterViewReuseIdentifier: cell.identifier)
+    public func register<View>(_ view: ReusableView<View>) {
+        if let nib = view.nib {
+          self.register(nib, forHeaderFooterViewReuseIdentifier: view.identifier)
         } else {
-          self.register(View.self, forHeaderFooterViewReuseIdentifier: cell.identifier)
+          self.register(View.self, forHeaderFooterViewReuseIdentifier: view.identifier)
         }
     }
 
@@ -67,6 +67,21 @@ extension Reactive where Base: UITableView {
           return self.items(cellIdentifier: reusableCell.identifier, cellType: Cell.self)(source)(configureCell)
         }
       }
+    }
+    
+}
+
+
+extension LeafBox where T: UITableView {
+    
+    public func register<Cell>(_ cell: ReusableCell<Cell>) -> LeafBox<T>{
+        value.register(cell)
+        return value.leaf
+    }
+    
+    public func register<View>(_ view: ReusableView<View>) -> LeafBox<T> {
+        value.register(view)
+        return value.leaf
     }
     
 }
