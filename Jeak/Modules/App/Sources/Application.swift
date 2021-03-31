@@ -12,8 +12,8 @@ private extension Application {
 //        UINavigationController(rootViewController:ExampleMainViewController())
 //    }()
     
-    static let mainViewController: JKDashboardViewController = {
-        JKDashboardViewController()
+    static let mainViewController: UINavigationController = {
+        UINavigationController(rootViewController: JKMainViewController())
     }()
 
     static let window: UIWindow = {

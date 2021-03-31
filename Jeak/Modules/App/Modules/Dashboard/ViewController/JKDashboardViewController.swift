@@ -23,6 +23,8 @@ class JKDashboardViewController: ViewController {
             .instance
     }()
     
+    public var lotteryType: JKLotteryType = .ssq
+    
 }
 
 // MARK: - Override
@@ -46,10 +48,8 @@ private extension JKDashboardViewController {
     func setupUI() {
         
         tableView.leaf.add(to: view).snp.makeConstraints {
-            $0.trailing.bottom.leading.equalToSuperview()
-            $0.top.equalTo(Adaptor.safeAreaTopHeight)
+            $0.edges.equalToSuperview()
         }
-        
         
     }
     

@@ -25,8 +25,3 @@ class JKLotteryListViewModel {
 }
 
 
-enum JKLotteryType: Int {
-    case ssq = 0
-    case dlt = 1
-
-}

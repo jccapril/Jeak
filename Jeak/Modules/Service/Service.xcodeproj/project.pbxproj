@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		092C8C7E25F9191800B904D6 /* Service.h in Headers */ = {isa = PBXBuildFile; fileRef = 092C8C7C25F9191800B904D6 /* Service.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		092C8C8E25F9196200B904D6 /* Standard in Frameworks */ = {isa = PBXBuildFile; productRef = 092C8C8D25F9196200B904D6 /* Standard */; };
+		C002DA95261474B200B7D2B5 /* JSONCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002DA94261474B200B7D2B5 /* JSONCoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		092C8C7925F9191800B904D6 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		092C8C7C25F9191800B904D6 /* Service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		092C8C7D25F9191800B904D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C002DA94261474B200B7D2B5 /* JSONCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,7 @@
 		092C8C6F25F9191800B904D6 = {
 			isa = PBXGroup;
 			children = (
+				C002DA912614747300B7D2B5 /* Sources */,
 				092C8C9525F91A5300B904D6 /* Resources */,
 				092C8C7B25F9191800B904D6 /* Service */,
 				092C8C7A25F9191800B904D6 /* Products */,
@@ -60,6 +63,22 @@
 				092C8C7D25F9191800B904D6 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C002DA912614747300B7D2B5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C002DA932614748C00B7D2B5 /* JSONCoder */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C002DA932614748C00B7D2B5 /* JSONCoder */ = {
+			isa = PBXGroup;
+			children = (
+				C002DA94261474B200B7D2B5 /* JSONCoder.swift */,
+			);
+			path = JSONCoder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +126,7 @@
 				TargetAttributes = {
 					092C8C7825F9191800B904D6 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -146,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C002DA95261474B200B7D2B5 /* JSONCoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +298,7 @@
 		092C8C8225F9191800B904D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -293,6 +315,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeak.Service;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,6 +324,7 @@
 		092C8C8325F9191800B904D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
