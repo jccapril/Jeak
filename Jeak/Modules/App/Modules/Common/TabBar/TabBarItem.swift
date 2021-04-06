@@ -1,5 +1,5 @@
 //
-//  TabItem.swift
+//  TabBarItem.swift
 //  App
 //
 //  Created by Flutter on 2021/4/6.
@@ -7,7 +7,7 @@
 
 import UICore
 
-enum TabItem: String {
+enum TabBarItem: String {
     case overview = "TabBar.Item.Overview.Title"
     case mine = "TabBar.Item.Mine.Title"
     case setting = "TabBar.Item.Setting.Title"

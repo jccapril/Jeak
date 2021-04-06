@@ -30,6 +30,6 @@ extension OverviewNavigationController {
 
 private extension OverviewNavigationController {
     func setup() {
-        tabBarItem = UITabBarItem(title: TabItem.overview.displayTitle, image: nil, selectedImage: nil)
+        tabBarItem = UITabBarItem(title: TabBarItem.overview.displayTitle, image: nil, selectedImage: nil)
     }
 }

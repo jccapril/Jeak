@@ -32,6 +32,6 @@ extension MineNavigationController {
 
 private extension MineNavigationController {
     func setup() {
-        tabBarItem = UITabBarItem(title: TabItem.mine.displayTitle, image: nil, selectedImage: nil)
+        tabBarItem = UITabBarItem(title: TabBarItem.mine.displayTitle, image: nil, selectedImage: nil)
     }
 }

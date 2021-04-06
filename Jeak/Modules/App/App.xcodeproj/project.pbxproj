@@ -41,7 +41,7 @@
 		C0AB3B6C25F9F79F007C36AD /* UICore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3B6A25F9F79F007C36AD /* UICore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0AB3B7025F9F85C007C36AD /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB3B6F25F9F85C007C36AD /* BackupViewController.swift */; };
 		C0BED1E025FF2F8E005A5584 /* RxSwiftFilteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BED1DF25FF2F8E005A5584 /* RxSwiftFilteringViewController.swift */; };
-		C0D902B1261C45EF00D8F7AE /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D902B0261C45EF00D8F7AE /* TabItem.swift */; };
+		C0D902B1261C45EF00D8F7AE /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D902B0261C45EF00D8F7AE /* TabBarItem.swift */; };
 		C0D902B7261C47D700D8F7AE /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D902B6261C47D700D8F7AE /* OverviewViewController.swift */; };
 		C0D902BC261C487D00D8F7AE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D902BB261C487D00D8F7AE /* SettingViewController.swift */; };
 		C0D902BE261C488900D8F7AE /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D902BD261C488900D8F7AE /* MineViewController.swift */; };
@@ -101,7 +101,7 @@
 		C0AB3B6A25F9F79F007C36AD /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AB3B6F25F9F85C007C36AD /* BackupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
 		C0BED1DF25FF2F8E005A5584 /* RxSwiftFilteringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftFilteringViewController.swift; sourceTree = "<group>"; };
-		C0D902B0261C45EF00D8F7AE /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		C0D902B0261C45EF00D8F7AE /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		C0D902B6261C47D700D8F7AE /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		C0D902BB261C487D00D8F7AE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		C0D902BD261C488900D8F7AE /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
@@ -294,7 +294,7 @@
 		C0D902AF261C45C100D8F7AE /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				C0D902B0261C45EF00D8F7AE /* TabItem.swift */,
+				C0D902B0261C45EF00D8F7AE /* TabBarItem.swift */,
 				C0204710261C52CB001DB586 /* TabBarItemModular.swift */,
 			);
 			path = TabBar;
@@ -448,7 +448,7 @@
 				C09D3E922600A51600EDC0F9 /* JKLotteryTableViewCell.swift in Sources */,
 				092C8CE82600E52000B904D6 /* JKSegmentControl.swift in Sources */,
 				C02B9E9025FB4363007DADA7 /* RandomUserAPI.swift in Sources */,
-				C0D902B1261C45EF00D8F7AE /* TabItem.swift in Sources */,
+				C0D902B1261C45EF00D8F7AE /* TabBarItem.swift in Sources */,
 				C0036C972601F90B00807550 /* JKView.swift in Sources */,
 				092C8CA925FA59A800B904D6 /* MainViewController.swift in Sources */,
 				C0204711261C52CB001DB586 /* TabBarItemModular.swift in Sources */,

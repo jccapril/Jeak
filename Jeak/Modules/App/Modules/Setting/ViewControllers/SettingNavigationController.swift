@@ -32,6 +32,6 @@ extension SettingNavigationController {
 
 private extension SettingNavigationController {
     func setup() {
-        tabBarItem = UITabBarItem(title: TabItem.setting.displayTitle, image: nil, selectedImage: nil)
+        tabBarItem = UITabBarItem(title: TabBarItem.setting.displayTitle, image: nil, selectedImage: nil)
     }
 }
