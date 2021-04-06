@@ -11,11 +11,7 @@ private extension Application {
 
     
     static let mainViewController: JKMainViewController = {
-        JKMainViewController(viewControllers:[
-            OverviewNavigationController(),
-            MineNavigationController(),
-            SettingNavigationController(),
-        ])
+        JKMainViewController()
     }()
 
     static let window: UIWindow = {

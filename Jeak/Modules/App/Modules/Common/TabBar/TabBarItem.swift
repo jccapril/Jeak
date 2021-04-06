@@ -12,14 +12,14 @@ enum TabBarItem: String {
     case mine = "TabBar.Item.Mine.Title"
     case setting = "TabBar.Item.Setting.Title"
     
-    var viewController: ViewController {
+    var viewController: UINavigationController {
         switch self {
         case .overview:
-            return OverviewViewController()
+            return OverviewNavigationController()
         case .mine:
-            return MineViewController()
+            return MineNavigationController()
         case .setting:
-            return SettingViewController()
+            return SettingNavigationController()
         }
     }
     
