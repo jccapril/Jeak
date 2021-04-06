@@ -16,6 +16,11 @@
 		C0036C972601F90B00807550 /* JKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0036C962601F90B00807550 /* JKView.swift */; };
 		C007163126089C0300336C2A /* JKLotteryRankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007163026089C0300336C2A /* JKLotteryRankTableViewCell.swift */; };
 		C007163326089C4A00336C2A /* JKCurrentLotteryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007163226089C4A00336C2A /* JKCurrentLotteryHeaderView.swift */; };
+		C020470A261C51B1001DB586 /* TabBarItemModular.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0204709261C514D001DB586 /* TabBarItemModular.strings */; };
+		C0204711261C52CB001DB586 /* TabBarItemModular.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0204710261C52CB001DB586 /* TabBarItemModular.swift */; };
+		C020471F261C60A9001DB586 /* SettingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C020471E261C60A9001DB586 /* SettingNavigationController.swift */; };
+		C0204721261C62CF001DB586 /* MineNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0204720261C62CF001DB586 /* MineNavigationController.swift */; };
+		C0204723261C630B001DB586 /* OverviewNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0204722261C630B001DB586 /* OverviewNavigationController.swift */; };
 		C02B9E6D25FB0485007DADA7 /* ExampleMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E6C25FB0485007DADA7 /* ExampleMainViewController.swift */; };
 		C02B9E8A25FB1113007DADA7 /* CodableExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8925FB1113007DADA7 /* CodableExampleViewController.swift */; };
 		C02B9E8C25FB1566007DADA7 /* EquatableExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8B25FB1566007DADA7 /* EquatableExampleViewController.swift */; };
@@ -36,6 +41,10 @@
 		C0AB3B6C25F9F79F007C36AD /* UICore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3B6A25F9F79F007C36AD /* UICore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0AB3B7025F9F85C007C36AD /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB3B6F25F9F85C007C36AD /* BackupViewController.swift */; };
 		C0BED1E025FF2F8E005A5584 /* RxSwiftFilteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BED1DF25FF2F8E005A5584 /* RxSwiftFilteringViewController.swift */; };
+		C0D902B1261C45EF00D8F7AE /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D902B0261C45EF00D8F7AE /* TabItem.swift */; };
+		C0D902B7261C47D700D8F7AE /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D902B6261C47D700D8F7AE /* OverviewViewController.swift */; };
+		C0D902BC261C487D00D8F7AE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D902BB261C487D00D8F7AE /* SettingViewController.swift */; };
+		C0D902BE261C488900D8F7AE /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D902BD261C488900D8F7AE /* MineViewController.swift */; };
 		C0E2833225FA031900ACAA93 /* Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E2833125FA031900ACAA93 /* Center.framework */; };
 		C0E2833325FA031900ACAA93 /* Center.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0E2833125FA031900ACAA93 /* Center.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -66,6 +75,12 @@
 		C0036C962601F90B00807550 /* JKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKView.swift; sourceTree = "<group>"; };
 		C007163026089C0300336C2A /* JKLotteryRankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKLotteryRankTableViewCell.swift; sourceTree = "<group>"; };
 		C007163226089C4A00336C2A /* JKCurrentLotteryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKCurrentLotteryHeaderView.swift; sourceTree = "<group>"; };
+		C0204708261C514D001DB586 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TabBarItemModular.strings"; sourceTree = "<group>"; };
+		C0204710261C52CB001DB586 /* TabBarItemModular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemModular.swift; sourceTree = "<group>"; };
+		C0204712261C5A8B001DB586 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TabBarItemModular.strings; sourceTree = "<group>"; };
+		C020471E261C60A9001DB586 /* SettingNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNavigationController.swift; sourceTree = "<group>"; };
+		C0204720261C62CF001DB586 /* MineNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineNavigationController.swift; sourceTree = "<group>"; };
+		C0204722261C630B001DB586 /* OverviewNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewNavigationController.swift; sourceTree = "<group>"; };
 		C02B9E6C25FB0485007DADA7 /* ExampleMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleMainViewController.swift; sourceTree = "<group>"; };
 		C02B9E8925FB1113007DADA7 /* CodableExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExampleViewController.swift; sourceTree = "<group>"; };
 		C02B9E8B25FB1566007DADA7 /* EquatableExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableExampleViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +101,10 @@
 		C0AB3B6A25F9F79F007C36AD /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AB3B6F25F9F85C007C36AD /* BackupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
 		C0BED1DF25FF2F8E005A5584 /* RxSwiftFilteringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftFilteringViewController.swift; sourceTree = "<group>"; };
+		C0D902B0261C45EF00D8F7AE /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		C0D902B6261C47D700D8F7AE /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		C0D902BB261C487D00D8F7AE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		C0D902BD261C488900D8F7AE /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		C0E2833125FA031900ACAA93 /* Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				C09CB7C02609D4DA0082DDB7 /* Common */,
+				C0D902B4261C479300D8F7AE /* Setting */,
+				C0D902B3261C478C00D8F7AE /* Mine */,
+				C0D902B2261C478000D8F7AE /* Overview */,
 				C09D3E5E2600A1F100EDC0F9 /* Lottery */,
 				C09D3E5B26009ED100EDC0F9 /* Dashboard */,
 				C09D3E5A26009E5500EDC0F9 /* Main */,
@@ -188,7 +210,8 @@
 		C09CB7C02609D4DA0082DDB7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				C09CB7C12609D51F0082DDB7 /* Enum.Lottery.swift */,
+				C0D902BF261C48A300D8F7AE /* Enum */,
+				C0D902AF261C45C100D8F7AE /* TabBar */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -244,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				C0AB3B5125F9F3D3007C36AD /* Info.plist */,
+				C0204709261C514D001DB586 /* TabBarItemModular.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -265,6 +289,74 @@
 				C0AB3B6A25F9F79F007C36AD /* UICore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0D902AF261C45C100D8F7AE /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C0D902B0261C45EF00D8F7AE /* TabItem.swift */,
+				C0204710261C52CB001DB586 /* TabBarItemModular.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		C0D902B2261C478000D8F7AE /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				C0D902B5261C47A500D8F7AE /* ViewControllers */,
+			);
+			path = Overview;
+			sourceTree = "<group>";
+		};
+		C0D902B3261C478C00D8F7AE /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				C0D902B8261C47E900D8F7AE /* ViewControllers */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		C0D902B4261C479300D8F7AE /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				C0D902BA261C486C00D8F7AE /* ViewControllers */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		C0D902B5261C47A500D8F7AE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C0D902B6261C47D700D8F7AE /* OverviewViewController.swift */,
+				C0204722261C630B001DB586 /* OverviewNavigationController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C0D902B8261C47E900D8F7AE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C0D902BD261C488900D8F7AE /* MineViewController.swift */,
+				C0204720261C62CF001DB586 /* MineNavigationController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C0D902BA261C486C00D8F7AE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C0D902BB261C487D00D8F7AE /* SettingViewController.swift */,
+				C020471E261C60A9001DB586 /* SettingNavigationController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C0D902BF261C48A300D8F7AE /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				C09CB7C12609D51F0082DDB7 /* Enum.Lottery.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +412,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = C0AB3B4325F9F3D3007C36AD;
 			productRefGroup = C0AB3B4E25F9F3D3007C36AD /* Products */;
@@ -336,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C020470A261C51B1001DB586 /* TabBarItemModular.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,15 +441,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				092C8CDC25FF9ED700B904D6 /* RxSwiftUIViewController.swift in Sources */,
+				C0D902BE261C488900D8F7AE /* MineViewController.swift in Sources */,
 				C09D3E5D26009FB300EDC0F9 /* JKDashboardViewController.swift in Sources */,
+				C0D902B7261C47D700D8F7AE /* OverviewViewController.swift in Sources */,
 				C09D3E9A2600A99C00EDC0F9 /* JKLottery.swift in Sources */,
 				C09D3E922600A51600EDC0F9 /* JKLotteryTableViewCell.swift in Sources */,
 				092C8CE82600E52000B904D6 /* JKSegmentControl.swift in Sources */,
 				C02B9E9025FB4363007DADA7 /* RandomUserAPI.swift in Sources */,
+				C0D902B1261C45EF00D8F7AE /* TabItem.swift in Sources */,
 				C0036C972601F90B00807550 /* JKView.swift in Sources */,
 				092C8CA925FA59A800B904D6 /* MainViewController.swift in Sources */,
+				C0204711261C52CB001DB586 /* TabBarItemModular.swift in Sources */,
 				C007163326089C4A00336C2A /* JKCurrentLotteryHeaderView.swift in Sources */,
 				C0AB3B7025F9F85C007C36AD /* BackupViewController.swift in Sources */,
+				C020471F261C60A9001DB586 /* SettingNavigationController.swift in Sources */,
 				092C8CDA25FF943100B904D6 /* RxSwiftSubjectViewController.swift in Sources */,
 				C0BED1E025FF2F8E005A5584 /* RxSwiftFilteringViewController.swift in Sources */,
 				C0036C932601DA8C00807550 /* JKSegmentControl+rx.swift in Sources */,
@@ -363,10 +462,13 @@
 				C02B9E8E25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift in Sources */,
 				C02B9E8C25FB1566007DADA7 /* EquatableExampleViewController.swift in Sources */,
 				C02B9E8A25FB1113007DADA7 /* CodableExampleViewController.swift in Sources */,
+				C0204721261C62CF001DB586 /* MineNavigationController.swift in Sources */,
+				C0D902BC261C487D00D8F7AE /* SettingViewController.swift in Sources */,
 				092C8CDE25FFA59E00B904D6 /* Operators.swift in Sources */,
 				C09D3E602600A25600EDC0F9 /* JKLotteryListViewController.swift in Sources */,
 				C02B9E6D25FB0485007DADA7 /* ExampleMainViewController.swift in Sources */,
 				C0AB3B6725F9F753007C36AD /* Application.swift in Sources */,
+				C0204723261C630B001DB586 /* OverviewNavigationController.swift in Sources */,
 				C09CB7BF2609D3DE0082DDB7 /* JKMainViewController.swift in Sources */,
 				C02B9E9625FB5193007DADA7 /* RxSwiftExampleViewController.swift in Sources */,
 				C09D3E982600A74600EDC0F9 /* JKLotteryListViewModel.swift in Sources */,
@@ -375,6 +477,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C0204709261C514D001DB586 /* TabBarItemModular.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0204708261C514D001DB586 /* zh-Hans */,
+				C0204712261C5A8B001DB586 /* en */,
+			);
+			name = TabBarItemModular.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C0AB3B5325F9F3D3007C36AD /* Debug */ = {

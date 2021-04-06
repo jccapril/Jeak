@@ -6,14 +6,16 @@
 //
 
 import UICore
-
+import Service
 private extension Application {
-//    static let mainViewController: UINavigationController = {
-//        UINavigationController(rootViewController:ExampleMainViewController())
-//    }()
+
     
-    static let mainViewController: UINavigationController = {
-        UINavigationController(rootViewController: JKMainViewController())
+    static let mainViewController: JKMainViewController = {
+        JKMainViewController(viewControllers:[
+            OverviewNavigationController(),
+            MineNavigationController(),
+            SettingNavigationController(),
+        ])
     }()
 
     static let window: UIWindow = {
@@ -38,7 +40,9 @@ public extension Application {
 
 private extension Application {
     static func bootstrap() {
-
+        
+        
+        
     }
 
     static func setup() {

@@ -1,0 +1,14 @@
+/* 
+  TabBarItemModular.strings
+  App
+
+  Created by Flutter on 2021/4/6.
+  
+*/
+
+
+// MARK: TabBar
+
+TabBar.Item.Overview.Title = "首页";
+TabBar.Item.Mine.Title = "我的";
+TabBar.Item.Setting.Title = "设置";

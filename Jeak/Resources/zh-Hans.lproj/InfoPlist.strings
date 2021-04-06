@@ -1,0 +1,17 @@
+/* 
+  InfoPlist.strings
+  Jeak
+
+  Created by Flutter on 2021/4/6.
+  
+*/
+
+
+// Display Name
+CFBundleDisplayName = "双乐";
+
+// Usage Description
+//NSCameraUsageDescription = "番团需要访问您的相机才能正常使用拍摄功能";
+//NSMicrophoneUsageDescription = "番团需要访问您的相册才能在编辑头像、聊天时上传照片";
+//NSCalendarUsageDescription = "番团请求访问你的日历，在你的日历中设置提醒，你就不用担心会错过了哦";
+//NSLocationUsageDescription = "App需要您的同意,获取所在城市和位置，用于获取附近的用户";

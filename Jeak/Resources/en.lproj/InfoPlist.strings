@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  Jeak
+
+  Created by Flutter on 2021/4/6.
+  
+*/
+
+
+
+// Display Name
+CFBundleDisplayName = "Jeak";

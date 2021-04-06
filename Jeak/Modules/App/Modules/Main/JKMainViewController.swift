@@ -7,10 +7,16 @@
 
 import UICore
 
-class JKMainViewController: ViewController {
-
-    private var childrenControllers: [JKDashboardViewController]?
-
+class JKMainViewController: UITabBarController {
+    public init(viewControllers: [UIViewController]?, nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: Bundle? = nil) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.viewControllers = viewControllers
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 
@@ -21,9 +27,11 @@ extension JKMainViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         setupUI()
+
         
+        
+    
     }
 }
 
@@ -32,8 +40,6 @@ private extension JKMainViewController {
     
     func setupUI() {
         
-        navigationController?.isNavigationBarHidden = true
-
         
     }
     

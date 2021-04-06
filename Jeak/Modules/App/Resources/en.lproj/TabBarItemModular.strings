@@ -1,0 +1,14 @@
+/* 
+  TabBarItemModular.strings
+  App
+
+  Created by Flutter on 2021/4/6.
+  
+*/
+
+
+// MARK: TabBar
+
+TabBar.Item.Overview.Title = "home";
+TabBar.Item.Mine.Title = "mine";
+TabBar.Item.Setting.Title = "setting";
