@@ -5,19 +5,16 @@
 //  Created by Flutter on 2021/4/6.
 //
 
-import UIKit
+import UICore
 
-class SettingNavigationController: UINavigationController {
+class SettingNavigationController: NavigationController {
 
     public init() {
         super.init(rootViewController: SettingViewController(nibName: nil, bundle: nil))
         setup()
     }
     
-    @available(*, unavailable)
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
     
 
 }
@@ -32,6 +29,8 @@ extension SettingNavigationController {
 
 private extension SettingNavigationController {
     func setup() {
-        tabBarItem = UITabBarItem(title: TabBarItem.setting.displayTitle, image: nil, selectedImage: nil)
+        tabBarItem = UITabBarItem(title: TabBarItem.setting.displayTitle, image: TabBarItem.setting.icon, selectedImage: TabBarItem.setting.selectedIcon)
+        tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor(hex: 0x9ca2c7)!], for: .highlighted)
+        tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor(hex: 0x9ca2c7)!], for: .normal)
     }
 }

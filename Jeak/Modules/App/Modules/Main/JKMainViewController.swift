@@ -8,6 +8,9 @@
 import UICore
 
 class JKMainViewController: UITabBarController {
+    
+    let jkTabBar = TabBar()
+    
 //    public init(viewControllers: [UIViewController]?, nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: Bundle? = nil) {
 //        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 //        self.viewControllers = viewControllers
@@ -27,9 +30,8 @@ extension JKMainViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        setupUI()
         loadTabBar()
-    
+        
         
     }
 
@@ -41,18 +43,16 @@ extension JKMainViewController {
 
 private extension JKMainViewController {
     
-    func setupUI() {
-        
-        
-    }
-    
     func loadTabBar() {
         // We'll create and load our custom tab bar here
-        let tabItems: [TabBarItem] = [.overview,.mine,.setting]
+        self.setValue(jkTabBar, forKey: "tabBar")
+        
+        let tabItems: [TabBarItem] = [.overview,.setting]
         self.setupCustomTabBar(tabItems) { (controllers) in
             self.viewControllers = controllers
         }
         self.selectedIndex = 0 // default our selected index to the first item
+        
         
     }
     func setupCustomTabBar(_ menuItems: [TabBarItem], completion: @escaping ([UIViewController]) -> Void) {

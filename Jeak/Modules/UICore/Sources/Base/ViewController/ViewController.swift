@@ -36,6 +36,6 @@ extension ViewController {
 
 private extension ViewController {
     func setupUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(hex: 0xf5f9ff)
     }
 }

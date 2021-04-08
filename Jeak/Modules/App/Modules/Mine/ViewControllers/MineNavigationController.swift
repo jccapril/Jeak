@@ -5,19 +5,16 @@
 //  Created by Flutter on 2021/4/6.
 //
 
-import UIKit
+import UICore
 
-class MineNavigationController: UINavigationController {
+class MineNavigationController: NavigationController {
 
     public init() {
         super.init(rootViewController: MineViewController(nibName: nil, bundle: nil))
         setup()
     }
     
-    @available(*, unavailable)
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
     
 
 }
@@ -33,5 +30,7 @@ extension MineNavigationController {
 private extension MineNavigationController {
     func setup() {
         tabBarItem = UITabBarItem(title: TabBarItem.mine.displayTitle, image: nil, selectedImage: nil)
+        tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor(hex: 0x9ca2c7)!], for: .highlighted)
+        tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor(hex: 0x9ca2c7)!], for: .normal)
     }
 }

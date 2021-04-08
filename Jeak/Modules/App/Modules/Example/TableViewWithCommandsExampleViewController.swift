@@ -33,26 +33,26 @@ extension TableViewWithCommandsExampleViewController {
         // Do any additional setup after loading the view.
         setup()
         
-        let superMan =  User(
-            firstName: "Super",
-            lastName: "Man",
-            imageURL: "http://nerdreactor.com/wp-content/uploads/2015/02/Superman1.jpg"
-        )
-
-        let watMan = User(firstName: "Wat",
-            lastName: "Man",
-            imageURL: "http://www.iri.upc.edu/files/project/98/main.GIF"
-        )
+//        let superMan =  User(
+//            firstName: "Super",
+//            lastName: "Man",
+//            imageURL: "http://nerdreactor.com/wp-content/uploads/2015/02/Superman1.jpg"
+//        )
+//
+//        let watMan = User(firstName: "Wat",
+//            lastName: "Man",
+//            imageURL: "http://www.iri.upc.edu/files/project/98/main.GIF"
+//        )
+//        
+//        let loadFavoriteUsers = RandomUserAPI.sharedAPI
+//            .getExampleUserResultSet()
+//            .map(TableViewCommand.setUsers)
+//            .catchAndReturn(TableViewCommand.setUsers(users: []))
         
-        let loadFavoriteUsers = RandomUserAPI.sharedAPI
-            .getExampleUserResultSet()
-            .map(TableViewCommand.setUsers)
-            .catchAndReturn(TableViewCommand.setUsers(users: []))
         
-        
-        let initialLoadCommand = Observable.just(TableViewCommand.setFavoriteUsers(favoriteUsers: [superMan, watMan]))
-                .concat(loadFavoriteUsers)
-                .observe(on:MainScheduler.instance)
+//        let initialLoadCommand = Observable.just(TableViewCommand.setFavoriteUsers(favoriteUsers: [superMan, watMan]))
+//                .concat(loadFavoriteUsers)
+//                .observe(on:MainScheduler.instance)
         
     
         

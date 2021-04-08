@@ -26,11 +26,22 @@ enum TabBarItem: String {
     var icon:UIImage {
         switch self {
         case .overview:
-            return UIImage(named: "ic_overview")!
+            return TabBarItemModular.image(named: "ic_tabbar_item_home_normal")!
         case .mine:
-            return UIImage(named: "ic_mine")!
+            return TabBarItemModular.image(named: "ic_tabbar_item_mine")!
         case .setting:
-            return UIImage(named: "ic_setting")!
+            return TabBarItemModular.image(named: "ic_tabbar_item_setting_normal")!
+        }
+    }
+    
+    var selectedIcon:UIImage {
+        switch self {
+        case .overview:
+            return TabBarItemModular.image(named: "ic_tabbar_item_home_selected")!
+        case .mine:
+            return TabBarItemModular.image(named: "ic_tabbar_item_min")!
+        case .setting:
+            return TabBarItemModular.image(named: "ic_tabbar_item_setting_selected")!
         }
     }
     
