@@ -11,7 +11,7 @@ class OverviewNavigationController: NavigationController {
 
     public init() {
         super.init(rootViewController: OverviewViewController(nibName: nil, bundle: nil))
-        setup()
+        setupTabBarItem()
     }
     
     
@@ -20,14 +20,19 @@ class OverviewNavigationController: NavigationController {
 extension OverviewNavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        
     }
 }
 
 private extension OverviewNavigationController {
-    func setup() {
+    
+    func setupTabBarItem() {
         tabBarItem = UITabBarItem(title: TabBarItem.overview.displayTitle, image: TabBarItem.overview.icon, selectedImage: TabBarItem.overview.selectedIcon)
-        tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor(hex: 0x9ca2c7)!], for: .highlighted)
-        tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor(hex: 0x9ca2c7)!], for: .normal)
+        tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : Theme.tabbarItemTitleColor], for: .highlighted)
+        tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : Theme.tabbarItemTitleColor], for: .normal)
     }
+    
+
 }
+
+

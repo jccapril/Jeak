@@ -11,7 +11,7 @@ class MineNavigationController: NavigationController {
 
     public init() {
         super.init(rootViewController: MineViewController(nibName: nil, bundle: nil))
-        setup()
+        setupTabBarItem()
     }
     
 
@@ -23,14 +23,14 @@ class MineNavigationController: NavigationController {
 extension MineNavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        
     }
 }
 
 private extension MineNavigationController {
-    func setup() {
+    func setupTabBarItem() {
         tabBarItem = UITabBarItem(title: TabBarItem.mine.displayTitle, image: nil, selectedImage: nil)
-        tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor(hex: 0x9ca2c7)!], for: .highlighted)
-        tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor(hex: 0x9ca2c7)!], for: .normal)
+        tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : Theme.tabbarItemTitleColor], for: .highlighted)
+        tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : Theme.tabbarItemTitleColor], for: .normal)
     }
 }

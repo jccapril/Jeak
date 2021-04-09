@@ -17,7 +17,7 @@ private extension Application {
     static let window: UIWindow = {
         UIWindow(frame: UIScreen.main.bounds)
             .leaf
-            .backgroundColor(.white)
+            .backgroundColor(Theme.backgroundColor)
             .makeKeyAndVisible()
             .instance
     }()

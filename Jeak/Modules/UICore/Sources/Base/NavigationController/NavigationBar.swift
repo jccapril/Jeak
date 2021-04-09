@@ -24,7 +24,7 @@ private extension NavigationBar {
         }
         isExclusiveTouch = true
         isTranslucent = true
-        setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+        setBackgroundImage(UIImage(color: #colorLiteral(red: 0.9607843137, green: 0.9764705882, blue: 1, alpha: 1)), for: .any, barMetrics: .default)
         shadowImage = UIImage()
     }
 }

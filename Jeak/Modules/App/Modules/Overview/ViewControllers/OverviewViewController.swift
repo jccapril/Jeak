@@ -9,15 +9,31 @@ import UICore
 
 class OverviewViewController: ViewController {
     
+
+
+}
+
+
+// MARK: - Override
+
+extension OverviewViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        setupUI()
+    }
+}
 
+
+// MARK: - Method
+
+private extension OverviewViewController {
     
+    func setupUI(){
         
     }
     
-
 }
+
+
