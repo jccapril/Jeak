@@ -21,6 +21,7 @@ extension OverviewViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupNaviagtionBar()
         setupUI()
     }
 }
@@ -29,6 +30,13 @@ extension OverviewViewController {
 // MARK: - Method
 
 private extension OverviewViewController {
+    
+    
+    func setupNaviagtionBar() {
+    
+        
+        
+    }
     
     func setupUI(){
         

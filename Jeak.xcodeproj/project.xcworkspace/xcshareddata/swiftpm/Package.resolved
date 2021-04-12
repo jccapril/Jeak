@@ -2,6 +2,24 @@
   "object": {
     "pins": [
       {
+        "package": "Asura",
+        "repositoryURL": "https://gitee.com/jlab/Asura.git",
+        "state": {
+          "branch": null,
+          "revision": "e781113a1609266386e5143ff3fa4b0af3755358",
+          "version": "1.1.1"
+        }
+      },
+      {
+        "package": "Coder",
+        "repositoryURL": "https://gitee.com/jlab/Coder.git",
+        "state": {
+          "branch": null,
+          "revision": "2db04df6de4c04fd7b7cbe89d3e1a872f5bdf635",
+          "version": "1.0.0"
+        }
+      },
+      {
         "package": "grpc-swift",
         "repositoryURL": "https://gitee.com/jlab/grpc-swift.git",
         "state": {
@@ -48,11 +66,20 @@
       },
       {
         "package": "Standard",
-        "repositoryURL": "https://gitee.com/jccgulu/standard.git",
+        "repositoryURL": "https://gitee.com/jccgulu/Standard.git",
         "state": {
           "branch": null,
           "revision": "bcb82abc67413c207c240b3f07cedf68e333977f",
           "version": "1.0.1"
+        }
+      },
+      {
+        "package": "Storage",
+        "repositoryURL": "https://gitee.com/jlab/Storage.git",
+        "state": {
+          "branch": null,
+          "revision": "5f508653b435d79ce39ce87baf743f4f294c1db6",
+          "version": "1.0.2"
         }
       },
       {

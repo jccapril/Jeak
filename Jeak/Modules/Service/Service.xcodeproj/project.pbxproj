@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		092C8C7E25F9191800B904D6 /* Service.h in Headers */ = {isa = PBXBuildFile; fileRef = 092C8C7C25F9191800B904D6 /* Service.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		092C8C8E25F9196200B904D6 /* Standard in Frameworks */ = {isa = PBXBuildFile; productRef = 092C8C8D25F9196200B904D6 /* Standard */; };
-		C002DA95261474B200B7D2B5 /* JSONCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002DA94261474B200B7D2B5 /* JSONCoder.swift */; };
+		C019939126241D02001650E0 /* Coder in Frameworks */ = {isa = PBXBuildFile; productRef = C019939026241D02001650E0 /* Coder */; };
+		C019939426241D1E001650E0 /* Standard in Frameworks */ = {isa = PBXBuildFile; productRef = C019939326241D1E001650E0 /* Standard */; };
+		C019939826241D89001650E0 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = C019939726241D89001650E0 /* Storage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		092C8C7925F9191800B904D6 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		092C8C7C25F9191800B904D6 /* Service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		092C8C7D25F9191800B904D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C002DA94261474B200B7D2B5 /* JSONCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,7 +24,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				092C8C8E25F9196200B904D6 /* Standard in Frameworks */,
+				C019939826241D89001650E0 /* Storage in Frameworks */,
+				C019939126241D02001650E0 /* Coder in Frameworks */,
+				C019939426241D1E001650E0 /* Standard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,17 +70,8 @@
 		C002DA912614747300B7D2B5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				C002DA932614748C00B7D2B5 /* JSONCoder */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		C002DA932614748C00B7D2B5 /* JSONCoder */ = {
-			isa = PBXGroup;
-			children = (
-				C002DA94261474B200B7D2B5 /* JSONCoder.swift */,
-			);
-			path = JSONCoder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,7 +103,9 @@
 			);
 			name = Service;
 			packageProductDependencies = (
-				092C8C8D25F9196200B904D6 /* Standard */,
+				C019939026241D02001650E0 /* Coder */,
+				C019939326241D1E001650E0 /* Standard */,
+				C019939726241D89001650E0 /* Storage */,
 			);
 			productName = Service;
 			productReference = 092C8C7925F9191800B904D6 /* Service.framework */;
@@ -140,7 +135,9 @@
 			);
 			mainGroup = 092C8C6F25F9191800B904D6;
 			packageReferences = (
-				092C8C8C25F9196200B904D6 /* XCRemoteSwiftPackageReference "standard" */,
+				C019938F26241D02001650E0 /* XCRemoteSwiftPackageReference "Coder" */,
+				C019939226241D1E001650E0 /* XCRemoteSwiftPackageReference "Standard" */,
+				C019939626241D89001650E0 /* XCRemoteSwiftPackageReference "Storage" */,
 			);
 			productRefGroup = 092C8C7A25F9191800B904D6 /* Products */;
 			projectDirPath = "";
@@ -166,7 +163,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C002DA95261474B200B7D2B5 /* JSONCoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,21 +366,47 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		092C8C8C25F9196200B904D6 /* XCRemoteSwiftPackageReference "standard" */ = {
+		C019938F26241D02001650E0 /* XCRemoteSwiftPackageReference "Coder" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitee.com/jccgulu/standard.git";
+			repositoryURL = "https://gitee.com/jlab/Coder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		C019939226241D1E001650E0 /* XCRemoteSwiftPackageReference "Standard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/jccgulu/Standard.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.1;
 			};
 		};
+		C019939626241D89001650E0 /* XCRemoteSwiftPackageReference "Storage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/jlab/Storage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		092C8C8D25F9196200B904D6 /* Standard */ = {
+		C019939026241D02001650E0 /* Coder */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 092C8C8C25F9196200B904D6 /* XCRemoteSwiftPackageReference "standard" */;
+			package = C019938F26241D02001650E0 /* XCRemoteSwiftPackageReference "Coder" */;
+			productName = Coder;
+		};
+		C019939326241D1E001650E0 /* Standard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C019939226241D1E001650E0 /* XCRemoteSwiftPackageReference "Standard" */;
 			productName = Standard;
+		};
+		C019939726241D89001650E0 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C019939626241D89001650E0 /* XCRemoteSwiftPackageReference "Storage" */;
+			productName = Storage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
