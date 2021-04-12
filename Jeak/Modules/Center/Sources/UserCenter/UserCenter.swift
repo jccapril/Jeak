@@ -13,6 +13,10 @@ public enum UserCenter {}
 
 extension UserCenter: TypeName {}
 
+private extension UserCenter {
+    static let store = StorageCenter.jeak[typeName]
+}
+
 extension UserCenter {
     private(set) static var guid: String {
         get {
@@ -22,6 +26,30 @@ extension UserCenter {
             UserDefaults.standard.set(newValue, forKey: "xxx-guid")
         }
     }
+    
+    private(set) static var userInfo: UserInfo? = {
+        do {
+            guard let userInfo: UserInfo = try store.sync.get() else { return nil }
+            return userInfo
+        } catch {
+            print("\(error)")
+            return nil
+        }
+    }() {
+        didSet {
+            do {
+                switch userInfo {
+                case .none:
+                    try store.sync.delete(key: UserInfo.key)
+                case .some(let userInfo):
+                    try store.sync.put(storableObject: userInfo)
+                }
+            } catch {
+                print("\(error)")
+            }
+        }
+    }
+    
 }
 
 public extension UserCenter {
@@ -40,6 +68,8 @@ public extension UserCenter {
             complete(result)
         }
     }
+    
+
 }
 
 

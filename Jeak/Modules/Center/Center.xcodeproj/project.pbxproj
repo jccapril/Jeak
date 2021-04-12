@@ -10,6 +10,8 @@
 		092C8C9225F9197200B904D6 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092C8C9125F9197200B904D6 /* Service.framework */; };
 		092C8C9325F9197200B904D6 /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 092C8C9125F9197200B904D6 /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C002370D25F89D0D008F21DA /* RPC in Frameworks */ = {isa = PBXBuildFile; productRef = C002370C25F89D0D008F21DA /* RPC */; };
+		C019939C26241F91001650E0 /* StorageCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C019939B26241F91001650E0 /* StorageCenter.swift */; };
+		C019939F26242034001650E0 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C019939E26242034001650E0 /* UserInfo.swift */; };
 		C0903C9525F8B51700D05B0A /* UserCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0903C9425F8B51700D05B0A /* UserCenter.swift */; };
 		C0B2944325F7608D00FE88B7 /* RPCCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2944225F7608D00FE88B7 /* RPCCenter.swift */; };
 		C0B2944625F760B400FE88B7 /* RPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2944525F760B400FE88B7 /* RPCService.swift */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		092C8C9125F9197200B904D6 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C019939B26241F91001650E0 /* StorageCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCenter.swift; sourceTree = "<group>"; };
+		C019939E26242034001650E0 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		C0903C9425F8B51700D05B0A /* UserCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenter.swift; sourceTree = "<group>"; };
 		C0B2942C25F75F9900FE88B7 /* Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B2943025F75F9900FE88B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,9 +65,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C019939A26241F84001650E0 /* StorageCenter */ = {
+			isa = PBXGroup;
+			children = (
+				C019939B26241F91001650E0 /* StorageCenter.swift */,
+			);
+			path = StorageCenter;
+			sourceTree = "<group>";
+		};
+		C019939D26242023001650E0 /* StorageModels */ = {
+			isa = PBXGroup;
+			children = (
+				C019939E26242034001650E0 /* UserInfo.swift */,
+			);
+			path = StorageModels;
+			sourceTree = "<group>";
+		};
 		C0903C9325F8B50500D05B0A /* UserCenter */ = {
 			isa = PBXGroup;
 			children = (
+				C019939D26242023001650E0 /* StorageModels */,
 				C0903C9425F8B51700D05B0A /* UserCenter.swift */,
 			);
 			path = UserCenter;
@@ -98,6 +119,7 @@
 		C0B2944025F75FEA00FE88B7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C019939A26241F84001650E0 /* StorageCenter */,
 				C0903C9325F8B50500D05B0A /* UserCenter */,
 				C0B2944125F7605A00FE88B7 /* RPCCenter */,
 			);
@@ -199,9 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C019939C26241F91001650E0 /* StorageCenter.swift in Sources */,
 				C0B2944325F7608D00FE88B7 /* RPCCenter.swift in Sources */,
 				C0B2944625F760B400FE88B7 /* RPCService.swift in Sources */,
 				C0B2944A25F7637100FE88B7 /* JeakRPCService.swift in Sources */,
+				C019939F26242034001650E0 /* UserInfo.swift in Sources */,
 				C0903C9525F8B51700D05B0A /* UserCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,8 @@
 
 import UICore
 import Coder
+import Center
+
 class JKMainViewController: UITabBarController {
 
     lazy var jkTabBar: TabBar = {
@@ -38,7 +40,7 @@ extension JKMainViewController {
 
         // Do any additional setup after loading the view.
         loadTabBar()
-        
+      
 
     }
 
