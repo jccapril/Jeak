@@ -1,0 +1,13 @@
+/* 
+  NavigationBarItemModular.strings
+  App
+
+  Created by Flutter on 2021/4/14.
+  
+*/
+
+// MARK: TabBar
+
+NaviagtionBar.Item.Overview.Title.Left = "My";
+NaviagtionBar.Item.Overview.Title.Right = "Lottery";
+

@@ -28,6 +28,12 @@ extension JKMainViewController: TabBarDelegate {
         let mine = MineViewController()
         let current = self.selectedViewController as! NavigationController
         mine.hidesBottomBarWhenPushed = true
+//        let transition = CATransition()
+//        transition.duration = 1.0
+//        transition.type = CATransitionType.push
+//        transition.subtype = CATransitionSubtype.fromBottom
+//        current.view.layer.add(transition,forKey:kCATransition)
+        
         current.pushViewController(mine, animated: true)
     }
 }

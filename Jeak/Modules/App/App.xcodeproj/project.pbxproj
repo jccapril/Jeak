@@ -31,6 +31,7 @@
 		C0613665262000C800878284 /* CommonModular..swift in Sources */ = {isa = PBXBuildFile; fileRef = C0613664262000C800878284 /* CommonModular..swift */; };
 		C06136672620011F00878284 /* NaviagtionBarModular.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06136662620011F00878284 /* NaviagtionBarModular.swift */; };
 		C061366C2620241600878284 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061366B2620241600878284 /* Theme.swift */; };
+		C09675962626EC35002FCA50 /* NaviagtionBarModular.strings in Resources */ = {isa = PBXBuildFile; fileRef = C09675982626EC35002FCA50 /* NaviagtionBarModular.strings */; };
 		C09CB7BF2609D3DE0082DDB7 /* JKMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CB7BE2609D3DE0082DDB7 /* JKMainViewController.swift */; };
 		C09CB7C22609D51F0082DDB7 /* Enum.Lottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CB7C12609D51F0082DDB7 /* Enum.Lottery.swift */; };
 		C09D3E5D26009FB300EDC0F9 /* JKDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D3E5C26009FB300EDC0F9 /* JKDashboardViewController.swift */; };
@@ -45,6 +46,9 @@
 		C0AB3B6C25F9F79F007C36AD /* UICore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3B6A25F9F79F007C36AD /* UICore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0AB3B7025F9F85C007C36AD /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB3B6F25F9F85C007C36AD /* BackupViewController.swift */; };
 		C0BED1E025FF2F8E005A5584 /* RxSwiftFilteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BED1DF25FF2F8E005A5584 /* RxSwiftFilteringViewController.swift */; };
+		C0CFEE52262575E800B4E916 /* CarouseViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFEE51262575E800B4E916 /* CarouseViewFlowLayout.swift */; };
+		C0CFEE542625855300B4E916 /* CarouseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFEE532625855300B4E916 /* CarouseViewCell.swift */; };
+		C0CFEE5626258C0800B4E916 /* CarouseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFEE5526258C0800B4E916 /* CarouseView.swift */; };
 		C0D902B1261C45EF00D8F7AE /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D902B0261C45EF00D8F7AE /* TabBarItem.swift */; };
 		C0D902B7261C47D700D8F7AE /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D902B6261C47D700D8F7AE /* OverviewViewController.swift */; };
 		C0D902BC261C487D00D8F7AE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D902BB261C487D00D8F7AE /* SettingViewController.swift */; };
@@ -96,6 +100,8 @@
 		C0613664262000C800878284 /* CommonModular..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModular..swift; sourceTree = "<group>"; };
 		C06136662620011F00878284 /* NaviagtionBarModular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviagtionBarModular.swift; sourceTree = "<group>"; };
 		C061366B2620241600878284 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		C09675972626EC35002FCA50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/NaviagtionBarModular.strings; sourceTree = "<group>"; };
+		C09675992626EC39002FCA50 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/NaviagtionBarModular.strings"; sourceTree = "<group>"; };
 		C09CB7BE2609D3DE0082DDB7 /* JKMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKMainViewController.swift; sourceTree = "<group>"; };
 		C09CB7C12609D51F0082DDB7 /* Enum.Lottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.Lottery.swift; sourceTree = "<group>"; };
 		C09D3E5C26009FB300EDC0F9 /* JKDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKDashboardViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +116,9 @@
 		C0AB3B6A25F9F79F007C36AD /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AB3B6F25F9F85C007C36AD /* BackupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
 		C0BED1DF25FF2F8E005A5584 /* RxSwiftFilteringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftFilteringViewController.swift; sourceTree = "<group>"; };
+		C0CFEE51262575E800B4E916 /* CarouseViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseViewFlowLayout.swift; sourceTree = "<group>"; };
+		C0CFEE532625855300B4E916 /* CarouseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseViewCell.swift; sourceTree = "<group>"; };
+		C0CFEE5526258C0800B4E916 /* CarouseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseView.swift; sourceTree = "<group>"; };
 		C0D902B0261C45EF00D8F7AE /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		C0D902B6261C47D700D8F7AE /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		C0D902BB261C487D00D8F7AE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +245,7 @@
 		C09CB7C02609D4DA0082DDB7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C0CFEE502625751100B4E916 /* CarouselView */,
 				C0613664262000C800878284 /* CommonModular..swift */,
 				C061366A262023F900878284 /* Theme */,
 				C06136532620004A00878284 /* NaviagtionBar */,
@@ -298,6 +308,7 @@
 				C0AB3B5125F9F3D3007C36AD /* Info.plist */,
 				C0204709261C514D001DB586 /* TabBarItemModular.strings */,
 				C020472F261D4B56001DB586 /* Image.xcassets */,
+				C09675982626EC35002FCA50 /* NaviagtionBarModular.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -319,6 +330,16 @@
 				C0AB3B6A25F9F79F007C36AD /* UICore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0CFEE502625751100B4E916 /* CarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				C0CFEE51262575E800B4E916 /* CarouseViewFlowLayout.swift */,
+				C0CFEE532625855300B4E916 /* CarouseViewCell.swift */,
+				C0CFEE5526258C0800B4E916 /* CarouseView.swift */,
+			);
+			path = CarouselView;
 			sourceTree = "<group>";
 		};
 		C0D902AF261C45C100D8F7AE /* TabBar */ = {
@@ -462,6 +483,7 @@
 			files = (
 				C020470A261C51B1001DB586 /* TabBarItemModular.strings in Resources */,
 				C0204730261D4C3B001DB586 /* Image.xcassets in Resources */,
+				C09675962626EC35002FCA50 /* NaviagtionBarModular.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				092C8CDC25FF9ED700B904D6 /* RxSwiftUIViewController.swift in Sources */,
+				C0CFEE5626258C0800B4E916 /* CarouseView.swift in Sources */,
 				C0D902BE261C488900D8F7AE /* MineViewController.swift in Sources */,
 				C09D3E5D26009FB300EDC0F9 /* JKDashboardViewController.swift in Sources */,
 				C0D902B7261C47D700D8F7AE /* OverviewViewController.swift in Sources */,
@@ -488,11 +511,13 @@
 				C007163326089C4A00336C2A /* JKCurrentLotteryHeaderView.swift in Sources */,
 				C0AB3B7025F9F85C007C36AD /* BackupViewController.swift in Sources */,
 				C020471F261C60A9001DB586 /* SettingNavigationController.swift in Sources */,
+				C0CFEE542625855300B4E916 /* CarouseViewCell.swift in Sources */,
 				092C8CDA25FF943100B904D6 /* RxSwiftSubjectViewController.swift in Sources */,
 				C0BED1E025FF2F8E005A5584 /* RxSwiftFilteringViewController.swift in Sources */,
 				C0036C932601DA8C00807550 /* JKSegmentControl+rx.swift in Sources */,
 				C007163126089C0300336C2A /* JKLotteryRankTableViewCell.swift in Sources */,
 				C02B9E8E25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift in Sources */,
+				C0CFEE52262575E800B4E916 /* CarouseViewFlowLayout.swift in Sources */,
 				C02B9E8C25FB1566007DADA7 /* EquatableExampleViewController.swift in Sources */,
 				C02B9E8A25FB1113007DADA7 /* CodableExampleViewController.swift in Sources */,
 				C0204721261C62CF001DB586 /* MineNavigationController.swift in Sources */,
@@ -522,6 +547,15 @@
 				C0204712261C5A8B001DB586 /* en */,
 			);
 			name = TabBarItemModular.strings;
+			sourceTree = "<group>";
+		};
+		C09675982626EC35002FCA50 /* NaviagtionBarModular.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C09675972626EC35002FCA50 /* en */,
+				C09675992626EC39002FCA50 /* zh-Hans */,
+			);
+			name = NaviagtionBarModular.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

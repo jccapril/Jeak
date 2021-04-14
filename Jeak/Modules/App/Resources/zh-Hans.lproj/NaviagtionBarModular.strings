@@ -1,0 +1,11 @@
+/* 
+  NavigationBarItemModular.strings
+  App
+
+  Created by Flutter on 2021/4/14.
+  
+*/
+// MARK: TabBar
+
+NaviagtionBar.Item.Overview.Title.Left = "我的";
+NaviagtionBar.Item.Overview.Title.Right = "彩票";

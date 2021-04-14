@@ -61,5 +61,12 @@ public extension LeafBox where T: UIScrollView {
         value.showsHorizontalScrollIndicator = showsHorizontalScrollIndicator
         return value.leaf
     }
+    
+    @discardableResult
+    func scrollsToTop(_ scrollsToTop: Bool) -> LeafBox<T> {
+        value.scrollsToTop = scrollsToTop
+        return value.leaf
+    }
+
 }
 

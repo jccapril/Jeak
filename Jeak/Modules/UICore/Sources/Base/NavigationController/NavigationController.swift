@@ -72,14 +72,14 @@ extension NavigationController: UIGestureRecognizerDelegate {
 // MARK: - Assert
 
 extension NavigationController {
-    @available(*, unavailable)
-    override open func setNavigationBarHidden(_: Bool, animated _: Bool) {
-        fatalError("DO NOT CALL THIS")
-    }
-
-    // swiftlint:disable unused_setter_value
-    override open var isNavigationBarHidden: Bool {
-        get { super.isNavigationBarHidden }
-        set { fatalError("DO NOT CALL THIS") }
-    }
+//    @available(*, unavailable)
+//    override open func setNavigationBarHidden(_: Bool, animated _: Bool) {
+//        fatalError("DO NOT CALL THIS")
+//    }
+//
+//    // swiftlint:disable unused_setter_value
+//    override open var isNavigationBarHidden: Bool {
+//        get { super.isNavigationBarHidden }
+//        set { fatalError("DO NOT CALL THIS") }
+//    }
 }

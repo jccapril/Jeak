@@ -9,4 +9,5 @@
 enum JKLotteryType: Int {
     case ssq = 0
     case dlt = 1
+    case fc3d = 2
 }

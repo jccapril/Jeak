@@ -18,5 +18,6 @@ public extension Adaptor {
     static let statusHeight = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
     static let statusBarHeight = UIApplication.shared.statusBarFrame.height
     static let tabBarHeight = 49 + safeAreaBottomHeight
+    static let navibarHeight = 40 + safeAreaTopHeight
 }
 
