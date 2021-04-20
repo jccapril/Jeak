@@ -9,10 +9,12 @@ import Foundation
 
 
 protocol JKLottery {
-    
+    var lotteryType: JKLotteryType { get set }
 }
 
 struct JKLotterySSQ: JKLottery {
+    var lotteryType: JKLotteryType = .ssq
     var red: String
     var blue: String
 }
+

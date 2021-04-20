@@ -35,6 +35,8 @@
 		C061366C2620241600878284 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061366B2620241600878284 /* Theme.swift */; };
 		C083AAFE262EA6FD00F0809F /* JKBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083AAFD262EA6FD00F0809F /* JKBall.swift */; };
 		C083AB0F262EC88300F0809F /* OverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083AB0E262EC88300F0809F /* OverviewViewModel.swift */; };
+		C083AB22262ECE8B00F0809F /* OverviewSimpleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083AB21262ECE8B00F0809F /* OverviewSimpleCellViewModel.swift */; };
+		C083AB26262ECF4900F0809F /* BaseCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083AB25262ECF4900F0809F /* BaseCellViewModel.swift */; };
 		C09675962626EC35002FCA50 /* NaviagtionBarModular.strings in Resources */ = {isa = PBXBuildFile; fileRef = C09675982626EC35002FCA50 /* NaviagtionBarModular.strings */; };
 		C09CB7BF2609D3DE0082DDB7 /* JKMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CB7BE2609D3DE0082DDB7 /* JKMainViewController.swift */; };
 		C09CB7C22609D51F0082DDB7 /* Enum.Lottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CB7C12609D51F0082DDB7 /* Enum.Lottery.swift */; };
@@ -109,6 +111,8 @@
 		C061366B2620241600878284 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C083AAFD262EA6FD00F0809F /* JKBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBall.swift; sourceTree = "<group>"; };
 		C083AB0E262EC88300F0809F /* OverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModel.swift; sourceTree = "<group>"; };
+		C083AB21262ECE8B00F0809F /* OverviewSimpleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewSimpleCellViewModel.swift; sourceTree = "<group>"; };
+		C083AB25262ECF4900F0809F /* BaseCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCellViewModel.swift; sourceTree = "<group>"; };
 		C09675972626EC35002FCA50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/NaviagtionBarModular.strings; sourceTree = "<group>"; };
 		C09675992626EC39002FCA50 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/NaviagtionBarModular.strings"; sourceTree = "<group>"; };
 		C09CB7BE2609D3DE0082DDB7 /* JKMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKMainViewController.swift; sourceTree = "<group>"; };
@@ -269,14 +273,40 @@
 		C083AB0D262EC86300F0809F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C083AB20262ECE6C00F0809F /* cell */,
 				C083AB0E262EC88300F0809F /* OverviewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C083AB20262ECE6C00F0809F /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				C083AB21262ECE8B00F0809F /* OverviewSimpleCellViewModel.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		C083AB23262ECF2F00F0809F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C083AB24262ECF3E00F0809F /* Cell */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C083AB24262ECF3E00F0809F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C083AB25262ECF4900F0809F /* BaseCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		C09CB7C02609D4DA0082DDB7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C083AB23262ECF2F00F0809F /* ViewModel */,
 				C083AAFF262EA8E000F0809F /* Font */,
 				C0CFEE502625751100B4E916 /* CarouselView */,
 				C0613664262000C800878284 /* CommonModular..swift */,
@@ -563,6 +593,7 @@
 				C0CFEE542625855300B4E916 /* CarouseViewCell.swift in Sources */,
 				092C8CDA25FF943100B904D6 /* RxSwiftSubjectViewController.swift in Sources */,
 				C0BED1E025FF2F8E005A5584 /* RxSwiftFilteringViewController.swift in Sources */,
+				C083AB26262ECF4900F0809F /* BaseCellViewModel.swift in Sources */,
 				C0036C932601DA8C00807550 /* JKSegmentControl+rx.swift in Sources */,
 				C007163126089C0300336C2A /* JKLotteryRankTableViewCell.swift in Sources */,
 				C02B9E8E25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift in Sources */,
@@ -570,6 +601,7 @@
 				C02B9E8C25FB1566007DADA7 /* EquatableExampleViewController.swift in Sources */,
 				C02B9E8A25FB1113007DADA7 /* CodableExampleViewController.swift in Sources */,
 				C0204721261C62CF001DB586 /* MineNavigationController.swift in Sources */,
+				C083AB22262ECE8B00F0809F /* OverviewSimpleCellViewModel.swift in Sources */,
 				C0CDD172262822B700EDCAD6 /* LotterySimpleTableViewCell.swift in Sources */,
 				C0D902BC261C487D00D8F7AE /* SettingViewController.swift in Sources */,
 				C061366C2620241600878284 /* Theme.swift in Sources */,
