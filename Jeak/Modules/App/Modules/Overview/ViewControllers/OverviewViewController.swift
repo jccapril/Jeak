@@ -9,18 +9,17 @@ import UICore
 
 class OverviewViewController: ViewController {
     
-    lazy var banner: CarouseView = {
-       
-        let lazy = CarouseView(frame: CGRect(x: 0, y: Adaptor.navibarHeight + 20, width: self.view.frame.size.width, height: 200), shouldInfiniteLoop: true, types:[.ssq,.dlt])
-        lazy.isZoom = true
-        lazy.imgCornerRadius = 40
-        lazy.itemWidth = self.view.frame.size.width - 100
-        lazy.pageControl.isHidden = true;
-        lazy.delegate = self
-        return lazy
-        
+    private enum OverviewMode: Int {
+        case normal = 0
+        case simple = 1
+    }
+    
+    private var mode: OverviewMode = .simple
+    private lazy var childrenControllers:[ViewController] = {
+        [OverviewNormalViewController(),OverviewSimpleViewController()]
     }()
-
+    
+    private var currentController:ViewController?
 }
 
 
@@ -32,16 +31,9 @@ extension OverviewViewController {
 
         // Do any additional setup after loading the view.
         setupNaviagtionBar()
-        setupUI()
+        setupChildrenControllers()
+//        setupUI()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
-
-
-    
     
 }
 
@@ -53,9 +45,6 @@ private extension OverviewViewController {
     
     func setupNaviagtionBar() {
     
-//        let label1 = UIBarButtonItem(title: "我的", style: .plain, target: nil, action: nil)
-//        let label2 = UIBarButtonItem(title: "彩票", style: .plain, target: nil, action: nil)
-        
         let left = NaviagtionBarModular.localizedString(key: "NaviagtionBar.Item.Overview.Title.Left")
         let right = NaviagtionBarModular.localizedString(key: "NaviagtionBar.Item.Overview.Title.Right")
         
@@ -65,28 +54,43 @@ private extension OverviewViewController {
         abs.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 30), range: NSRange(location: 0, length: left.count))
         abs.addAttribute(.font, value: UIFont.systemFont(ofSize: 30, weight: .thin), range: NSRange(location: left.count + 2, length: right.count))
         label.attributedText = abs
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: label)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: label)
+        
+
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: NaviagtionBarModular.image(named: "ic_naviagtion_item_switch"), style: .plain, target: self, action: #selector(switchMode(sender:)))
         
     }
     
-    func setupUI(){
-        self.banner.leaf.add(to: self.view)
+    func setupChildrenControllers(){
+        if mode == .normal {
+            currentController = childrenControllers[0]
+        }else {
+            currentController = childrenControllers[1]
+        }
+        
+        view.addSubview(currentController!.view)
+    }
+    
+    @objc
+    func switchMode(sender:UIBarButtonItem) {
+        currentController!.view.isHidden = true
+        if mode == .normal {
+            mode = .simple
+            currentController = childrenControllers[1]
+        }else {
+            mode = .normal
+            currentController = childrenControllers[0]
+        }
+        guard currentController!.isViewLoaded else {
+            view.addSubview(currentController!.view)
+            return
+        }
+        currentController!.view.isHidden = false
+
+
     }
     
 }
 
 
-// MARK: - Delegate
-// MARK: - CarouseViewDelegate
-
-extension OverviewViewController:CarouseViewDelegate {
-    
-    func carouseView(_ carouseView: CarouseView, toCurrentPageIndex index: Int) {
-        print("toCurrentPageIndex:\(index)")
-    }
-    
-    func carouseView(_ carouseView: CarouseView, didSelectItemAtIndex index: Int) {
-        print("didSelectItemAtIndex:\(index)")
-    }
-    
-}

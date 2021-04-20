@@ -13,8 +13,6 @@ protocol JKLottery {
 }
 
 struct JKLotterySSQ: JKLottery {
-    
     var red: String
     var blue: String
-    
 }

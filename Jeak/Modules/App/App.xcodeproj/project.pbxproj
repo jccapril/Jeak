@@ -28,9 +28,13 @@
 		C02B9E8E25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8D25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift */; };
 		C02B9E9025FB4363007DADA7 /* RandomUserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8F25FB4363007DADA7 /* RandomUserAPI.swift */; };
 		C02B9E9625FB5193007DADA7 /* RxSwiftExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E9525FB5193007DADA7 /* RxSwiftExampleViewController.swift */; };
+		C04A1DCE26280E9500F461AA /* OverviewNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A1DCD26280E9500F461AA /* OverviewNormalViewController.swift */; };
+		C04A1DD026280EA800F461AA /* OverviewSimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A1DCF26280EA800F461AA /* OverviewSimpleViewController.swift */; };
 		C0613665262000C800878284 /* CommonModular..swift in Sources */ = {isa = PBXBuildFile; fileRef = C0613664262000C800878284 /* CommonModular..swift */; };
 		C06136672620011F00878284 /* NaviagtionBarModular.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06136662620011F00878284 /* NaviagtionBarModular.swift */; };
 		C061366C2620241600878284 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061366B2620241600878284 /* Theme.swift */; };
+		C083AAFE262EA6FD00F0809F /* JKBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083AAFD262EA6FD00F0809F /* JKBall.swift */; };
+		C083AB0F262EC88300F0809F /* OverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083AB0E262EC88300F0809F /* OverviewViewModel.swift */; };
 		C09675962626EC35002FCA50 /* NaviagtionBarModular.strings in Resources */ = {isa = PBXBuildFile; fileRef = C09675982626EC35002FCA50 /* NaviagtionBarModular.strings */; };
 		C09CB7BF2609D3DE0082DDB7 /* JKMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CB7BE2609D3DE0082DDB7 /* JKMainViewController.swift */; };
 		C09CB7C22609D51F0082DDB7 /* Enum.Lottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CB7C12609D51F0082DDB7 /* Enum.Lottery.swift */; };
@@ -46,6 +50,7 @@
 		C0AB3B6C25F9F79F007C36AD /* UICore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3B6A25F9F79F007C36AD /* UICore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0AB3B7025F9F85C007C36AD /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB3B6F25F9F85C007C36AD /* BackupViewController.swift */; };
 		C0BED1E025FF2F8E005A5584 /* RxSwiftFilteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BED1DF25FF2F8E005A5584 /* RxSwiftFilteringViewController.swift */; };
+		C0CDD172262822B700EDCAD6 /* LotterySimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CDD171262822B700EDCAD6 /* LotterySimpleTableViewCell.swift */; };
 		C0CFEE52262575E800B4E916 /* CarouseViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFEE51262575E800B4E916 /* CarouseViewFlowLayout.swift */; };
 		C0CFEE542625855300B4E916 /* CarouseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFEE532625855300B4E916 /* CarouseViewCell.swift */; };
 		C0CFEE5626258C0800B4E916 /* CarouseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFEE5526258C0800B4E916 /* CarouseView.swift */; };
@@ -97,9 +102,13 @@
 		C02B9E8D25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWithCommandsExampleViewController.swift; sourceTree = "<group>"; };
 		C02B9E8F25FB4363007DADA7 /* RandomUserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserAPI.swift; sourceTree = "<group>"; };
 		C02B9E9525FB5193007DADA7 /* RxSwiftExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftExampleViewController.swift; sourceTree = "<group>"; };
+		C04A1DCD26280E9500F461AA /* OverviewNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewNormalViewController.swift; sourceTree = "<group>"; };
+		C04A1DCF26280EA800F461AA /* OverviewSimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewSimpleViewController.swift; sourceTree = "<group>"; };
 		C0613664262000C800878284 /* CommonModular..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModular..swift; sourceTree = "<group>"; };
 		C06136662620011F00878284 /* NaviagtionBarModular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviagtionBarModular.swift; sourceTree = "<group>"; };
 		C061366B2620241600878284 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		C083AAFD262EA6FD00F0809F /* JKBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBall.swift; sourceTree = "<group>"; };
+		C083AB0E262EC88300F0809F /* OverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewModel.swift; sourceTree = "<group>"; };
 		C09675972626EC35002FCA50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/NaviagtionBarModular.strings; sourceTree = "<group>"; };
 		C09675992626EC39002FCA50 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/NaviagtionBarModular.strings"; sourceTree = "<group>"; };
 		C09CB7BE2609D3DE0082DDB7 /* JKMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKMainViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +125,7 @@
 		C0AB3B6A25F9F79F007C36AD /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AB3B6F25F9F85C007C36AD /* BackupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
 		C0BED1DF25FF2F8E005A5584 /* RxSwiftFilteringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftFilteringViewController.swift; sourceTree = "<group>"; };
+		C0CDD171262822B700EDCAD6 /* LotterySimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotterySimpleTableViewCell.swift; sourceTree = "<group>"; };
 		C0CFEE51262575E800B4E916 /* CarouseViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseViewFlowLayout.swift; sourceTree = "<group>"; };
 		C0CFEE532625855300B4E916 /* CarouseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseViewCell.swift; sourceTree = "<group>"; };
 		C0CFEE5526258C0800B4E916 /* CarouseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouseView.swift; sourceTree = "<group>"; };
@@ -169,7 +179,6 @@
 		092C8CE42600E4D100B904D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C09D3E992600A99C00EDC0F9 /* JKLottery.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,9 +251,33 @@
 			path = Theme;
 			sourceTree = "<group>";
 		};
+		C083AAFF262EA8E000F0809F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		C083AB0A262EC78800F0809F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C09D3E992600A99C00EDC0F9 /* JKLottery.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C083AB0D262EC86300F0809F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C083AB0E262EC88300F0809F /* OverviewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C09CB7C02609D4DA0082DDB7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C083AAFF262EA8E000F0809F /* Font */,
 				C0CFEE502625751100B4E916 /* CarouselView */,
 				C0613664262000C800878284 /* CommonModular..swift */,
 				C061366A262023F900878284 /* Theme */,
@@ -332,6 +365,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C0CDD1702628227000EDCAD6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C0CDD171262822B700EDCAD6 /* LotterySimpleTableViewCell.swift */,
+				C083AAFD262EA6FD00F0809F /* JKBall.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C0CFEE502625751100B4E916 /* CarouselView */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +397,9 @@
 		C0D902B2261C478000D8F7AE /* Overview */ = {
 			isa = PBXGroup;
 			children = (
+				C083AB0D262EC86300F0809F /* ViewModel */,
+				C083AB0A262EC78800F0809F /* Model */,
+				C0CDD1702628227000EDCAD6 /* View */,
 				C0D902B5261C47A500D8F7AE /* ViewControllers */,
 			);
 			path = Overview;
@@ -381,6 +426,8 @@
 			children = (
 				C0D902B6261C47D700D8F7AE /* OverviewViewController.swift */,
 				C0204722261C630B001DB586 /* OverviewNavigationController.swift */,
+				C04A1DCD26280E9500F461AA /* OverviewNormalViewController.swift */,
+				C04A1DCF26280EA800F461AA /* OverviewSimpleViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -502,6 +549,7 @@
 				C09D3E9A2600A99C00EDC0F9 /* JKLottery.swift in Sources */,
 				C09D3E922600A51600EDC0F9 /* JKLotteryTableViewCell.swift in Sources */,
 				092C8CE82600E52000B904D6 /* JKSegmentControl.swift in Sources */,
+				C083AB0F262EC88300F0809F /* OverviewViewModel.swift in Sources */,
 				C0E61112261D9E3F001FA3BE /* TabBar.swift in Sources */,
 				C02B9E9025FB4363007DADA7 /* RandomUserAPI.swift in Sources */,
 				C0D902B1261C45EF00D8F7AE /* TabBarItem.swift in Sources */,
@@ -509,6 +557,7 @@
 				092C8CA925FA59A800B904D6 /* MainViewController.swift in Sources */,
 				C0204711261C52CB001DB586 /* TabBarItemModular.swift in Sources */,
 				C007163326089C4A00336C2A /* JKCurrentLotteryHeaderView.swift in Sources */,
+				C083AAFE262EA6FD00F0809F /* JKBall.swift in Sources */,
 				C0AB3B7025F9F85C007C36AD /* BackupViewController.swift in Sources */,
 				C020471F261C60A9001DB586 /* SettingNavigationController.swift in Sources */,
 				C0CFEE542625855300B4E916 /* CarouseViewCell.swift in Sources */,
@@ -521,17 +570,20 @@
 				C02B9E8C25FB1566007DADA7 /* EquatableExampleViewController.swift in Sources */,
 				C02B9E8A25FB1113007DADA7 /* CodableExampleViewController.swift in Sources */,
 				C0204721261C62CF001DB586 /* MineNavigationController.swift in Sources */,
+				C0CDD172262822B700EDCAD6 /* LotterySimpleTableViewCell.swift in Sources */,
 				C0D902BC261C487D00D8F7AE /* SettingViewController.swift in Sources */,
 				C061366C2620241600878284 /* Theme.swift in Sources */,
 				092C8CDE25FFA59E00B904D6 /* Operators.swift in Sources */,
 				C09D3E602600A25600EDC0F9 /* JKLotteryListViewController.swift in Sources */,
 				C02B9E6D25FB0485007DADA7 /* ExampleMainViewController.swift in Sources */,
 				C0AB3B6725F9F753007C36AD /* Application.swift in Sources */,
+				C04A1DCE26280E9500F461AA /* OverviewNormalViewController.swift in Sources */,
 				C06136672620011F00878284 /* NaviagtionBarModular.swift in Sources */,
 				C0204723261C630B001DB586 /* OverviewNavigationController.swift in Sources */,
 				C09CB7BF2609D3DE0082DDB7 /* JKMainViewController.swift in Sources */,
 				C0613665262000C800878284 /* CommonModular..swift in Sources */,
 				C02B9E9625FB5193007DADA7 /* RxSwiftExampleViewController.swift in Sources */,
+				C04A1DD026280EA800F461AA /* OverviewSimpleViewController.swift in Sources */,
 				C09D3E982600A74600EDC0F9 /* JKLotteryListViewModel.swift in Sources */,
 				C09CB7C22609D51F0082DDB7 /* Enum.Lottery.swift in Sources */,
 			);
