@@ -32,9 +32,9 @@
         "package": "RPC",
         "repositoryURL": "https://gitee.com/jccgulu/jeak_ios_rpc.git",
         "state": {
-          "branch": "main",
-          "revision": "ac5a3cec2153b4b2c35f3f3a617f25379ad26d5d",
-          "version": null
+          "branch": null,
+          "revision": "c9a37151bcca50072b3b223e2b2e8f70cd7a3394",
+          "version": "1.0.3"
         }
       },
       {

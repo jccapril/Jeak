@@ -8,35 +8,31 @@
 import Foundation
 import GRPC
 import RPC
-
+import Storage
 
 public final class JeakRPCService: RPCService {
-//    #if JEAK_PRODUCT
-//        private let host = "api.jeak.com"
-//    #else
-    private let host = "192.168.3.22"
-//    #endif
-    private let port = 443
-    
+
     private let timeout = 10
+    private let store: Store
+    let resultQueue = DispatchQueue.main
+    let requestQueue = DispatchQueue(label: typeName)
 
-    private let resultQueue = DispatchQueue.main
-    private let requestQueue = DispatchQueue(label: typeName)
-
-    public init() {
-        super.init(host: host, port: port)
+    public init(store: Store) {
+        self.store = store
+        let remote = (try? store.sync.get(key: Self.remoteKey)) ?? Self.remote
+        super.init(name: Self.name, host: remote.host, port: remote.port, tls: remote.tls)
     }
 }
 
 
 public extension JeakRPCService {
     func callOptions(additionHeader: [(String, String)] = []) -> CallOptions {
-        let sessionID = UserDefaults.standard.string(forKey: "sessionId") ?? ""
+//        let sessionID = UserDefaults.standard.string(forKey: "sessionId") ?? ""
         let bundleID = Bundle.main.bundleIdentifier ?? ""
         let version = (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? ""
 
         let defaultHeaders = [
-            ("X-JEAK-SID", sessionID),
+//            ("X-JEAK-SID", sessionID),
             ("X-JEAK-BID", bundleID),
             ("X-JEAK-VERSION", version),
         ]
@@ -52,7 +48,7 @@ public extension JeakRPCService {
 
 
 public extension JeakRPCService {
-    
+
     func login(mobile: String, password: String, complete: @escaping(Result<Jeak_NormalLoginResponse,Error>)->Void) {
         requestQueue.async {
             let client = Jeak_LoginClient(channel: self.connection,defaultCallOptions: self.callOptions())
@@ -73,5 +69,28 @@ public extension JeakRPCService {
             }
         }
     }
-    
+
+}
+
+public extension JeakRPCService {
+    func update(host: String, port: Int, tls: Bool) {
+        change(host: host, port: port, tls: tls)
+        let remote = Remote(host: host, port: port, tls: tls)
+        store.async.put(value: remote, forKey: Self.remoteKey, complete: { _ in })
+    }
+}
+
+
+private extension JeakRPCService {
+    #if APPSTORE
+        static let host: String = ""
+    #else
+        static let host: String = "192.168.3.22"
+    #endif
+
+    static let port: Int = 443
+    static let name: String = "jeak"
+    static let remote = Remote(host: host, port: port, tls: true)
+
+    static let remoteKey: String = "\(typeName)/\(name)/remote"
 }

@@ -306,10 +306,10 @@
 		C09CB7C02609D4DA0082DDB7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C0613664262000C800878284 /* CommonModular..swift */,
 				C083AB23262ECF2F00F0809F /* ViewModel */,
 				C083AAFF262EA8E000F0809F /* Font */,
 				C0CFEE502625751100B4E916 /* CarouselView */,
-				C0613664262000C800878284 /* CommonModular..swift */,
 				C061366A262023F900878284 /* Theme */,
 				C06136532620004A00878284 /* NaviagtionBar */,
 				C0D902BF261C48A300D8F7AE /* Enum */,

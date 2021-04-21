@@ -6,11 +6,16 @@
 //
 
 import Foundation
+import Standard
 
 public enum RPCCenter {}
 
-private extension RPCCenter {}
+extension RPCCenter: TypeName {}
+
+private extension RPCCenter {
+    static let store = StorageCenter.jeak[typeName]
+}
 
 public extension RPCCenter {
-    static let jeak = JeakRPCService()
+    static let jeak = JeakRPCService(store: store)
 }

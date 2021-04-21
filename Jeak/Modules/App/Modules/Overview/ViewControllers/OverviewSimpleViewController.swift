@@ -23,6 +23,8 @@ class OverviewSimpleViewController: ViewController {
             .register(Reusable.cell)
             .instance
     }()
+    
+    lazy var viewModel = OverviewViewModel()
 }
 
 extension OverviewSimpleViewController {
@@ -31,6 +33,7 @@ extension OverviewSimpleViewController {
 
         // Do any additional setup after loading the view.
         setupUI()
+        bindRx()
     }
     
 }
@@ -39,7 +42,6 @@ private extension OverviewSimpleViewController {
     
     func setupUI() {
         
-//        self.tableView.autoresizesSubviews
         tableView.leaf.add(to: view)
         tableView.snp.makeConstraints {
             $0.edges.equalTo(UIEdgeInsets(top: Adaptor.navibarHeight, left: 0, bottom: 0, right: 0))
@@ -47,6 +49,19 @@ private extension OverviewSimpleViewController {
         
     }
     
+    
+}
+
+private extension OverviewSimpleViewController  {
+    func bindRx() {
+        viewModel.disposeBag = disposeBag
+        bindListView(tableView)
+        viewModel.loadFirst()
+    }
+    
+    func bindListView(_ tableView: UITableView) {
+        
+    }
 }
 
 extension OverviewSimpleViewController: UITableViewDataSource {

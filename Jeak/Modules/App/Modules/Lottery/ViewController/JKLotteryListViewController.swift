@@ -122,12 +122,13 @@ private extension JKLotteryListViewController {
         
     }
     
-    func mockDataSource() -> [JKLottery] {
-        var mock = [JKLottery]()
-        mock.append(JKLotterySSQ(red: "1,2,3,4,5,6", blue: "1"))
-        mock.append(JKLotterySSQ(red: "11,12,13,14,15,16", blue: "2"))
-        mock.append(JKLotterySSQ(red: "21,22,23,24,25,26", blue: "3"))
-        return mock
+    func mockDataSource() -> [Any] {
+//        var mock = [JKLottery]()
+////        mock.append(JKLotterySSQ(red: "1,2,3,4,5,6", blue: "1"))
+////        mock.append(JKLotterySSQ(red: "11,12,13,14,15,16", blue: "2"))
+////        mock.append(JKLotterySSQ(red: "21,22,23,24,25,26", blue: "3"))
+//        return mock
+        return []
     }
     
 }
