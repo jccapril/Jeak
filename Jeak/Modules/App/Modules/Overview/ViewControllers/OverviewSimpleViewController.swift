@@ -6,25 +6,28 @@
 //
 
 import UICore
+import RxCocoa
+import RxSwift
+import Center
 
 class OverviewSimpleViewController: ViewController {
     
-    private enum Reusable {
-        static let cell = ReusableCell<LotterySimpleTableViewCell>()
-    }
+
     
     lazy var tableView: UITableView = {
         UITableView(frame: .zero, style: .plain)
             .leaf
             .separatorStyle(.none)
-            .dataSource(self)
-            .delegate(self)
             .backgroundColor(Theme.backgroundColor)
-            .register(Reusable.cell)
+            .register(OverviewViewModel.Reusable.cell)
             .instance
     }()
     
-    lazy var viewModel = OverviewViewModel()
+    lazy var viewModel:OverviewViewModel = {
+        let lazy = OverviewViewModel()
+        lazy.disposeBag = disposeBag
+        return lazy
+    }()
 }
 
 extension OverviewSimpleViewController {
@@ -54,32 +57,44 @@ private extension OverviewSimpleViewController {
 
 private extension OverviewSimpleViewController  {
     func bindRx() {
-        viewModel.disposeBag = disposeBag
+        
         bindListView(tableView)
         viewModel.loadFirst()
+        let input = OverviewViewModel.Input()
+        let output = viewModel.transform(input: input)
+        handleItems(items: output.items)
+        
     }
     
     func bindListView(_ tableView: UITableView) {
+        tableView.rx.modelSelected(OverviewSimpleCellViewModel.self)
+            .subscribe(onNext: { [weak self] item in
+                self?.detailClick(viewModel: item)
+            })
+            .disposed(by: disposeBag)
+        
+        tableView.rx.willDisplayCell
+            .subscribe(onNext: { [weak self] cell, indexPath in
+                guard let cellViewModel = self?.viewModel.contents[safe: indexPath.row] else { return }
+                cellViewModel.willDisplay(cell: cell)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    
+    func handleItems(items: BehaviorRelay<[BaseCellViewModel]>) {
+        items.bind(to: tableView.rx.items(OverviewViewModel.Reusable.cell)){ (row, element, cell) in
+            
+        }
+        .disposed(by: disposeBag)
+    }
+}
+
+private extension OverviewSimpleViewController  {
+    func detailClick(viewModel: OverviewSimpleCellViewModel){
         
     }
 }
 
-extension OverviewSimpleViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:LotterySimpleTableViewCell = tableView.dequeue(Reusable.cell, for: indexPath)
-        
-        
-        return cell
-    }
-    
-}
 
 
-extension OverviewSimpleViewController: UITableViewDelegate {
-    
-}

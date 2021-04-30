@@ -6,6 +6,17 @@
 //
 
 import UIKit
+import Standard
+
+public protocol ConfigurableCell: UICollectionViewCell, TypeName {
+    static var identifier: String { get }
+    static var estimatedItemSize: CGSize { get }
+}
+
+public extension ConfigurableCell {
+    static var identifier: String { typeName }
+}
+
 
 protocol RxBaseCellViewModel {
     associatedtype Input
@@ -16,8 +27,8 @@ protocol RxBaseCellViewModel {
 
 protocol BaseCellViewModel {
     var identifier: String { get set }
-    var target: String? { get set }
-    var size: CGSize { get set }
+//    var target: String? { get set }
+//    var size: CGSize { get set }
     func willDisplay(cell: UIView)
     func didEndDisplaying(cell: UIView)
 }

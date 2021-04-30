@@ -10,39 +10,44 @@ import Center
 import RPC
 
 protocol JKLottery {
-    var lotteryType: JKLotteryType? { get }
-    var redBalls: [String]? { get }
-    var blueBalls: [String]? { get }
-    var lotteryDate: Date? { get }
-    var lotteryPhase: Int64? { get }
-    var lotteryFirstPrizeCount: Int64? { get }
-    var lotteryFirstPrizeMoney: Int64? { get }
-    var lotteryRewardPoolMoney: Int64? { get }
+    var lotteryName: String { get }
+    var lotteryType: JKLotteryType { get }
+    var redBalls: [String] { get }
+    var blueBalls: [String] { get }
+    var lotteryDate: Date { get }
+    var lotteryPhase: Int64 { get }
+    var lotteryFirstPrizeCount: Int64 { get }
+    var lotteryFirstPrizeMoney: Int64 { get }
+    var lotteryRewardPoolMoney: Int64 { get }
 }
 
 extension Jeak_Lottery: JKLottery {
-    var lotteryType: JKLotteryType? {
-        JKLotteryType.init(rawValue: Int(type))
+    
+    var lotteryName: String {
+        name
     }
-    var redBalls: [String]? {
+    var lotteryType: JKLotteryType {
+        JKLotteryType.init(rawValue: Int(type)) ?? .ssq
+    }
+    var redBalls: [String] {
         red.split(separator: "|").compactMap { "\($0)" }
     }
-    var blueBalls: [String]? {
+    var blueBalls: [String] {
         blue.split(separator: "|").compactMap { "\($0)" }
     }
-    var lotteryDate: Date? {
+    var lotteryDate: Date {
         Date(timeIntervalSince1970: TimeInterval(date))
     }
-    var lotteryPhase: Int64? {
+    var lotteryPhase: Int64 {
         phase
     }
-    var lotteryFirstPrizeCount: Int64? {
+    var lotteryFirstPrizeCount: Int64 {
         firstPrizeCount
     }
-    var lotteryFirstPrizeMoney: Int64? {
+    var lotteryFirstPrizeMoney: Int64 {
         firstPrizeMoney
     }
-    var lotteryRewardPoolMoney: Int64? {
+    var lotteryRewardPoolMoney: Int64 {
         rewardPoolMoney
     }
     

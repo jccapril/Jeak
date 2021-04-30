@@ -16,7 +16,7 @@ class LotterySimpleTableViewCell: UITableViewCell {
     }()
     
     /** 标题 e.g. 双色球 */
-    private lazy var titleLabel: UILabel = {
+    lazy var titleLabel: UILabel = {
         UILabel()
             .leaf
             .font(UIFont.boldSystemFont(ofSize: 20))
@@ -27,7 +27,7 @@ class LotterySimpleTableViewCell: UITableViewCell {
  
     
     /** 期数 e.g.  2021039期 */
-    private lazy var phaseLabel: UILabel = {
+    lazy var phaseLabel: UILabel = {
         UILabel()
             .leaf
             .font(UIFont.systemFont(ofSize: 16))
@@ -37,7 +37,7 @@ class LotterySimpleTableViewCell: UITableViewCell {
     }()
    
     /** 日期 e.g.  04-13 星期二 */
-    private lazy var dateLabel: UILabel = {
+    lazy var dateLabel: UILabel = {
         UILabel()
             .leaf
             .font(UIFont.systemFont(ofSize: 16))
@@ -46,43 +46,43 @@ class LotterySimpleTableViewCell: UITableViewCell {
             .instance
     }()
     
-    private lazy var ball1: JKBall = {
+    lazy var ball1: JKBall = {
         let ball: JKBall = JKBall()
         ball.type = .red
         return ball
     }()
-    private lazy var ball2: JKBall = {
+    lazy var ball2: JKBall = {
         let ball: JKBall = JKBall()
         ball.type = .red
         return ball
     }()
-    private lazy var ball3: JKBall = {
+    lazy var ball3: JKBall = {
         let ball: JKBall = JKBall()
         ball.type = .red
         return ball
     }()
-    private lazy var ball4: JKBall = {
+    lazy var ball4: JKBall = {
         let ball: JKBall = JKBall()
         ball.type = .red
         return ball
     }()
-    private lazy var ball5: JKBall = {
+    lazy var ball5: JKBall = {
         let ball: JKBall = JKBall()
         ball.type = .red
         return ball
     }()
-    private lazy var ball6: JKBall = {
+    lazy var ball6: JKBall = {
         let ball: JKBall = JKBall()
         ball.type = .red
         return ball
     }()
-    private lazy var ball7: JKBall = {
+    lazy var ball7: JKBall = {
         let ball: JKBall = JKBall()
         ball.type = .blue
         return ball
     }()
     
-    private lazy var indicator: UIImageView = {
+    lazy var indicator: UIImageView = {
         UIImageView()
             .leaf
             .image(CommonModular.image(named: "ic_overview_cell_right"))
@@ -90,7 +90,7 @@ class LotterySimpleTableViewCell: UITableViewCell {
     }()
     
     
-    private lazy var detailView: UIView = {
+    lazy var detailView: UIView = {
         UIView()
             .leaf
             .backgroundColor(#colorLiteral(red: 0.9568627451, green: 0.9725490196, blue: 0.9803921569, alpha: 1))
@@ -98,14 +98,14 @@ class LotterySimpleTableViewCell: UITableViewCell {
             .instance
     }()
     
-    private lazy var bottomLineView: UIView = {
+    lazy var bottomLineView: UIView = {
         UIView()
             .leaf
             .backgroundColor(#colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1))
             .instance
     }()
     
-    private lazy var firstRankTitleLabel: UILabel = {
+   private lazy var firstRankTitleLabel: UILabel = {
         UILabel()
             .leaf
             .text("一等奖")
@@ -115,7 +115,7 @@ class LotterySimpleTableViewCell: UITableViewCell {
             .instance
     }()
     
-    private lazy var firstRankCountLabel: UILabel = {
+    lazy var firstRankCountLabel: UILabel = {
         UILabel()
             .leaf
             .backgroundColor(#colorLiteral(red: 0.9019607843, green: 0.3058823529, blue: 0.2784313725, alpha: 1))
@@ -126,7 +126,7 @@ class LotterySimpleTableViewCell: UITableViewCell {
             .instance
     }()
     
-    private lazy var firstRankRewardLabel: UILabel = {
+    lazy var firstRankRewardLabel: UILabel = {
         UILabel()
             .leaf
             .font(.systemFont(ofSize: 16))
@@ -145,13 +145,14 @@ class LotterySimpleTableViewCell: UITableViewCell {
         
     }()
     
-    private lazy var rewardPoolLabel: UILabel = {
+    lazy var rewardPoolLabel: UILabel = {
         UILabel()
             .leaf
             .font(.systemFont(ofSize: 16))
             .textAlignment(.center)
             .instance
     }()
+    
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -378,3 +379,8 @@ private extension LotterySimpleTableViewCell {
     
     
 }
+
+
+//extension LotterySimpleTableViewCell: ConfigurableCell {
+//    
+//}

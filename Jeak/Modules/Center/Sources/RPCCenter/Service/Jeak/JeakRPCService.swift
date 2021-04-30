@@ -85,12 +85,12 @@ private extension JeakRPCService {
     #if APPSTORE
         static let host: String = ""
     #else
-        static let host: String = "192.168.3.22"
+        static let host: String = "172.16.12.89"
     #endif
 
     static let port: Int = 443
     static let name: String = "jeak"
-    static let remote = Remote(host: host, port: port, tls: true)
+    static let remote = Remote(host: host, port: port, tls: false)
 
     static let remoteKey: String = "\(typeName)/\(name)/remote"
 }
