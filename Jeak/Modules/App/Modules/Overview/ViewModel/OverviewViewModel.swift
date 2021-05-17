@@ -65,12 +65,17 @@ extension OverviewViewModel {
         self.elements.accept([])
         var array = [BaseCellViewModel]()
         
-        let ssqViewModel = OverviewSimpleCellViewModel(identifier:Reusable.cell.identifier, data: ssq!)
-        array.append(ssqViewModel)
+        if ssq != nil {
+            let ssqViewModel = OverviewSimpleCellViewModel(identifier:Reusable.cell.identifier, data: ssq)
+            array.append(ssqViewModel)
+        }
         
-        let dltViewModel = OverviewSimpleCellViewModel(identifier:Reusable.cell.identifier, data: dlt!)
-        array.append(dltViewModel)
+        if dlt != nil {
+            let dltViewModel = OverviewSimpleCellViewModel(identifier:Reusable.cell.identifier, data: dlt)
+            array.append(dltViewModel)
+        }
         handleElements(array)
+        
     }
 }
 
@@ -107,6 +112,7 @@ extension OverviewViewModel {
                 case .failure(let error):
                     observer.onError(error)
                 case .success(let lottery):
+                
                     observer.onNext(lottery)
                     observer.onCompleted()
                 }

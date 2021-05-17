@@ -58,16 +58,16 @@ public extension UserCenter {
 
 
 public extension UserCenter {
-    static func login(mobile: String,password: String,complete: @escaping (Result<Jeak_NormalLoginResponse, Error>) -> Void) {
-        RPCCenter.jeak.login(mobile: mobile, password: password) { result in
-            switch result {
-            case .success(let response):
-                UserCenter.guid = response.guid
-            default: break
-            }
-            complete(result)
-        }
-    }
+//    static func login(mobile: String,password: String,complete: @escaping (Result<Jeak_NormalLoginResponse, Error>) -> Void) {
+//        RPCCenter.jeak.login(mobile: mobile, password: password) { result in
+//            switch result {
+//            case .success(let response):
+//                UserCenter.guid = response.guid
+//            default: break
+//            }
+//            complete(result)
+//        }
+//    }
     
 
 }

@@ -49,26 +49,26 @@ public extension JeakRPCService {
 
 public extension JeakRPCService {
 
-    func login(mobile: String, password: String, complete: @escaping(Result<Jeak_NormalLoginResponse,Error>)->Void) {
-        requestQueue.async {
-            let client = Jeak_LoginClient(channel: self.connection,defaultCallOptions: self.callOptions())
-            let call = client.normalLogin(.with{
-                $0.mobile = mobile
-                $0.password = password
-            })
-            call.response.whenComplete {result in
-                self.resultQueue.async {
-                    complete(result)
-                }
-            }
-            do {
-                let status = try call.status.wait()
-                print("inner Call Status : \(status)")
-            } catch {
-                print("inner Call Failed With Error : \(error)")
-            }
-        }
-    }
+//    func login(mobile: String, password: String, complete: @escaping(Result<Jeak_NormalLoginResponse,Error>)->Void) {
+//        requestQueue.async {
+//            let client = Jeak_LoginClient(channel: self.connection,defaultCallOptions: self.callOptions())
+//            let call = client.normalLogin(.with{
+//                $0.mobile = mobile
+//                $0.password = password
+//            })
+//            call.response.whenComplete {result in
+//                self.resultQueue.async {
+//                    complete(result)
+//                }
+//            }
+//            do {
+//                let status = try call.status.wait()
+//                print("inner Call Status : \(status)")
+//            } catch {
+//                print("inner Call Failed With Error : \(error)")
+//            }
+//        }
+//    }
 
 }
 
@@ -83,12 +83,14 @@ public extension JeakRPCService {
 
 private extension JeakRPCService {
     #if APPSTORE
-        static let host: String = ""
-    #else
-        static let host: String = "172.16.12.89"
-    #endif
+        static let host: String = "118.24.73.244"
 
-    static let port: Int = 443
+    #else
+//        static let host: String = "172.16.12.89"
+        static let host: String = "118.24.73.244"
+    #endif
+    static let port: Int = 1443
+    
     static let name: String = "jeak"
     static let remote = Remote(host: host, port: port, tls: false)
 

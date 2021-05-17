@@ -466,16 +466,16 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 4R855GB33C;
+				DEVELOPMENT_TEAM = NZNQCNN9S9;
 				INFOPLIST_FILE = Jeak/Resources/info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jeak.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.upsky.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = jeak_dev_pro;
+				PROVISIONING_PROFILE_SPECIFIER = test_pro;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

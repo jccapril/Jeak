@@ -14,8 +14,8 @@ protocol JKLottery {
     var lotteryType: JKLotteryType { get }
     var redBalls: [String] { get }
     var blueBalls: [String] { get }
-    var lotteryDate: Date { get }
-    var lotteryPhase: Int64 { get }
+    var lotteryDate: String { get }
+    var lotteryCode: String { get }
     var lotteryFirstPrizeCount: Int64 { get }
     var lotteryFirstPrizeMoney: Int64 { get }
     var lotteryRewardPoolMoney: Int64 { get }
@@ -30,25 +30,25 @@ extension Jeak_Lottery: JKLottery {
         JKLotteryType.init(rawValue: Int(type)) ?? .ssq
     }
     var redBalls: [String] {
-        red.split(separator: "|").compactMap { "\($0)" }
+        red
     }
     var blueBalls: [String] {
-        blue.split(separator: "|").compactMap { "\($0)" }
+        blue
     }
-    var lotteryDate: Date {
-        Date(timeIntervalSince1970: TimeInterval(date))
+    var lotteryDate: String {
+        date
     }
-    var lotteryPhase: Int64 {
-        phase
+    var lotteryCode: String {
+        code
     }
     var lotteryFirstPrizeCount: Int64 {
-        firstPrizeCount
+        firstCount
     }
     var lotteryFirstPrizeMoney: Int64 {
-        firstPrizeMoney
+        firstMoney
     }
     var lotteryRewardPoolMoney: Int64 {
-        rewardPoolMoney
+        poolMoney
     }
     
 }
