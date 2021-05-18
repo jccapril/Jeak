@@ -8,14 +8,14 @@
 import Foundation
 import UICore
 import UIKit
-
+import RPC
 class OverviewSimpleCellViewModel {
     var identifier: String
 //    var target: String?
 //    var size: CGSize
-    var data: JKLottery?
+    var data: Jeak_Lottery?
     private weak var weakCell: LotterySimpleTableViewCell?
-    init(identifier: String, data: JKLottery?) {
+    init(identifier: String, data: Jeak_Lottery?) {
         self.data = data
         self.identifier = identifier
     }
@@ -38,29 +38,30 @@ private extension OverviewSimpleCellViewModel {
             return
         }
         DispatchQueue.main.async {
-            cell.titleLabel.text = self.data?.lotteryName
-            cell.phaseLabel.text = self.data?.lotteryCode
-//            cell.dateLabel.text =  self.data.lotteryDate.string(format: "MM-dd EEEE")
-            cell.dateLabel.text = self.data?.lotteryDate
-            cell.ball1.text = self.data?.redBalls[0]
-            cell.ball2.text = self.data?.redBalls[1]
-            cell.ball3.text = self.data?.redBalls[2]
-            cell.ball4.text = self.data?.redBalls[3]
-            cell.ball5.text = self.data?.redBalls[4]
-            if self.data?.lotteryType == .ssq {
-                cell.ball6.text = self.data?.redBalls[5]
+            cell.titleLabel.text = self.data?.name
+            cell.phaseLabel.text = self.data?.code
+             
+            let date = Date.stringConvertDate(string: self.data?.date ?? "",dateFormat: "yyyy-MM-dd").string(format: "MM-dd EEEE")
+            cell.dateLabel.text =  date
+            cell.ball1.text = self.data?.red[0]
+            cell.ball2.text = self.data?.red[1]
+            cell.ball3.text = self.data?.red[2]
+            cell.ball4.text = self.data?.red[3]
+            cell.ball5.text = self.data?.red[4]
+            if self.data?.type == 0 {
+                cell.ball6.text = self.data?.red[5]
                 cell.ball6.type = .red
-                cell.ball7.text = self.data?.blueBalls[0]
+                cell.ball7.text = self.data?.blue[0]
                 cell.ball7.type = .blue
-            }else if self.data?.lotteryType == .dlt {
-                cell.ball6.text = self.data?.blueBalls[0]
+            }else if self.data?.type == 1 {
+                cell.ball6.text = self.data?.blue[0]
                 cell.ball6.type = .blue
-                cell.ball7.text = self.data?.blueBalls[1]
+                cell.ball7.text = self.data?.blue[1]
                 cell.ball7.type = .blue
             }
-            cell.firstRankCountLabel.text = "\( self.data?.lotteryFirstPrizeCount ?? 0)注"
-            cell.firstRankRewardLabel.attributedText = self.transformAttr(money: Int(self.data?.lotteryFirstPrizeMoney ?? 0))
-            cell.rewardPoolLabel.attributedText = self.transformAttr(money: Int(self.data?.lotteryRewardPoolMoney ?? 0))
+            cell.firstRankCountLabel.text = "\( self.data?.firstCount ?? 0)注"
+            cell.firstRankRewardLabel.attributedText = self.transformAttr(money: Int(self.data?.firstMoney ?? 0))
+            cell.rewardPoolLabel.attributedText = self.transformAttr(money: Int(self.data?.poolMoney ?? 0))
         }
     }
     func transformAttr(money:Int)->NSAttributedString{

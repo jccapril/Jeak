@@ -59,10 +59,19 @@ private extension OverviewSimpleViewController  {
     func bindRx() {
         
         bindListView(tableView)
-        viewModel.loadFirst()
         let input = OverviewViewModel.Input()
         let output = viewModel.transform(input: input)
         handleItems(items: output.items)
+        output.loadingState.distinctUntilChanged().asObservable()
+            .subscribe (onNext: { state in
+                if(state) {
+                    self.view.hideToastActivity()
+                }else {
+                    self.view.makeToastActivity(.center)
+                }
+            })
+            .disposed(by: disposeBag)
+        viewModel.loadFirst()
         
     }
     
@@ -83,6 +92,11 @@ private extension OverviewSimpleViewController  {
     
     
     func handleItems(items: BehaviorRelay<[BaseCellViewModel]>) {
+        
+        items.subscribe { result in
+            self.view.hideAllToasts()
+        }.disposed(by: disposeBag)
+        
         items.bind(to: tableView.rx.items(OverviewViewModel.Reusable.cell)){ (row, element, cell) in
             
         }

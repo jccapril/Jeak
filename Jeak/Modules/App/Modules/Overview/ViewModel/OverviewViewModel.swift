@@ -20,7 +20,7 @@ class OverviewViewModel {
     var contents: [BaseCellViewModel] {
         elements.value
     }
-    
+    let loadingState = BehaviorRelay(value: false)
     let elements = BehaviorRelay<[BaseCellViewModel]>(value: [])
     var disposeBag: DisposeBag?
     
@@ -31,11 +31,13 @@ extension OverviewViewModel: RxBaseCellViewModel {
         
     }
     struct Output {
+        let loadingState: Driver<Bool>
         let items: BehaviorRelay<[BaseCellViewModel]>
     }
     
     func transform(input: Input) -> Output {
         return Output(
+            loadingState: loadingState.asDriver(),
             items: elements
         )
     }
@@ -51,16 +53,20 @@ extension OverviewViewModel {
 
         Observable.zip(ssq, dlt) { result1, result2 in
             (result1, result2)
-        }
-        .subscribe { result1, result2 in
+        }.subscribe(onNext: { result1,result2 in
+            self.loadingState.accept(true)
             self.handleFirstResult(ssq: result1, dlt: result2)
-        }
+        }, onError: { err in
+            self.loadingState.accept(true)
+        }, onCompleted: {
+        })
         .disposed(by: disposeBag)
+
         
     }
     
     
-    func handleFirstResult(ssq:JKLottery?,dlt:JKLottery?){
+    func handleFirstResult(ssq:Jeak_Lottery?,dlt:Jeak_Lottery?){
        
         self.elements.accept([])
         var array = [BaseCellViewModel]()
@@ -90,8 +96,8 @@ extension OverviewViewModel {
 
 extension OverviewViewModel {
 
-    func GetLastLotterySSQ() -> Observable<JKLottery?>{
-        Observable<JKLottery?>.create { observer in
+    func GetLastLotterySSQ() -> Observable<Jeak_Lottery?>{
+        Observable<Jeak_Lottery?>.create { observer in
             LotteryCenter.getLastLotterySSQ { result in
                 switch result {
                 case .failure(let error):
@@ -105,8 +111,8 @@ extension OverviewViewModel {
         }
     }
     
-    func GetLastLotteryDLT() -> Observable<JKLottery?>{
-        Observable<JKLottery?>.create { observer in
+    func GetLastLotteryDLT() -> Observable<Jeak_Lottery?>{
+        Observable<Jeak_Lottery?>.create { observer in
             LotteryCenter.getLastLotteryDLT { result in
                 switch result {
                 case .failure(let error):
