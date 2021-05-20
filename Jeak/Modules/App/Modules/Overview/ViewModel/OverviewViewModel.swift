@@ -48,38 +48,44 @@ extension OverviewViewModel {
     func loadFirst() {
         guard let disposeBag = self.disposeBag else { return }
         
-        let ssq = GetLastLotterySSQ()
-        let dlt = GetLastLotteryDLT()
+        GetLastestLotteryList()
+            .subscribe(onNext: { result in
+                self.loadingState.accept(true)
+                self.handleFirstResult(lotteryList: result)
+            }, onError: { err in
+                self.loadingState.accept(true)
+            }, onCompleted: {
+                
+            })
+            .disposed(by: disposeBag)
+        
+//        let ssq = GetLastLotterySSQ()
+//        let dlt = GetLastLotteryDLT()
 
-        Observable.zip(ssq, dlt) { result1, result2 in
-            (result1, result2)
-        }.subscribe(onNext: { result1,result2 in
-            self.loadingState.accept(true)
-            self.handleFirstResult(ssq: result1, dlt: result2)
-        }, onError: { err in
-            self.loadingState.accept(true)
-        }, onCompleted: {
-        })
-        .disposed(by: disposeBag)
-
+//        Observable.zip(ssq, dlt) { result1, result2 in
+//            (result1, result2)
+//        }.subscribe(onNext: { result1,result2 in
+//            self.loadingState.accept(true)
+//            self.handleFirstResult(ssq: result1, dlt: result2)
+//        }, onError: { err in
+//            self.loadingState.accept(true)
+//        }, onCompleted: {
+//        })
+//        .disposed(by: disposeBag)
         
     }
     
     
-    func handleFirstResult(ssq:Jeak_Lottery?,dlt:Jeak_Lottery?){
+    func handleFirstResult(lotteryList:[Jeak_Lottery]?){
        
         self.elements.accept([])
         var array = [BaseCellViewModel]()
         
-        if ssq != nil {
-            let ssqViewModel = OverviewSimpleCellViewModel(identifier:Reusable.cell.identifier, data: ssq)
-            array.append(ssqViewModel)
+        for lottery in lotteryList ?? [] {
+            let viewModel = OverviewSimpleCellViewModel(identifier:Reusable.cell.identifier, data: lottery)
+            array.append(viewModel)
         }
         
-        if dlt != nil {
-            let dltViewModel = OverviewSimpleCellViewModel(identifier:Reusable.cell.identifier, data: dlt)
-            array.append(dltViewModel)
-        }
         handleElements(array)
         
     }
@@ -89,16 +95,15 @@ extension OverviewViewModel {
 extension OverviewViewModel {
     func handleElements(_ elements: [BaseCellViewModel]) {
         self.elements.accept(self.elements.value + elements)
-        
     }
 }
 
 
 extension OverviewViewModel {
 
-    func GetLastLotterySSQ() -> Observable<Jeak_Lottery?>{
-        Observable<Jeak_Lottery?>.create { observer in
-            LotteryCenter.getLastLotterySSQ { result in
+    func GetLastestLotteryList() -> Observable<[Jeak_Lottery]?> {
+        Observable<[Jeak_Lottery]?>.create { observer in
+            LotteryCenter.getLastestLotteryList { result in
                 switch result {
                 case .failure(let error):
                     observer.onError(error)
@@ -111,20 +116,5 @@ extension OverviewViewModel {
         }
     }
     
-    func GetLastLotteryDLT() -> Observable<Jeak_Lottery?>{
-        Observable<Jeak_Lottery?>.create { observer in
-            LotteryCenter.getLastLotteryDLT { result in
-                switch result {
-                case .failure(let error):
-                    observer.onError(error)
-                case .success(let lottery):
-                
-                    observer.onNext(lottery)
-                    observer.onCompleted()
-                }
-            }
-            return Disposables.create()
-        }
-    }
-    
+   
 }

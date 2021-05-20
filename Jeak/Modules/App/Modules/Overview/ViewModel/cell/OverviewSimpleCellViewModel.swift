@@ -88,7 +88,7 @@ private extension OverviewSimpleCellViewModel {
             abs.append(NSAttributedString(string: "万", attributes: [.font : UIFont.systemFont(ofSize: 16),.foregroundColor : UIColor.black]))
         }
 
-        if remain > 0 {
+        if remain >= 0 {
             let curr = NSAttributedString(string: "\(remain)", attributes: [.font : UIFont.systemFont(ofSize: 16),.foregroundColor : #colorLiteral(red: 0.9019607843, green: 0.3058823529, blue: 0.2784313725, alpha: 1)])
             abs.append(curr)
 

@@ -15,10 +15,9 @@ extension LotteryCenter: TypeName {}
 
 public extension LotteryCenter {
     
-    static func getLastLotterySSQ(complete: @escaping (Result<Jeak_Lottery?, Error>) -> Void){
-        RPCCenter.jeak.GetLastLottery(type: 0, complete: {
-            result in
-                switch result {
+    static func getLastestLotteryList(complete: @escaping (Result<[Jeak_Lottery]?, Error>) -> Void) {
+        RPCCenter.jeak.GetLastestLottery(hasSSQ: true, hasDLT: true) { result in
+            switch result {
                 case .success(let response):
                     if response.errCode != 0 {
                         complete(.success(nil))
@@ -28,27 +27,10 @@ public extension LotteryCenter {
                     }
                 case .failure(let error):
                     complete(.failure(error))
-                }
-        })
+            }
+            
+        }
     }
     
-    
-    static func getLastLotteryDLT(complete: @escaping (Result<Jeak_Lottery?, Error>) -> Void){
-        RPCCenter.jeak.GetLastLottery(type: 1, complete: {
-            result in
-                switch result {
-                case .success(let response):
-                    if response.errCode != 0 {
-                        complete(.success(nil))
-                    }else {
-                        let lottery = response.lottery
-                        complete(.success(lottery))
-                    }
-
-                case .failure(let error):
-                    complete(.failure(error))
-                }
-        })
-    }
     
 }
