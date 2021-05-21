@@ -66,9 +66,18 @@ private extension OverviewSimpleCellViewModel {
     }
     func transformAttr(money:Int)->NSAttributedString{
         
+        let abs = NSMutableAttributedString()
+        
+        if money == 0 {
+            let curr = NSAttributedString(string: "\(money)", attributes: [.font : UIFont.systemFont(ofSize: 16),.foregroundColor : #colorLiteral(red: 0.9019607843, green: 0.3058823529, blue: 0.2784313725, alpha: 1)])
+            abs.append(curr)
+
+            abs.append(NSAttributedString(string: "元", attributes: [.font : UIFont.systemFont(ofSize: 16),.foregroundColor : UIColor.black]))
+            return abs.copy() as! NSAttributedString
+        }
+        
         let ohm = 100000000
         let ots = 10000
-        let abs = NSMutableAttributedString()
         
         let hm = money/ohm
         let ts = (money%ohm)/ots

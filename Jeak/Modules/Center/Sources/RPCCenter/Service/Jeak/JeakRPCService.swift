@@ -83,11 +83,11 @@ public extension JeakRPCService {
 
 private extension JeakRPCService {
     #if APPSTORE
-        static let host: String = "118.24.73.244"
+        static let host: String = "djangoc.com"
         static let port: Int = 1443
     #else
-        static let host: String = "172.16.12.89"
-        static let port: Int = 443
+        static let host: String = "djangoc.com"
+        static let port: Int = 1443
     #endif
     
     
