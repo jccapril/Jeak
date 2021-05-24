@@ -27,5 +27,21 @@ public extension JeakRPCService {
             }
         }
     }
+    
+    func GetLotteryList(type:Int64,complete: @escaping (Result<Jeak_Gateway_GetLotteriesResponse, Error>) -> Void) {
+        requestQueue.async {
+            let client = Jeak_Gateway_LotteryClient(channel: self.connection, defaultCallOptions: self.callOptions())
+            let call = client.getLotteries(.with {
+                $0.type = type
+            })
+            call.response.whenComplete { result in self.resultQueue.async { complete(result) } }
+            do {
+                let status = try call.status.wait()
+                print("Call Status : \(status)")
+            } catch {
+                print("Call Failed With Error : \(error)")
+            }
+        }
+    }
    
 }

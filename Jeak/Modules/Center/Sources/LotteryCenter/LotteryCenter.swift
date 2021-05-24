@@ -32,5 +32,36 @@ public extension LotteryCenter {
         }
     }
     
+    static func getSSQLotteryList(complete: @escaping (Result<[Jeak_Lottery]?, Error>) -> Void) {
+        RPCCenter.jeak.GetLotteryList(type:0) { result in
+            switch result {
+            case .success(let response):
+                if response.errCode != 0 {
+                    complete(.success(nil))
+                }else {
+                    let lottery = response.lottery
+                    complete(.success(lottery))
+                }
+            case .failure(let error):
+                complete(.failure(error))
+            }
+        }
+    }
+    
+    static func getDLTLotteryList(complete: @escaping (Result<[Jeak_Lottery]?, Error>) -> Void) {
+        RPCCenter.jeak.GetLotteryList(type:1) { result in
+            switch result {
+            case .success(let response):
+                if response.errCode != 0 {
+                    complete(.success(nil))
+                }else {
+                    let lottery = response.lottery
+                    complete(.success(lottery))
+                }
+            case .failure(let error):
+                complete(.failure(error))
+            }
+        }
+    }
     
 }
