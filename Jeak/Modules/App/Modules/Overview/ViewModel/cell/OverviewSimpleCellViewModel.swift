@@ -77,8 +77,8 @@ private extension OverviewSimpleCellViewModel {
         
         let ohm = 100000000
         let ots = 10000
-        
-        
+
+
         let hm = money/ohm
         let ts = (money%ohm)/ots
         let remain = (money%ohm)%ots

@@ -46,7 +46,6 @@
 		C09D3E902600A4AF00EDC0F9 /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C09D3E8E2600A4AF00EDC0F9 /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C09D3E922600A51600EDC0F9 /* JKLotteryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D3E912600A51600EDC0F9 /* JKLotteryTableViewCell.swift */; };
 		C09D3E982600A74600EDC0F9 /* JKLotteryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D3E972600A74600EDC0F9 /* JKLotteryListViewModel.swift */; };
-		C09D3E9A2600A99C00EDC0F9 /* JKLottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09D3E992600A99C00EDC0F9 /* JKLottery.swift */; };
 		C0AB3B6725F9F753007C36AD /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB3B6625F9F753007C36AD /* Application.swift */; };
 		C0AB3B6B25F9F79F007C36AD /* UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3B6A25F9F79F007C36AD /* UICore.framework */; };
 		C0AB3B6C25F9F79F007C36AD /* UICore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB3B6A25F9F79F007C36AD /* UICore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -122,7 +121,6 @@
 		C09D3E8E2600A4AF00EDC0F9 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09D3E912600A51600EDC0F9 /* JKLotteryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKLotteryTableViewCell.swift; sourceTree = "<group>"; };
 		C09D3E972600A74600EDC0F9 /* JKLotteryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKLotteryListViewModel.swift; sourceTree = "<group>"; };
-		C09D3E992600A99C00EDC0F9 /* JKLottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKLottery.swift; sourceTree = "<group>"; };
 		C0AB3B4D25F9F3D3007C36AD /* App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AB3B5125F9F3D3007C36AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0AB3B6625F9F753007C36AD /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
@@ -158,6 +156,7 @@
 		092C8C9F25FA565300B904D6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C095068B265B79E800A645A9 /* Extension */,
 				C09CB7C02609D4DA0082DDB7 /* Common */,
 				C0D902B4261C479300D8F7AE /* Setting */,
 				C0D902B3261C478C00D8F7AE /* Mine */,
@@ -178,13 +177,6 @@
 				C09D3E972600A74600EDC0F9 /* JKLotteryListViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		092C8CE42600E4D100B904D6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		092C8CE52600E4DA00B904D6 /* ViewController */ = {
@@ -262,14 +254,6 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		C083AB0A262EC78800F0809F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C09D3E992600A99C00EDC0F9 /* JKLottery.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		C083AB0D262EC86300F0809F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +285,13 @@
 				C083AB25262ECF4900F0809F /* BaseCellViewModel.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		C095068B265B79E800A645A9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		C09CB7C02609D4DA0082DDB7 /* Common */ = {
@@ -340,7 +331,6 @@
 			children = (
 				092C8CE62600E4E500B904D6 /* View */,
 				092C8CE52600E4DA00B904D6 /* ViewController */,
-				092C8CE42600E4D100B904D6 /* Model */,
 				092C8CE32600E4C400B904D6 /* ViewModel */,
 			);
 			path = Lottery;
@@ -428,7 +418,6 @@
 			isa = PBXGroup;
 			children = (
 				C083AB0D262EC86300F0809F /* ViewModel */,
-				C083AB0A262EC78800F0809F /* Model */,
 				C0CDD1702628227000EDCAD6 /* View */,
 				C0D902B5261C47A500D8F7AE /* ViewControllers */,
 			);
@@ -576,7 +565,6 @@
 				C0D902BE261C488900D8F7AE /* MineViewController.swift in Sources */,
 				C09D3E5D26009FB300EDC0F9 /* JKDashboardViewController.swift in Sources */,
 				C0D902B7261C47D700D8F7AE /* OverviewViewController.swift in Sources */,
-				C09D3E9A2600A99C00EDC0F9 /* JKLottery.swift in Sources */,
 				C09D3E922600A51600EDC0F9 /* JKLotteryTableViewCell.swift in Sources */,
 				092C8CE82600E52000B904D6 /* JKSegmentControl.swift in Sources */,
 				C083AB0F262EC88300F0809F /* OverviewViewModel.swift in Sources */,
