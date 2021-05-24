@@ -9,6 +9,27 @@ import Foundation
 import RPC
 import Standard
 
+enum LotteryCenterError: Error {
+    case BidInvalid
+    case LotteryTypeInvalid
+    case OtherInvalid
+    
+    private static let intValues:[LotteryCenterError:Int64] = [.BidInvalid:1002001,.LotteryTypeInvalid:1002002]
+    private static let mappingDict:[Int64:LotteryCenterError] = Dictionary(uniqueKeysWithValues: LotteryCenterError.intValues.map({ ($1, $0) }))
+
+    var intValue:Int64 {
+        return LotteryCenterError.intValues[self]!
+    }
+
+    init(intValue:Int64){
+        if let err =  LotteryCenterError.mappingDict[intValue] {
+            self = err
+        }else {
+            self = .OtherInvalid
+        }
+    }
+}
+
 public enum LotteryCenter {}
 
 extension LotteryCenter: TypeName {}
@@ -20,7 +41,7 @@ public extension LotteryCenter {
             switch result {
                 case .success(let response):
                     if response.errCode != 0 {
-                        complete(.success(nil))
+                        complete(.failure(LotteryCenterError.init(intValue: response.errCode)))
                     }else {
                         let lottery = response.lottery
                         complete(.success(lottery))
@@ -37,7 +58,8 @@ public extension LotteryCenter {
             switch result {
             case .success(let response):
                 if response.errCode != 0 {
-                    complete(.success(nil))
+                
+                    complete(.failure(LotteryCenterError.init(intValue: response.errCode)))
                 }else {
                     let lottery = response.lottery
                     complete(.success(lottery))
@@ -53,7 +75,7 @@ public extension LotteryCenter {
             switch result {
             case .success(let response):
                 if response.errCode != 0 {
-                    complete(.success(nil))
+                    complete(.failure(LotteryCenterError.init(intValue: response.errCode)))
                 }else {
                     let lottery = response.lottery
                     complete(.success(lottery))
