@@ -13,7 +13,9 @@ public extension JeakRPCService {
     
     func GetLastestLottery(hasSSQ:Bool,hasDLT:Bool,complete: @escaping (Result<Jeak_Gateway_GetLastestLotteryResponse, Error>) -> Void) {
         requestQueue.async {
-            let client = Jeak_Gateway_LotteryClient(channel: self.connection, defaultCallOptions: self.callOptions())
+            let client = Jeak_Gateway_LotteryClient(channel: self.connection,
+                                                    defaultCallOptions: self.callOptions(),
+                                                    interceptors: JeakClientInterceptorFactory())
             let call = client.getLastestLottery(.with {
                 $0.dlt = hasDLT
                 $0.ssq = hasSSQ
@@ -30,7 +32,10 @@ public extension JeakRPCService {
     
     func GetLotteryList(type:Int64,complete: @escaping (Result<Jeak_Gateway_GetLotteriesResponse, Error>) -> Void) {
         requestQueue.async {
-            let client = Jeak_Gateway_LotteryClient(channel: self.connection, defaultCallOptions: self.callOptions())
+            let client = Jeak_Gateway_LotteryClient(
+                channel: self.connection,
+                defaultCallOptions: self.callOptions(),
+                interceptors: JeakClientInterceptorFactory())
             let call = client.getLotteries(.with {
                 $0.type = type
             })

@@ -8,7 +8,7 @@
 import Foundation
 import RPC
 import Standard
-
+import GRPC
 enum LotteryCenterError: Error {
     case BidInvalid
     case LotteryTypeInvalid
@@ -40,13 +40,17 @@ public extension LotteryCenter {
         RPCCenter.jeak.GetLastestLottery(hasSSQ: true, hasDLT: true) { result in
             switch result {
                 case .success(let response):
-                    if response.errCode != 0 {
-                        complete(.failure(LotteryCenterError.init(intValue: response.errCode)))
-                    }else {
-                        let lottery = response.lottery
-                        complete(.success(lottery))
-                    }
+                    let lottery = response.lottery
+                    complete(.success(lottery))
                 case .failure(let error):
+                    if let e = error as? ResponseError {
+                        let status = e.rpcStatus.code
+                        let code = e.ecodeError?.errCode ?? 0
+                        print("find status \(status)")
+                        print("find code \(code)")
+                      } else {
+                        // handle other err0or types
+                      }
                     complete(.failure(error))
             }
             
@@ -57,13 +61,8 @@ public extension LotteryCenter {
         RPCCenter.jeak.GetLotteryList(type:0) { result in
             switch result {
             case .success(let response):
-                if response.errCode != 0 {
-                
-                    complete(.failure(LotteryCenterError.init(intValue: response.errCode)))
-                }else {
-                    let lottery = response.lottery
-                    complete(.success(lottery))
-                }
+                let lottery = response.lottery
+                complete(.success(lottery))
             case .failure(let error):
                 complete(.failure(error))
             }
@@ -74,12 +73,8 @@ public extension LotteryCenter {
         RPCCenter.jeak.GetLotteryList(type:1) { result in
             switch result {
             case .success(let response):
-                if response.errCode != 0 {
-                    complete(.failure(LotteryCenterError.init(intValue: response.errCode)))
-                }else {
-                    let lottery = response.lottery
-                    complete(.success(lottery))
-                }
+                let lottery = response.lottery
+                complete(.success(lottery))
             case .failure(let error):
                 complete(.failure(error))
             }

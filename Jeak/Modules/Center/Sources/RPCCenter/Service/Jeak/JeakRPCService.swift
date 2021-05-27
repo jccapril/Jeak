@@ -8,6 +8,7 @@
 import Foundation
 import GRPC
 import RPC
+import Logging
 import Storage
 
 public final class JeakRPCService: RPCService {
@@ -30,46 +31,19 @@ public extension JeakRPCService {
 //        let sessionID = UserDefaults.standard.string(forKey: "sessionId") ?? ""
         let bundleID = Bundle.main.bundleIdentifier ?? ""
         let version = (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? ""
-
         let defaultHeaders = [
-//            ("X-JEAK-SID", sessionID),
-            ("X-JEAK-BID", bundleID),
-            ("X-JEAK-VERSION", version),
+//            ("authorization","bearer grpc.auth.token"),
+            ("x-jeak-bid", bundleID),
+            ("x-jeak-version", version),
         ]
-
         let allHeaders = defaultHeaders + additionHeader
         return CallOptions(
             customMetadata: .init(allHeaders),
             timeLimit: .timeout(.seconds(Int64(timeout))),
-            cacheable: true
+            cacheable: true,
+            logger:Logger.init(label: "jeak.io.grpc")
         )
     }
-}
-
-
-public extension JeakRPCService {
-
-//    func login(mobile: String, password: String, complete: @escaping(Result<Jeak_NormalLoginResponse,Error>)->Void) {
-//        requestQueue.async {
-//            let client = Jeak_LoginClient(channel: self.connection,defaultCallOptions: self.callOptions())
-//            let call = client.normalLogin(.with{
-//                $0.mobile = mobile
-//                $0.password = password
-//            })
-//            call.response.whenComplete {result in
-//                self.resultQueue.async {
-//                    complete(result)
-//                }
-//            }
-//            do {
-//                let status = try call.status.wait()
-//                print("inner Call Status : \(status)")
-//            } catch {
-//                print("inner Call Failed With Error : \(error)")
-//            }
-//        }
-//    }
-
 }
 
 public extension JeakRPCService {
@@ -80,19 +54,17 @@ public extension JeakRPCService {
     }
 }
 
-
 private extension JeakRPCService {
     #if APPSTORE
         static let host: String = "djangoc.com"
         static let port: Int = 1443
     #else
-        static let host: String = "djangoc.com"
-        static let port: Int = 1443
+        static let host: String = "172.16.12.89"
+        static let port: Int = 443
     #endif
     
-    
-    static let name: String = "jeak"
-    static let remote = Remote(host: host, port: port, tls: false)
 
+    static let name: String = "jeak"
+    static let remote = Remote(host: host, port: port, tls: true)
     static let remoteKey: String = "\(typeName)/\(name)/remote"
 }

@@ -16,9 +16,14 @@
 		C083AB69262FD78900F0809F /* JeakRPCService.Lottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083AB68262FD78900F0809F /* JeakRPCService.Lottery.swift */; };
 		C083ABA9262FF9FC00F0809F /* LotteryCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083ABA8262FF9FC00F0809F /* LotteryCenter.swift */; };
 		C0903C9525F8B51700D05B0A /* UserCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0903C9425F8B51700D05B0A /* UserCenter.swift */; };
+		C09DF8EE265D05F7008283A3 /* cert.pem in Resources */ = {isa = PBXBuildFile; fileRef = C09DF8ED265D05F7008283A3 /* cert.pem */; };
+		C09DF8F1265DECD1008283A3 /* LoggingEchoClientInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09DF8F0265DECD1008283A3 /* LoggingEchoClientInterceptor.swift */; };
+		C09DF8F4265DF20D008283A3 /* JeakClientInterceptorFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09DF8F3265DF20D008283A3 /* JeakClientInterceptorFactoryProtocol.swift */; };
+		C09DF8F6265DF21A008283A3 /* JeakClientInterceptorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09DF8F5265DF21A008283A3 /* JeakClientInterceptorFactory.swift */; };
 		C0B2944325F7608D00FE88B7 /* RPCCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2944225F7608D00FE88B7 /* RPCCenter.swift */; };
 		C0B2944625F760B400FE88B7 /* RPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2944525F760B400FE88B7 /* RPCService.swift */; };
 		C0B2944A25F7637100FE88B7 /* JeakRPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2944925F7637100FE88B7 /* JeakRPCService.swift */; };
+		C0E074E4265F5E84009471EA /* ResponseHandlerInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E074E3265F5E84009471EA /* ResponseHandlerInterceptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,11 +48,16 @@
 		C083AB68262FD78900F0809F /* JeakRPCService.Lottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeakRPCService.Lottery.swift; sourceTree = "<group>"; };
 		C083ABA8262FF9FC00F0809F /* LotteryCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryCenter.swift; sourceTree = "<group>"; };
 		C0903C9425F8B51700D05B0A /* UserCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenter.swift; sourceTree = "<group>"; };
+		C09DF8ED265D05F7008283A3 /* cert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cert.pem; sourceTree = "<group>"; };
+		C09DF8F0265DECD1008283A3 /* LoggingEchoClientInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingEchoClientInterceptor.swift; sourceTree = "<group>"; };
+		C09DF8F3265DF20D008283A3 /* JeakClientInterceptorFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeakClientInterceptorFactoryProtocol.swift; sourceTree = "<group>"; };
+		C09DF8F5265DF21A008283A3 /* JeakClientInterceptorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeakClientInterceptorFactory.swift; sourceTree = "<group>"; };
 		C0B2942C25F75F9900FE88B7 /* Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B2943025F75F9900FE88B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0B2944225F7608D00FE88B7 /* RPCCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCCenter.swift; sourceTree = "<group>"; };
 		C0B2944525F760B400FE88B7 /* RPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCService.swift; sourceTree = "<group>"; };
 		C0B2944925F7637100FE88B7 /* JeakRPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeakRPCService.swift; sourceTree = "<group>"; };
+		C0E074E3265F5E84009471EA /* ResponseHandlerInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHandlerInterceptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +133,25 @@
 			path = UserCenter;
 			sourceTree = "<group>";
 		};
+		C09DF8EF265DECA5008283A3 /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+				C09DF8F2265DF1E7008283A3 /* Jeak */,
+				C09DF8F0265DECD1008283A3 /* LoggingEchoClientInterceptor.swift */,
+				C0E074E3265F5E84009471EA /* ResponseHandlerInterceptor.swift */,
+			);
+			path = Interceptor;
+			sourceTree = "<group>";
+		};
+		C09DF8F2265DF1E7008283A3 /* Jeak */ = {
+			isa = PBXGroup;
+			children = (
+				C09DF8F3265DF20D008283A3 /* JeakClientInterceptorFactoryProtocol.swift */,
+				C09DF8F5265DF21A008283A3 /* JeakClientInterceptorFactory.swift */,
+			);
+			path = Jeak;
+			sourceTree = "<group>";
+		};
 		C0B2942225F75F9900FE88B7 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +173,7 @@
 		C0B2943F25F75FD900FE88B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C09DF8ED265D05F7008283A3 /* cert.pem */,
 				C0B2943025F75F9900FE88B7 /* Info.plist */,
 			);
 			path = Resources;
@@ -163,6 +193,7 @@
 		C0B2944125F7605A00FE88B7 /* RPCCenter */ = {
 			isa = PBXGroup;
 			children = (
+				C09DF8EF265DECA5008283A3 /* Interceptor */,
 				C0B2944225F7608D00FE88B7 /* RPCCenter.swift */,
 				C083AB64262FD03900F0809F /* Service */,
 			);
@@ -244,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C09DF8EE265D05F7008283A3 /* cert.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +286,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C09DF8F4265DF20D008283A3 /* JeakClientInterceptorFactoryProtocol.swift in Sources */,
 				C019939C26241F91001650E0 /* StorageCenter.swift in Sources */,
 				C0B2944325F7608D00FE88B7 /* RPCCenter.swift in Sources */,
 				C0B2944625F760B400FE88B7 /* RPCService.swift in Sources */,
 				C0B2944A25F7637100FE88B7 /* JeakRPCService.swift in Sources */,
 				C083ABA9262FF9FC00F0809F /* LotteryCenter.swift in Sources */,
+				C0E074E4265F5E84009471EA /* ResponseHandlerInterceptor.swift in Sources */,
+				C09DF8F6265DF21A008283A3 /* JeakClientInterceptorFactory.swift in Sources */,
 				C019939F26242034001650E0 /* UserInfo.swift in Sources */,
 				C083AB67262FD09F00F0809F /* RPCService.Remote.swift in Sources */,
+				C09DF8F1265DECD1008283A3 /* LoggingEchoClientInterceptor.swift in Sources */,
 				C083AB69262FD78900F0809F /* JeakRPCService.Lottery.swift in Sources */,
 				C0903C9525F8B51700D05B0A /* UserCenter.swift in Sources */,
 			);
@@ -481,7 +517,7 @@
 			repositoryURL = "https://gitee.com/jccgulu/jeak_ios_rpc.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.2;
+				minimumVersion = 1.1.7;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
