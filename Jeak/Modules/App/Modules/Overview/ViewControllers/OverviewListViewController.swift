@@ -1,53 +1,60 @@
 //
-//  OverviewSimpleViewController.swift
+//  OverviewListViewController.swift
 //  App
 //
-//  Created by Flutter on 2021/4/15.
+//  Created by Flutter on 2021/6/1.
 //
 
 import UICore
 import RxCocoa
 import RxSwift
 
-
-protocol OverviewSimpleViewControllerDelegate: AnyObject{
-    // 定义协议方法
-    func viewControllerDidSelectedType(type:Int64)
-}
-
-class OverviewSimpleViewController: ViewController {
+class OverviewListViewController: ViewController {
     
-    weak var delegate: OverviewSimpleViewControllerDelegate?
+    var type:Int64
     lazy var tableView: UITableView = {
         UITableView(frame: .zero, style: .plain)
             .leaf
             .separatorStyle(.none)
             .backgroundColor(Theme.backgroundColor)
-            .register(OverviewSimpleViewModel.Reusable.cell)
+            .register(OverviewListViewModel.Reusable.cell)
             .instance
     }()
     
-    lazy var viewModel:OverviewSimpleViewModel = {
-        let lazy = OverviewSimpleViewModel()
+    lazy var viewModel:OverviewListViewModel = {
+        let lazy = OverviewListViewModel(type: type)
         lazy.disposeBag = disposeBag
         return lazy
     }()
+    
+    init(type:Int64) {
+        self.type = type
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
-extension OverviewSimpleViewController {
+
+extension OverviewListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = self.type == 0 ? "双色球" : "大乐透"
         setupUI()
         bindRx()
     }
     
 }
 
-private extension OverviewSimpleViewController {
+
+private extension OverviewListViewController {
     
     func setupUI() {
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: NaviagtionBarModular.image(named: "ic_naviagtion_item_back"), style: .plain, target: self, action: #selector(goBack(sender:)))
         
         tableView.leaf.add(to: view)
         tableView.snp.makeConstraints {
@@ -59,11 +66,11 @@ private extension OverviewSimpleViewController {
     
 }
 
-private extension OverviewSimpleViewController  {
+private extension OverviewListViewController  {
     func bindRx() {
         
         bindListView(tableView)
-        let input = OverviewSimpleViewModel.Input()
+        let input = OverviewListViewModel.Input()
         let output = viewModel.transform(input: input)
         handleItems(items: output.items)
         output.loadingState.distinctUntilChanged().asObservable()
@@ -75,7 +82,7 @@ private extension OverviewSimpleViewController  {
                 }
             })
             .disposed(by: disposeBag)
-        viewModel.loadFirst()
+        viewModel.loadDataSource()
         
     }
     
@@ -101,18 +108,20 @@ private extension OverviewSimpleViewController  {
             self.view.hideAllToasts()
         }.disposed(by: disposeBag)
         
-        items.bind(to: tableView.rx.items(OverviewSimpleViewModel.Reusable.cell)){ (row, element, cell) in
+        items.bind(to: tableView.rx.items(OverviewListViewModel.Reusable.cell)){ (row, element, cell) in
             
         }
         .disposed(by: disposeBag)
     }
 }
 
-private extension OverviewSimpleViewController  {
+private extension OverviewListViewController  {
     func detailClick(viewModel: OverviewLotteryCellViewModel){
-        self.delegate?.viewControllerDidSelectedType(type: viewModel.data?.type ?? 0)
+        
+    }
+    
+    @objc
+    func goBack(sender:UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
     }
 }
-
-
-

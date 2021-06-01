@@ -60,7 +60,7 @@ private extension JeakRPCService {
         static let port: Int = 1443
     #else
         static let host: String = "172.16.12.89"
-        static let port: Int = 443
+        static let port: Int = 4443
     #endif
     
 

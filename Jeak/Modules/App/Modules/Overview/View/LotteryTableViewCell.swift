@@ -1,5 +1,5 @@
 //
-//  LotterySimpleTableViewCell.swift
+//  LotteryTableViewCell.swift
 //  App
 //
 //  Created by Flutter on 2021/4/15.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LotterySimpleTableViewCell: UITableViewCell {
+class LotteryTableViewCell: UITableViewCell {
 
     var type: JKLotteryType = .ssq
     
@@ -169,7 +169,7 @@ class LotterySimpleTableViewCell: UITableViewCell {
 }
 
 
-extension LotterySimpleTableViewCell {
+extension LotteryTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -183,7 +183,7 @@ extension LotterySimpleTableViewCell {
 }
 
 
-private extension LotterySimpleTableViewCell {
+private extension LotteryTableViewCell {
     
     func setupUI() {
 //        contentView.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
@@ -381,6 +381,6 @@ private extension LotterySimpleTableViewCell {
 }
 
 
-//extension LotterySimpleTableViewCell: ConfigurableCell {
+//extension LotteryTableViewCell: ConfigurableCell {
 //    
 //}

@@ -517,7 +517,7 @@
 			repositoryURL = "https://gitee.com/jccgulu/jeak_ios_rpc.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.7;
+				minimumVersion = 1.1.8;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

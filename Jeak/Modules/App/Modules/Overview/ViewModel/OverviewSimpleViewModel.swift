@@ -1,5 +1,5 @@
 //
-//  OverviewViewModel.swift
+//  OverviewSimpleViewModel.swift
 //  App
 //
 //  Created by Flutter on 2021/4/20.
@@ -13,9 +13,9 @@ import RPC
 import Service
 import UICore
 
-class OverviewViewModel {
+class OverviewSimpleViewModel {
     enum Reusable {
-        static let cell = ReusableCell<LotterySimpleTableViewCell>()
+        static let cell = ReusableCell<LotteryTableViewCell>()
     }
     var contents: [BaseCellViewModel] {
         elements.value
@@ -26,7 +26,7 @@ class OverviewViewModel {
     
 }
 
-extension OverviewViewModel: RxBaseCellViewModel {
+extension OverviewSimpleViewModel: RxBaseCellViewModel {
     struct Input {
         
     }
@@ -44,7 +44,7 @@ extension OverviewViewModel: RxBaseCellViewModel {
 }
 
 
-extension OverviewViewModel {
+extension OverviewSimpleViewModel {
     func loadFirst() {
         guard let disposeBag = self.disposeBag else { return }
         
@@ -82,7 +82,7 @@ extension OverviewViewModel {
         var array = [BaseCellViewModel]()
         
         for lottery in lotteryList ?? [] {
-            let viewModel = OverviewSimpleCellViewModel(identifier:Reusable.cell.identifier, data: lottery)
+            let viewModel = OverviewLotteryCellViewModel(identifier:Reusable.cell.identifier, data: lottery)
             array.append(viewModel)
         }
         
@@ -92,14 +92,14 @@ extension OverviewViewModel {
 }
 
 
-extension OverviewViewModel {
+extension OverviewSimpleViewModel {
     func handleElements(_ elements: [BaseCellViewModel]) {
         self.elements.accept(self.elements.value + elements)
     }
 }
 
 
-extension OverviewViewModel {
+extension OverviewSimpleViewModel {
 
     func GetLastestLotteryList() -> Observable<[Jeak_Lottery]?> {
         Observable<[Jeak_Lottery]?>.create { observer in

@@ -9,22 +9,22 @@ import Foundation
 import UICore
 import UIKit
 import RPC
-class OverviewSimpleCellViewModel {
+class OverviewLotteryCellViewModel {
     var identifier: String
 //    var target: String?
 //    var size: CGSize
     var data: Jeak_Lottery?
-    private weak var weakCell: LotterySimpleTableViewCell?
+    private weak var weakCell: LotteryTableViewCell?
     init(identifier: String, data: Jeak_Lottery?) {
         self.data = data
         self.identifier = identifier
     }
 }
 
-extension OverviewSimpleCellViewModel: BaseCellViewModel {
+extension OverviewLotteryCellViewModel: BaseCellViewModel {
   
     func willDisplay(cell: UIView) {
-        weakCell = cell as? LotterySimpleTableViewCell
+        weakCell = cell as? LotteryTableViewCell
         bindShow()
     }
 
@@ -32,7 +32,7 @@ extension OverviewSimpleCellViewModel: BaseCellViewModel {
 }
 
 
-private extension OverviewSimpleCellViewModel {
+private extension OverviewLotteryCellViewModel {
     func bindShow() {
         guard let cell = weakCell else {
             return

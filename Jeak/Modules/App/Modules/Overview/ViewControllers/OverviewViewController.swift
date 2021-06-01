@@ -13,10 +13,12 @@ class OverviewViewController: ViewController {
         case normal = 0
         case simple = 1
     }
-    
     private var mode: OverviewMode = .simple
     private lazy var childrenControllers:[ViewController] = {
-        [OverviewNormalViewController(),OverviewSimpleViewController()]
+        let normal = OverviewNormalViewController()
+        let simple = OverviewSimpleViewController()
+        simple.delegate = self
+        return [normal,simple]
     }()
     
     private var currentController:ViewController?
@@ -93,4 +95,10 @@ private extension OverviewViewController {
     
 }
 
-
+extension OverviewViewController: OverviewSimpleViewControllerDelegate {
+    func viewControllerDidSelectedType(type: Int64) {
+        let list = OverviewListViewController(type: type)
+        list.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(list, animated: true)
+    }
+}
