@@ -1,5 +1,5 @@
 //
-//  OverviewSimpleContentView.swift
+//  File.swift
 //  App
 //
 //  Created by Flutter on 2021/6/2.
@@ -8,14 +8,14 @@
 import UICore
 import UIKit
 
-class OverviewSimpleContentView: UIView {
+class OverviewListContentView: UIView {
     
     lazy var listView: LotteryTableView = {
         LotteryTableView(frame: .zero, style: .plain)
             .leaf
             .separatorStyle(.none)
             .backgroundColor(Theme.backgroundColor)
-            .register(OverviewSimpleViewModel.Reusable.cell)
+            .register(OverviewListViewModel.Reusable.cell)
             .instance
     }()
     
@@ -28,7 +28,7 @@ class OverviewSimpleContentView: UIView {
     required init?(coder _: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
 
-private extension OverviewSimpleContentView {
+private extension OverviewListContentView {
     func setupUI() {
         listView.leaf.add(to: self).snp.makeConstraints { maker in
             maker.edges.equalToSuperview()
@@ -36,7 +36,7 @@ private extension OverviewSimpleContentView {
     }
 }
 
-extension Reactive where Base: OverviewSimpleContentView {
+extension Reactive where Base: OverviewListContentView {
     var loadState: Binder<Bool> {
         Binder(base) { view, state in
             if(state) {
@@ -53,3 +53,4 @@ extension Reactive where Base: OverviewSimpleContentView {
         }
     }
 }
+

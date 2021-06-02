@@ -21,6 +21,7 @@ class OverviewSimpleViewModel {
         elements.value
     }
     let refreshState = BehaviorRelay(value: LotteryTableView.RefreshState.pull)
+    let message = BehaviorRelay(value: "")
     let loadingState = BehaviorRelay(value: false)
     let elements = BehaviorRelay<[BaseCellViewModel]>(value: [])
     var disposeBag: DisposeBag?
@@ -36,6 +37,7 @@ extension OverviewSimpleViewModel: RxBaseCellViewModel {
         let refreshState: Driver<LotteryTableView.RefreshState>
         let loadingState: Driver<Bool>
         let items: BehaviorRelay<[BaseCellViewModel]>
+        let message: Driver<String>
     }
     
     func transform(input: Input) -> Output {
@@ -44,7 +46,8 @@ extension OverviewSimpleViewModel: RxBaseCellViewModel {
         return Output(
             refreshState: refreshState.asDriver(),
             loadingState: loadingState.asDriver(),
-            items: elements
+            items: elements,
+            message: message.asDriver()
         )
     }
 }
@@ -82,7 +85,8 @@ extension OverviewSimpleViewModel {
             }, onError: { err in
                 guard let e = err as? ResponseError else { return }
                 guard let ecode = e.ecodeError else { return }
-                print("find code \(ecode)")
+                self.loadingState.accept(true)
+                self.message.accept(ecode.errMsg)
             }, onCompleted: {
                 
             })
@@ -106,24 +110,19 @@ extension OverviewSimpleViewModel {
     
     
     func handleFirstResult(lotteryList:[Jeak_Lottery]?){
-       
         self.elements.accept([])
         var array = [BaseCellViewModel]()
-        
         for lottery in lotteryList ?? [] {
             let viewModel = OverviewLotteryCellViewModel(identifier:Reusable.cell.identifier, data: lottery)
             array.append(viewModel)
         }
-        
         handleElements(array)
-        
     }
 }
 
 
 extension OverviewSimpleViewModel {
     func handleElements(_ elements: [BaseCellViewModel]) {
-        
         self.elements.accept(self.elements.value + elements)
         self.loadingState.accept(true)
         if self.elements.value.isEmpty {

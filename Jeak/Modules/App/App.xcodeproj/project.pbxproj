@@ -21,6 +21,7 @@
 		C01DBA2826676407007F314B /* OverviewSimpleContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01DBA2726676407007F314B /* OverviewSimpleContentView.swift */; };
 		C01DBA2A266765F6007F314B /* LotteryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01DBA29266765F6007F314B /* LotteryTableView.swift */; };
 		C01DBA2D26676792007F314B /* AppModular.strings in Resources */ = {isa = PBXBuildFile; fileRef = C01DBA2F26676792007F314B /* AppModular.strings */; };
+		C01DBA3226678B70007F314B /* OverviewListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01DBA3126678B70007F314B /* OverviewListContentView.swift */; };
 		C020470A261C51B1001DB586 /* TabBarItemModular.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0204709261C514D001DB586 /* TabBarItemModular.strings */; };
 		C0204711261C52CB001DB586 /* TabBarItemModular.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0204710261C52CB001DB586 /* TabBarItemModular.swift */; };
 		C020471F261C60A9001DB586 /* SettingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C020471E261C60A9001DB586 /* SettingNavigationController.swift */; };
@@ -100,6 +101,7 @@
 		C01DBA2726676407007F314B /* OverviewSimpleContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewSimpleContentView.swift; sourceTree = "<group>"; };
 		C01DBA29266765F6007F314B /* LotteryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryTableView.swift; sourceTree = "<group>"; };
 		C01DBA3026676795007F314B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AppModular.strings"; sourceTree = "<group>"; };
+		C01DBA3126678B70007F314B /* OverviewListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewListContentView.swift; sourceTree = "<group>"; };
 		C0204708261C514D001DB586 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TabBarItemModular.strings"; sourceTree = "<group>"; };
 		C0204710261C52CB001DB586 /* TabBarItemModular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemModular.swift; sourceTree = "<group>"; };
 		C0204712261C5A8B001DB586 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TabBarItemModular.strings; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 				C01DBA29266765F6007F314B /* LotteryTableView.swift */,
 				C0CDD171262822B700EDCAD6 /* LotteryTableViewCell.swift */,
 				C01DBA2726676407007F314B /* OverviewSimpleContentView.swift */,
+				C01DBA3126678B70007F314B /* OverviewListContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				C007163126089C0300336C2A /* JKLotteryRankTableViewCell.swift in Sources */,
 				C02B9E8E25FB40E5007DADA7 /* TableViewWithCommandsExampleViewController.swift in Sources */,
 				C0CFEE52262575E800B4E916 /* CarouseViewFlowLayout.swift in Sources */,
+				C01DBA3226678B70007F314B /* OverviewListContentView.swift in Sources */,
 				C02B9E8C25FB1566007DADA7 /* EquatableExampleViewController.swift in Sources */,
 				C02B9E8A25FB1113007DADA7 /* CodableExampleViewController.swift in Sources */,
 				C0204721261C62CF001DB586 /* MineNavigationController.swift in Sources */,

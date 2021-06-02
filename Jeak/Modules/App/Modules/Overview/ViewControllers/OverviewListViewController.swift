@@ -12,13 +12,9 @@ import RxSwift
 class OverviewListViewController: ViewController {
     
     var type:Int64
-    lazy var tableView: UITableView = {
-        UITableView(frame: .zero, style: .plain)
-            .leaf
-            .separatorStyle(.none)
-            .backgroundColor(Theme.backgroundColor)
-            .register(OverviewListViewModel.Reusable.cell)
-            .instance
+    lazy var contentView: OverviewListContentView = {
+        let contentView = OverviewListContentView(frame: .zero)
+        return contentView
     }()
     
     lazy var viewModel:OverviewListViewModel = {
@@ -26,6 +22,9 @@ class OverviewListViewController: ViewController {
         lazy.disposeBag = disposeBag
         return lazy
     }()
+    // rx
+    let headerRefreshTrigger = PublishSubject<Void>()
+    let footerRefreshTrigger = PublishSubject<Void>()
     
     init(type:Int64) {
         self.type = type
@@ -44,6 +43,7 @@ extension OverviewListViewController {
         self.title = self.type == 0 ? "双色球" : "大乐透"
         setupUI()
         bindRx()
+        setupRefresh()
     }
     
 }
@@ -55,9 +55,9 @@ private extension OverviewListViewController {
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: NaviagtionBarModular.image(named: "ic_naviagtion_item_back"), style: .plain, target: self, action: #selector(goBack(sender:)))
         
-        tableView.leaf.add(to: view)
-        tableView.snp.makeConstraints {
-            $0.edges.equalTo(UIEdgeInsets(top: Adaptor.navibarHeight, left: 0, bottom: 0, right: 0))
+        contentView.leaf.add(to: view).snp.makeConstraints {
+            $0.leading.trailing.bottom.equalToSuperview()
+            $0.top.equalTo(Adaptor.navibarHeight)
         }
         
     }
@@ -65,22 +65,35 @@ private extension OverviewListViewController {
     
 }
 
+
+private extension OverviewListViewController {
+    func setupRefresh() {
+        let tableView = contentView.listView
+        tableView.configRefreshHeader(with: tableView.header, container: self) { [weak self] in
+            self?.headerRefreshTrigger.onNext(())
+        }
+        tableView.configRefreshFooter(with: tableView.footer, container: self) { [weak self] in
+            self?.footerRefreshTrigger.onNext(())
+        }
+    }
+}
+
+
 private extension OverviewListViewController  {
     func bindRx() {
         
-        bindListView(tableView)
-        let input = OverviewListViewModel.Input()
+        bindListView(contentView.listView)
+        let input = OverviewListViewModel.Input(
+            headerRefresh: headerRefreshTrigger.asObserver(),
+            footerRefresh: footerRefreshTrigger.asObserver()
+        )
         let output = viewModel.transform(input: input)
         handleItems(items: output.items)
-        output.loadingState.distinctUntilChanged().asObservable()
-            .subscribe (onNext: { state in
-                if(state) {
-                    self.view.hideToastActivity()
-                }else {
-                    self.view.makeToastActivity(.center)
-                }
-            })
+        output.loadingState.distinctUntilChanged().drive(contentView.rx.loadState)
             .disposed(by: disposeBag)
+        output.message.drive(contentView.rx.errMsg)
+            .disposed(by: disposeBag)
+        output.refreshState.distinctUntilChanged().drive(contentView.listView.rx.refreshState).disposed(by: disposeBag)
         viewModel.loadDataSource()
         
     }
@@ -100,14 +113,9 @@ private extension OverviewListViewController  {
             .disposed(by: disposeBag)
     }
     
-    
     func handleItems(items: BehaviorRelay<[BaseCellViewModel]>) {
         
-        items.subscribe { result in
-            self.view.hideAllToasts()
-        }.disposed(by: disposeBag)
-        
-        items.bind(to: tableView.rx.items(OverviewListViewModel.Reusable.cell)){ (row, element, cell) in
+        items.bind(to: contentView.listView.rx.items(OverviewListViewModel.Reusable.cell)){ (row, element, cell) in
             
         }
         .disposed(by: disposeBag)

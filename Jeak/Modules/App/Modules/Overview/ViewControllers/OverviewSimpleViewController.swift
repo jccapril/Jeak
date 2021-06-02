@@ -28,7 +28,8 @@ class OverviewSimpleViewController: ViewController {
         lazy.disposeBag = disposeBag
         return lazy
     }()
-    // Rx
+    
+    
     let headerRefreshTrigger = PublishSubject<Void>()
 //    let footerRefreshTrigger = PublishSubject<Void>()
 }
@@ -80,9 +81,12 @@ private extension OverviewSimpleViewController  {
         )
         let output = viewModel.transform(input: input)
         handleItems(items: output.items)
-        output.loadingState.distinctUntilChanged().drive(rx.loadState)
+        output.loadingState.distinctUntilChanged().drive(contentView.rx.loadState)
+            .disposed(by: disposeBag)
+        output.message.drive(contentView.rx.errMsg)
             .disposed(by: disposeBag)
         output.refreshState.distinctUntilChanged().drive(contentView.listView.rx.refreshState).disposed(by: disposeBag)
+        
         viewModel.loadDataSource()
     }
     
@@ -104,10 +108,6 @@ private extension OverviewSimpleViewController  {
     
     func handleItems(items: BehaviorRelay<[BaseCellViewModel]>) {
         
-        items.subscribe { result in
-            self.view.hideAllToasts()
-        }.disposed(by: disposeBag)
-        
         items.bind(to: contentView.listView.rx.items(OverviewSimpleViewModel.Reusable.cell)){ (row, element, cell) in
             
         }
@@ -121,16 +121,3 @@ private extension OverviewSimpleViewController  {
     }
 }
 
-
-
-extension Reactive where Base: OverviewSimpleViewController {
-    var loadState: Binder<Bool> {
-        Binder(base) { controller, state in
-            if(state) {
-                controller.view.hideToastActivity()
-            }else {
-                controller.view.makeToastActivity(.center)
-            }
-        }
-    }
-}
