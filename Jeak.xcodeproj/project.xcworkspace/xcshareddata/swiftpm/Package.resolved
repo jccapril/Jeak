@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "PullToRefreshKit",
+        "repositoryURL": "git@gitee.com:jlab/PullToRefreshKit.git",
+        "state": {
+          "branch": null,
+          "revision": "95ca6672c84e681f5d2fa0f723d2381d0e68fe5e",
+          "version": "0.8.9"
+        }
+      },
+      {
         "package": "RxDataSources",
         "repositoryURL": "https://gitee.com/jlab/RxDataSources.git",
         "state": {

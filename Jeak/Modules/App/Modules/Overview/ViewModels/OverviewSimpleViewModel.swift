@@ -20,6 +20,7 @@ class OverviewSimpleViewModel {
     var contents: [BaseCellViewModel] {
         elements.value
     }
+    let refreshState = BehaviorRelay(value: LotteryTableView.RefreshState.pull)
     let loadingState = BehaviorRelay(value: false)
     let elements = BehaviorRelay<[BaseCellViewModel]>(value: [])
     var disposeBag: DisposeBag?
@@ -28,32 +29,58 @@ class OverviewSimpleViewModel {
 
 extension OverviewSimpleViewModel: RxBaseCellViewModel {
     struct Input {
-        
+        let headerRefresh: Observable<Void>
+        let footerRefresh: Observable<Void>
     }
     struct Output {
+        let refreshState: Driver<LotteryTableView.RefreshState>
         let loadingState: Driver<Bool>
         let items: BehaviorRelay<[BaseCellViewModel]>
     }
     
     func transform(input: Input) -> Output {
+        bindHeaderRefresh(input.headerRefresh)
+        bindFooterRefresh(input.footerRefresh)
         return Output(
+            refreshState: refreshState.asDriver(),
             loadingState: loadingState.asDriver(),
             items: elements
         )
     }
 }
 
+extension OverviewSimpleViewModel {
+    func bindHeaderRefresh(_ headerRefresh: Observable<Void>) {
+        guard let disposeBag = self.disposeBag else { return }
+        headerRefresh.skip(0)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.refreshState.accept(.pull)
+                self.loadDataSource()
+            })
+            .disposed(by: disposeBag)
+    }
+    func bindFooterRefresh(_ headerRefresh: Observable<Void>) {
+        guard let disposeBag = self.disposeBag else { return }
+        headerRefresh.skip(0)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.refreshState.accept(.pull)
+                self.loadDataSource()
+            })
+            .disposed(by: disposeBag)
+    }
+}
+
 
 extension OverviewSimpleViewModel {
-    func loadFirst() {
+    func loadDataSource() {
         guard let disposeBag = self.disposeBag else { return }
-        
         GetLastestLotteryList()
             .subscribe(onNext: { result in
-                self.loadingState.accept(true)
                 self.handleFirstResult(lotteryList: result)
             }, onError: { err in
-                self.loadingState.accept(true)
+                
             }, onCompleted: {
                 
             })
@@ -94,7 +121,14 @@ extension OverviewSimpleViewModel {
 
 extension OverviewSimpleViewModel {
     func handleElements(_ elements: [BaseCellViewModel]) {
+        
         self.elements.accept(self.elements.value + elements)
+        self.loadingState.accept(true)
+        if self.elements.value.isEmpty {
+            refreshState.accept(.empty)
+        }else {
+            refreshState.accept(.end)
+        }
     }
 }
 

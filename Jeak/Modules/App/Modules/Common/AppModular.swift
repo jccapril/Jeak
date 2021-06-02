@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 import Standard
 
-public class CommonModular: Modular {
+public class AppModular: Modular {
     static func image(named name: String) -> UIImage? {
-        UIImage(named: name, in: CommonModular.bundle, compatibleWith: nil)
+        UIImage(named: name, in: AppModular.bundle, compatibleWith: nil)
     }
 }

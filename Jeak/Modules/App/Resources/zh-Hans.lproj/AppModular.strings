@@ -1,0 +1,19 @@
+/* 
+  AppModular.strings
+  App
+
+  Created by Flutter on 2021/6/2.
+  
+*/
+
+"Pull to refresh" = "下拉刷新";
+"Release to refresh" = "松开刷新";
+"Success" = "加载完成";
+"Refreshing..." = "加载中...";
+"Failed" = "刷新失败";
+
+"Pull up to refresh" = "上拉加载更多数据";
+"No data any more" = "没有更多数据";
+"Refreshing..." = "加载中...";
+"Tap to load more" = "点击加载更多数据";
+"Scroll or tap to load" = "上拉或点击加载更多";

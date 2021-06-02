@@ -18,6 +18,9 @@
 		C007163326089C4A00336C2A /* JKCurrentLotteryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007163226089C4A00336C2A /* JKCurrentLotteryHeaderView.swift */; };
 		C01DBA0A266624D9007F314B /* OverviewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01DBA09266624D9007F314B /* OverviewListViewController.swift */; };
 		C01DBA0C26662698007F314B /* OverviewListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01DBA0B26662698007F314B /* OverviewListViewModel.swift */; };
+		C01DBA2826676407007F314B /* OverviewSimpleContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01DBA2726676407007F314B /* OverviewSimpleContentView.swift */; };
+		C01DBA2A266765F6007F314B /* LotteryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01DBA29266765F6007F314B /* LotteryTableView.swift */; };
+		C01DBA2D26676792007F314B /* AppModular.strings in Resources */ = {isa = PBXBuildFile; fileRef = C01DBA2F26676792007F314B /* AppModular.strings */; };
 		C020470A261C51B1001DB586 /* TabBarItemModular.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0204709261C514D001DB586 /* TabBarItemModular.strings */; };
 		C0204711261C52CB001DB586 /* TabBarItemModular.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0204710261C52CB001DB586 /* TabBarItemModular.swift */; };
 		C020471F261C60A9001DB586 /* SettingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C020471E261C60A9001DB586 /* SettingNavigationController.swift */; };
@@ -32,7 +35,7 @@
 		C02B9E9625FB5193007DADA7 /* RxSwiftExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E9525FB5193007DADA7 /* RxSwiftExampleViewController.swift */; };
 		C04A1DCE26280E9500F461AA /* OverviewNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A1DCD26280E9500F461AA /* OverviewNormalViewController.swift */; };
 		C04A1DD026280EA800F461AA /* OverviewSimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A1DCF26280EA800F461AA /* OverviewSimpleViewController.swift */; };
-		C0613665262000C800878284 /* CommonModular..swift in Sources */ = {isa = PBXBuildFile; fileRef = C0613664262000C800878284 /* CommonModular..swift */; };
+		C0613665262000C800878284 /* AppModular.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0613664262000C800878284 /* AppModular.swift */; };
 		C06136672620011F00878284 /* NaviagtionBarModular.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06136662620011F00878284 /* NaviagtionBarModular.swift */; };
 		C061366C2620241600878284 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061366B2620241600878284 /* Theme.swift */; };
 		C083AAFE262EA6FD00F0809F /* JKBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083AAFD262EA6FD00F0809F /* JKBall.swift */; };
@@ -94,6 +97,9 @@
 		C007163226089C4A00336C2A /* JKCurrentLotteryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKCurrentLotteryHeaderView.swift; sourceTree = "<group>"; };
 		C01DBA09266624D9007F314B /* OverviewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewListViewController.swift; sourceTree = "<group>"; };
 		C01DBA0B26662698007F314B /* OverviewListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewListViewModel.swift; sourceTree = "<group>"; };
+		C01DBA2726676407007F314B /* OverviewSimpleContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewSimpleContentView.swift; sourceTree = "<group>"; };
+		C01DBA29266765F6007F314B /* LotteryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryTableView.swift; sourceTree = "<group>"; };
+		C01DBA3026676795007F314B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AppModular.strings"; sourceTree = "<group>"; };
 		C0204708261C514D001DB586 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TabBarItemModular.strings"; sourceTree = "<group>"; };
 		C0204710261C52CB001DB586 /* TabBarItemModular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemModular.swift; sourceTree = "<group>"; };
 		C0204712261C5A8B001DB586 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TabBarItemModular.strings; sourceTree = "<group>"; };
@@ -109,7 +115,7 @@
 		C02B9E9525FB5193007DADA7 /* RxSwiftExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftExampleViewController.swift; sourceTree = "<group>"; };
 		C04A1DCD26280E9500F461AA /* OverviewNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewNormalViewController.swift; sourceTree = "<group>"; };
 		C04A1DCF26280EA800F461AA /* OverviewSimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewSimpleViewController.swift; sourceTree = "<group>"; };
-		C0613664262000C800878284 /* CommonModular..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModular..swift; sourceTree = "<group>"; };
+		C0613664262000C800878284 /* AppModular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModular.swift; sourceTree = "<group>"; };
 		C06136662620011F00878284 /* NaviagtionBarModular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviagtionBarModular.swift; sourceTree = "<group>"; };
 		C061366B2620241600878284 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C083AAFD262EA6FD00F0809F /* JKBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBall.swift; sourceTree = "<group>"; };
@@ -258,14 +264,14 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		C083AB0D262EC86300F0809F /* ViewModel */ = {
+		C083AB0D262EC86300F0809F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				C083AB20262ECE6C00F0809F /* cell */,
 				C083AB0E262EC88300F0809F /* OverviewSimpleViewModel.swift */,
 				C01DBA0B26662698007F314B /* OverviewListViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		C083AB20262ECE6C00F0809F /* cell */ = {
@@ -302,7 +308,7 @@
 		C09CB7C02609D4DA0082DDB7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				C0613664262000C800878284 /* CommonModular..swift */,
+				C0613664262000C800878284 /* AppModular.swift */,
 				C083AB23262ECF2F00F0809F /* ViewModel */,
 				C083AAFF262EA8E000F0809F /* Font */,
 				C0CFEE502625751100B4E916 /* CarouselView */,
@@ -367,6 +373,7 @@
 				C0204709261C514D001DB586 /* TabBarItemModular.strings */,
 				C020472F261D4B56001DB586 /* Image.xcassets */,
 				C09675982626EC35002FCA50 /* NaviagtionBarModular.strings */,
+				C01DBA2F26676792007F314B /* AppModular.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -390,13 +397,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C0CDD1702628227000EDCAD6 /* View */ = {
+		C0CDD1702628227000EDCAD6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C0CDD171262822B700EDCAD6 /* LotteryTableViewCell.swift */,
 				C083AAFD262EA6FD00F0809F /* JKBall.swift */,
+				C01DBA29266765F6007F314B /* LotteryTableView.swift */,
+				C0CDD171262822B700EDCAD6 /* LotteryTableViewCell.swift */,
+				C01DBA2726676407007F314B /* OverviewSimpleContentView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C0CFEE502625751100B4E916 /* CarouselView */ = {
@@ -422,8 +431,8 @@
 		C0D902B2261C478000D8F7AE /* Overview */ = {
 			isa = PBXGroup;
 			children = (
-				C083AB0D262EC86300F0809F /* ViewModel */,
-				C0CDD1702628227000EDCAD6 /* View */,
+				C083AB0D262EC86300F0809F /* ViewModels */,
+				C0CDD1702628227000EDCAD6 /* Views */,
 				C0D902B5261C47A500D8F7AE /* ViewControllers */,
 			);
 			path = Overview;
@@ -556,6 +565,7 @@
 				C020470A261C51B1001DB586 /* TabBarItemModular.strings in Resources */,
 				C0204730261D4C3B001DB586 /* Image.xcassets in Resources */,
 				C09675962626EC35002FCA50 /* NaviagtionBarModular.strings in Resources */,
+				C01DBA2D26676792007F314B /* AppModular.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +591,7 @@
 				092C8CA925FA59A800B904D6 /* MainViewController.swift in Sources */,
 				C0204711261C52CB001DB586 /* TabBarItemModular.swift in Sources */,
 				C007163326089C4A00336C2A /* JKCurrentLotteryHeaderView.swift in Sources */,
+				C01DBA2A266765F6007F314B /* LotteryTableView.swift in Sources */,
 				C083AAFE262EA6FD00F0809F /* JKBall.swift in Sources */,
 				C0AB3B7025F9F85C007C36AD /* BackupViewController.swift in Sources */,
 				C020471F261C60A9001DB586 /* SettingNavigationController.swift in Sources */,
@@ -600,6 +611,7 @@
 				C0CDD172262822B700EDCAD6 /* LotteryTableViewCell.swift in Sources */,
 				C0D902BC261C487D00D8F7AE /* SettingViewController.swift in Sources */,
 				C061366C2620241600878284 /* Theme.swift in Sources */,
+				C01DBA2826676407007F314B /* OverviewSimpleContentView.swift in Sources */,
 				092C8CDE25FFA59E00B904D6 /* Operators.swift in Sources */,
 				C09D3E602600A25600EDC0F9 /* JKLotteryListViewController.swift in Sources */,
 				C02B9E6D25FB0485007DADA7 /* ExampleMainViewController.swift in Sources */,
@@ -609,7 +621,7 @@
 				C06136672620011F00878284 /* NaviagtionBarModular.swift in Sources */,
 				C0204723261C630B001DB586 /* OverviewNavigationController.swift in Sources */,
 				C09CB7BF2609D3DE0082DDB7 /* JKMainViewController.swift in Sources */,
-				C0613665262000C800878284 /* CommonModular..swift in Sources */,
+				C0613665262000C800878284 /* AppModular.swift in Sources */,
 				C02B9E9625FB5193007DADA7 /* RxSwiftExampleViewController.swift in Sources */,
 				C04A1DD026280EA800F461AA /* OverviewSimpleViewController.swift in Sources */,
 				C09D3E982600A74600EDC0F9 /* JKLotteryListViewModel.swift in Sources */,
@@ -620,6 +632,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		C01DBA2F26676792007F314B /* AppModular.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C01DBA3026676795007F314B /* zh-Hans */,
+			);
+			name = AppModular.strings;
+			sourceTree = "<group>";
+		};
 		C0204709261C514D001DB586 /* TabBarItemModular.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

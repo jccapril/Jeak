@@ -40,7 +40,6 @@ class OverviewListViewController: ViewController {
 extension OverviewListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         self.title = self.type == 0 ? "双色球" : "大乐透"
         setupUI()

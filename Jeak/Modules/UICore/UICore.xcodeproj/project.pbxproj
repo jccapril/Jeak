@@ -10,6 +10,7 @@
 		092C8CA625FA572300B904D6 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 092C8CA525FA572300B904D6 /* Toast */; };
 		09ECE1AC2600ED6F00ADF9EF /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECE1AB2600ED6F00ADF9EF /* CollectionViewCell.swift */; };
 		C007162E2608996B00336C2A /* Adaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007162D2608996B00336C2A /* Adaptor.swift */; };
+		C01DBA2626676127007F314B /* PullToRefreshKit in Frameworks */ = {isa = PBXBuildFile; productRef = C01DBA2526676127007F314B /* PullToRefreshKit */; };
 		C02B9E8725FB0631007DADA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B9E8625FB0631007DADA7 /* ViewController.swift */; };
 		C06196FA2609967900E0AB9B /* Leaf.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06196F92609967900E0AB9B /* Leaf.swift */; };
 		C06196FE2609976800E0AB9B /* Leaf.UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06196FD2609976800E0AB9B /* Leaf.UIButton.swift */; };
@@ -111,6 +112,7 @@
 				C09D3E8B2600A39E00EDC0F9 /* Service.framework in Frameworks */,
 				C0AB3B3425F9F220007C36AD /* SnapKit in Frameworks */,
 				C0AB3B3D25F9F2B7007C36AD /* RxBlocking in Frameworks */,
+				C01DBA2626676127007F314B /* PullToRefreshKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +322,7 @@
 				092C8CA525FA572300B904D6 /* Toast */,
 				C09D3E5526008BD700EDC0F9 /* Differentiator */,
 				C09D3E5726008BD700EDC0F9 /* RxDataSources */,
+				C01DBA2526676127007F314B /* PullToRefreshKit */,
 			);
 			productName = UICore;
 			productReference = C0AB3B1B25F9F170007C36AD /* UICore.framework */;
@@ -353,6 +356,7 @@
 				C0AB3B3525F9F2B7007C36AD /* XCRemoteSwiftPackageReference "RxSwift" */,
 				092C8CA425FA572300B904D6 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				C09D3E5426008BD700EDC0F9 /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				C01DBA2426676126007F314B /* XCRemoteSwiftPackageReference "PullToRefreshKit" */,
 			);
 			productRefGroup = C0AB3B1C25F9F170007C36AD /* Products */;
 			projectDirPath = "";
@@ -620,6 +624,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		C01DBA2426676126007F314B /* XCRemoteSwiftPackageReference "PullToRefreshKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@gitee.com:jlab/PullToRefreshKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.9;
+			};
+		};
 		C09D3E5426008BD700EDC0F9 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://gitee.com/jlab/RxDataSources.git";
@@ -651,6 +663,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 092C8CA425FA572300B904D6 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
+		};
+		C01DBA2526676127007F314B /* PullToRefreshKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C01DBA2426676126007F314B /* XCRemoteSwiftPackageReference "PullToRefreshKit" */;
+			productName = PullToRefreshKit;
 		};
 		C09D3E5526008BD700EDC0F9 /* Differentiator */ = {
 			isa = XCSwiftPackageProductDependency;

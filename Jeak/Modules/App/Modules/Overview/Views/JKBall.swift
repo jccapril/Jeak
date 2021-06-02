@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 class JKBall: UILabel {
     
     static let ballWidth:CGFloat = 40.0

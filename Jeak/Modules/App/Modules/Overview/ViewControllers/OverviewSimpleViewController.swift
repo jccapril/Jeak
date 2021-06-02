@@ -18,20 +18,19 @@ protocol OverviewSimpleViewControllerDelegate: AnyObject{
 class OverviewSimpleViewController: ViewController {
     
     weak var delegate: OverviewSimpleViewControllerDelegate?
-    lazy var tableView: UITableView = {
-        UITableView(frame: .zero, style: .plain)
-            .leaf
-            .separatorStyle(.none)
-            .backgroundColor(Theme.backgroundColor)
-            .register(OverviewSimpleViewModel.Reusable.cell)
-            .instance
-    }()
     
+    lazy var contentView: OverviewSimpleContentView = {
+        let contentView = OverviewSimpleContentView(frame: .zero)
+        return contentView
+    }()
     lazy var viewModel:OverviewSimpleViewModel = {
         let lazy = OverviewSimpleViewModel()
         lazy.disposeBag = disposeBag
         return lazy
     }()
+    // Rx
+    let headerRefreshTrigger = PublishSubject<Void>()
+    let footerRefreshTrigger = PublishSubject<Void>()
 }
 
 extension OverviewSimpleViewController {
@@ -41,6 +40,7 @@ extension OverviewSimpleViewController {
         // Do any additional setup after loading the view.
         setupUI()
         bindRx()
+        setupRefresh()
     }
     
 }
@@ -49,34 +49,42 @@ private extension OverviewSimpleViewController {
     
     func setupUI() {
         
-        tableView.leaf.add(to: view)
-        tableView.snp.makeConstraints {
-            $0.edges.equalTo(UIEdgeInsets(top: Adaptor.navibarHeight, left: 0, bottom: 0, right: 0))
+        contentView.leaf.add(to: view).snp.makeConstraints {
+            $0.leading.trailing.bottom.equalToSuperview()
+            $0.top.equalTo(Adaptor.navibarHeight)
         }
-        
     }
-    
     
 }
 
+private extension OverviewSimpleViewController {
+    func setupRefresh() {
+        let tableView = contentView.listView
+        tableView.configRefreshHeader(with: tableView.header, container: self) { [weak self] in
+            self?.headerRefreshTrigger.onNext(())
+        }
+
+//        tableView.configRefreshFooter(with: tableView.footer, container: self) { [weak self] in
+//            self?.footerRefreshTrigger.onNext(())
+//        }
+    }
+}
+
+
 private extension OverviewSimpleViewController  {
     func bindRx() {
-        
+        let tableView = contentView.listView
         bindListView(tableView)
-        let input = OverviewSimpleViewModel.Input()
+        let input = OverviewSimpleViewModel.Input(
+            headerRefresh: headerRefreshTrigger.asObserver(),
+            footerRefresh: footerRefreshTrigger.asObserver()
+        )
         let output = viewModel.transform(input: input)
         handleItems(items: output.items)
-        output.loadingState.distinctUntilChanged().asObservable()
-            .subscribe (onNext: { state in
-                if(state) {
-                    self.view.hideToastActivity()
-                }else {
-                    self.view.makeToastActivity(.center)
-                }
-            })
+        output.loadingState.distinctUntilChanged().drive(rx.loadState)
             .disposed(by: disposeBag)
-        viewModel.loadFirst()
-        
+        output.refreshState.distinctUntilChanged().drive(contentView.listView.rx.refreshState).disposed(by: disposeBag)
+        viewModel.loadDataSource()
     }
     
     func bindListView(_ tableView: UITableView) {
@@ -101,7 +109,7 @@ private extension OverviewSimpleViewController  {
             self.view.hideAllToasts()
         }.disposed(by: disposeBag)
         
-        items.bind(to: tableView.rx.items(OverviewSimpleViewModel.Reusable.cell)){ (row, element, cell) in
+        items.bind(to: contentView.listView.rx.items(OverviewSimpleViewModel.Reusable.cell)){ (row, element, cell) in
             
         }
         .disposed(by: disposeBag)
@@ -116,3 +124,14 @@ private extension OverviewSimpleViewController  {
 
 
 
+extension Reactive where Base: OverviewSimpleViewController {
+    var loadState: Binder<Bool> {
+        Binder(base) { controller, state in
+            if(state) {
+                controller.view.hideToastActivity()
+            }else {
+                controller.view.makeToastActivity(.center)
+            }
+        }
+    }
+}

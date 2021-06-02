@@ -85,7 +85,7 @@ class LotteryTableViewCell: UITableViewCell {
     lazy var indicator: UIImageView = {
         UIImageView()
             .leaf
-            .image(CommonModular.image(named: "ic_overview_cell_right"))
+            .image(AppModular.image(named: "ic_overview_cell_right"))
             .instance
     }()
     
