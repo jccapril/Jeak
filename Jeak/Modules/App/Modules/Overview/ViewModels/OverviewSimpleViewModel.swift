@@ -30,7 +30,7 @@ class OverviewSimpleViewModel {
 extension OverviewSimpleViewModel: RxBaseCellViewModel {
     struct Input {
         let headerRefresh: Observable<Void>
-        let footerRefresh: Observable<Void>
+//        let footerRefresh: Observable<Void>
     }
     struct Output {
         let refreshState: Driver<LotteryTableView.RefreshState>
@@ -40,7 +40,7 @@ extension OverviewSimpleViewModel: RxBaseCellViewModel {
     
     func transform(input: Input) -> Output {
         bindHeaderRefresh(input.headerRefresh)
-        bindFooterRefresh(input.footerRefresh)
+//        bindFooterRefresh(input.footerRefresh)
         return Output(
             refreshState: refreshState.asDriver(),
             loadingState: loadingState.asDriver(),
@@ -60,16 +60,16 @@ extension OverviewSimpleViewModel {
             })
             .disposed(by: disposeBag)
     }
-    func bindFooterRefresh(_ headerRefresh: Observable<Void>) {
-        guard let disposeBag = self.disposeBag else { return }
-        headerRefresh.skip(0)
-            .subscribe(onNext: { [weak self] _ in
-                guard let self = self else { return }
-                self.refreshState.accept(.pull)
-                self.loadDataSource()
-            })
-            .disposed(by: disposeBag)
-    }
+//    func bindFooterRefresh(_ headerRefresh: Observable<Void>) {
+//        guard let disposeBag = self.disposeBag else { return }
+//        headerRefresh.skip(0)
+//            .subscribe(onNext: { [weak self] _ in
+//                guard let self = self else { return }
+//                self.refreshState.accept(.pull)
+//                self.loadDataSource()
+//            })
+//            .disposed(by: disposeBag)
+//    }
 }
 
 
@@ -80,7 +80,9 @@ extension OverviewSimpleViewModel {
             .subscribe(onNext: { result in
                 self.handleFirstResult(lotteryList: result)
             }, onError: { err in
-                
+                guard let e = err as? ResponseError else { return }
+                guard let ecode = e.ecodeError else { return }
+                print("find code \(ecode)")
             }, onCompleted: {
                 
             })

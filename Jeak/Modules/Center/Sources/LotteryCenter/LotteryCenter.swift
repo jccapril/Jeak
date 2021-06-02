@@ -43,14 +43,6 @@ public extension LotteryCenter {
                     let lottery = response.lottery
                     complete(.success(lottery))
                 case .failure(let error):
-                    if let e = error as? ResponseError {
-                        let status = e.rpcStatus.code
-                        let code = e.ecodeError?.errCode ?? 0
-                        print("find status \(status)")
-                        print("find code \(code)")
-                      } else {
-                        // handle other err0or types
-                      }
                     complete(.failure(error))
             }
             

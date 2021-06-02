@@ -30,13 +30,12 @@ class OverviewSimpleViewController: ViewController {
     }()
     // Rx
     let headerRefreshTrigger = PublishSubject<Void>()
-    let footerRefreshTrigger = PublishSubject<Void>()
+//    let footerRefreshTrigger = PublishSubject<Void>()
 }
 
 extension OverviewSimpleViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         setupUI()
         bindRx()
@@ -76,8 +75,8 @@ private extension OverviewSimpleViewController  {
         let tableView = contentView.listView
         bindListView(tableView)
         let input = OverviewSimpleViewModel.Input(
-            headerRefresh: headerRefreshTrigger.asObserver(),
-            footerRefresh: footerRefreshTrigger.asObserver()
+            headerRefresh: headerRefreshTrigger.asObserver()
+//            footerRefresh: footerRefreshTrigger.asObserver()
         )
         let output = viewModel.transform(input: input)
         handleItems(items: output.items)
