@@ -31,7 +31,6 @@ class OverviewSimpleViewModel {
 extension OverviewSimpleViewModel: RxBaseCellViewModel {
     struct Input {
         let headerRefresh: Observable<Void>
-//        let footerRefresh: Observable<Void>
     }
     struct Output {
         let refreshState: Driver<LotteryTableView.RefreshState>
@@ -42,7 +41,6 @@ extension OverviewSimpleViewModel: RxBaseCellViewModel {
     
     func transform(input: Input) -> Output {
         bindHeaderRefresh(input.headerRefresh)
-//        bindFooterRefresh(input.footerRefresh)
         return Output(
             refreshState: refreshState.asDriver(),
             loadingState: loadingState.asDriver(),
@@ -83,10 +81,17 @@ extension OverviewSimpleViewModel {
             .subscribe(onNext: { result in
                 self.handleFirstResult(lotteryList: result)
             }, onError: { err in
-                guard let e = err as? ResponseError else { return }
-                guard let ecode = e.ecodeError else { return }
                 self.loadingState.accept(true)
-                self.message.accept(ecode.errMsg)
+                if let e = err as? ResponseError {
+                    if let ecode = e.ecodeError {
+                        self.message.accept(ecode.errMsg)
+                    }else {
+                        self.message.accept("服务异常,请稍后再试")
+                    }
+                }else {
+                    self.message.accept("服务异常,请稍后再试")
+                }
+               
             }, onCompleted: {
                 
             })

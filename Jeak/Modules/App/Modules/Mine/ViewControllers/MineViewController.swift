@@ -47,13 +47,6 @@ private extension MineViewController {
     func setupUI() {
 
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: NaviagtionBarModular.image(named: "ic_naviagtion_item_back"), style: .plain, target: self, action: #selector(goBack(sender:)))
-
-//        backButton.leaf.add(to: self.view)
-//        backButton.snp.makeConstraints{
-//            $0.leading.equalTo(20)
-//            $0.top.equalTo(Adaptor.statusBarHeight + 10)
-//            $0.size.equalTo(CGSize(width: 40, height: 40))
-//        }
         
         
     }

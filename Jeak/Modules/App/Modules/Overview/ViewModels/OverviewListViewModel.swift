@@ -92,10 +92,16 @@ extension OverviewListViewModel {
             .subscribe(onNext: { result in
                 self.handleResult(lotteryList: result)
             }, onError: { err in
-                guard let e = err as? ResponseError else { return }
-                guard let ecode = e.ecodeError else { return }
                 self.loadingState.accept(true)
-                self.message.accept(ecode.errMsg)
+                if let e = err as? ResponseError {
+                    if let ecode = e.ecodeError {
+                        self.message.accept(ecode.errMsg)
+                    }else {
+                        self.message.accept("服务异常,请稍后再试")
+                    }
+                }else {
+                    self.message.accept("服务异常,请稍后再试")
+                }
             }, onCompleted: {
                 
             })
